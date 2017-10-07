@@ -29,6 +29,8 @@ comments -> If it is not apparant what the code is trying to accomplish right aw
 
 Committing -> whenever we debug or write a method I imagine we should commit. 
 
+if there are any instructions regarding something we created that have to be followed at a (LATER) time , please add the instruction to the trello list (for now) until we have a better strategy -> TO AVOID EXTRA BUGGYNESS
+
 
 OUR WORKFLOW
  1- Add features in develop -> Push to develop ONLY when Individual Bugs have been worked out to keep production clean.
