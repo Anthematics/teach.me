@@ -35,6 +35,5 @@ BRANCHING
     git branch <branch_name> /// creates <branch_name>
     git checkout <branch_name> /// switches to <branch_name>
     git merge <branch_name> /// brings new branch back to current branch
-
-
+s
 
