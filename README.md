@@ -13,8 +13,8 @@
 2. Workflow
 3. Priorities
 4. Helpful stuff
-  A. Git Commands 
-  B. Relevent Links
+A. Git Commands 
+B. Relevent Links
   
   
   
