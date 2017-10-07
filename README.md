@@ -62,9 +62,7 @@ Standards
 
 
              ______________________________  Helpful things ____________________________ 
-                                          A: Some git commands:
-
-git init /// creates new git repository
+  A: Some git commands: git init /// creates new git repository
 git add . /// adds files to staging
 git add --all ///adds files to staging (incl deleted) 
 git commit -m "<message>" /// moves files to repo
