@@ -1,10 +1,33 @@
-                                 # teach.me
-
-Our final project - In this description I would like to outline our set of standards at some point.
+  
+  --------------------------------------------Teach.ME--------------------------------------------------
+                                     Our final project 
+                                         GET HYPED
+                                            Feat.
+                                      LOB TO THE SANG ,
+                                    NAVI DA BUG KILLIN BEAST,  
+                              KAISER "MAKES ME THINK OF BREAD" CHANNNN,
+                                              &&&&
+                           Jayshun "I'm spelling my own name wrong" Harder
+                   ***************FEEL FREE TO MAKE CHANGES AS NEEDED ***************                                                                   
+1. Standards
+2. Workflow
+3. Priorities
+4. Helpful stuff
+  A. Git Commands 
+  B. Relevent Links
+  
+  
+  
 
 STANDARDS
-When you are in github -> 
-hit the compare and pull request so you can see what changes have been made.
+
+
+Test complex logic -> It was agreed amoung the seniors at Bitmaker that we only really have to worry about testing our complex apps -> remember how much employers love well tested code!
+
+comments -> If it is not apparant what the code is trying to accomplish right away we should:
+1) Refactor or 2) Commenting the code
+
+Committing -> whenever we debug or write a method I imagine we should commit. 
 
 
 OUR WORKFLOW
@@ -14,7 +37,7 @@ OUR WORKFLOW
 
                               ----Deploying to Heroku --- 
                               Go to github.com 
-                              pull request
+                              pull request (look at compare and p
                               then merge 
                               ----command line below---
                               then checkout master
@@ -37,13 +60,9 @@ Ruby cop -> enforces ruby style guide.
 Develop a timeline.
 Standards
 
-Test complex logic -> It was agreed amoung the seniors at Bitmaker that we only really have to worry about testing our complex apps -> remember how much employers love well tested code!
 
-comments -> If it is not apparant what the code is trying to accomplish right away we should:
-1) Refactor or 2) Commenting the code
-
-______________________________  Helpful things ____________________________ 
-Git Workflow
+             ______________________________  Helpful things ____________________________ 
+                                          A: Some git commands:
 
 git init /// creates new git repository
 git add . /// adds files to staging
@@ -58,4 +77,8 @@ BRANCHING
 git branch -a /// shows all branches
 git branch <branch_name> /// creates <branch_name>
 git checkout <branch_name> /// switches to <branch_name>
-git merge <branch_name> /// brings new branch back to current branch
+git merge <branch_name> /// brings new branch back to current branch.
+
+              B: Relevant Links (in case you missed a link didnt bookmark not at main computer)
+                          https://trello.com/b/3f0p2RmT/teachme -> Group trello
+                                  
