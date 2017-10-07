@@ -11,7 +11,7 @@ _______________________________________________________________
 
 Priorities
 1) Take a look at githooks - Should allow for strong testing 
-2) Ruby cop -> nforces ruby style guide. 
+2) Ruby cop -> enforces ruby style guide. 
 3) Develop a timeline. 
 
 Standards 
