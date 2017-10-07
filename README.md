@@ -1,9 +1,18 @@
 # teach.me
-Our final project - in this description I would like to outline our set of standards at some point.
+Our final project - In this description I would like to outline our set of standards at some point.
+
+STANDARDS 
+1. We do not push to master -> only the develop branch UNLESS: we are deploying to heroku and our bugs have been worked out. 
+2.
+
+
+_______________________________________________________________
+
 
 Priorities
 1) Take a look at githooks - Should allow for strong testing 
-2) ruby cop -> nforces ruby style guide. 
+2) Ruby cop -> nforces ruby style guide. 
+3) Develop a timeline. 
 
 Standards 
 
