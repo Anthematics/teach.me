@@ -5,7 +5,6 @@ class ModulesController < ApplicationController
 	def show
 	end
 
-
 	def new
 	end
 
@@ -20,6 +19,4 @@ class ModulesController < ApplicationController
 
 	def destroy
 	end
-
-
 end
