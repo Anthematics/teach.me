@@ -20,5 +20,4 @@ class ModulesController < ApplicationController
 	def destroy
 	end
 
-
 end
