@@ -3,7 +3,7 @@ Our final project - In this description I would like to outline our set of stand
 
 STANDARDS 
 1. We do not push to master -> only the develop branch UNLESS: we are deploying to heroku and our bugs have been worked out. 
-2.
+2. When you are in github _> hit the compare and pull request so you can see what changes have been made. 
 
 
 _______________________________________________________________
@@ -35,7 +35,7 @@ Git Workflow
     git commit -m "<message>" /// moves files to repo
     git status /// checks the status of files
     git log /// shows history of commits
-    git fetch //Use git fetch to retrieve new work done by other people. Fetching from a repository grabs all the new remote-tracking branches and tags without merging those changes into your own branches.
+    git fetch //Use git fetch to retrieve new work done by other people. Fetching from a repository grabs all the new remote-     tracking branches and tags without merging those changes into your own branches.
     git commit --amend -m // amend a commit when you do not feel the notes are accurate. 
 
 BRANCHING 
