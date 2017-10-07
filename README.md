@@ -62,7 +62,8 @@ Standards
 
 
              ______________________________  Helpful things ____________________________ 
-  A: Some git commands: git init /// creates new git repository
+             
+ ```A: Some git commands: git init /// creates new git repository
 git add . /// adds files to staging
 git add --all ///adds files to staging (incl deleted) 
 git commit -m "<message>" /// moves files to repo
@@ -75,8 +76,8 @@ BRANCHING
 git branch -a /// shows all branches
 git branch <branch_name> /// creates <branch_name>
 git checkout <branch_name> /// switches to <branch_name>
-git merge <branch_name> /// brings new branch back to current branch.
-
-              B: Relevant Links (in case you missed a link didnt bookmark not at main computer)
+git merge <branch_name> /// brings new branch back to current branch. ```
+                
+                B: Relevant Links (in case you missed a link didnt bookmark not at main computer)
                           https://trello.com/b/3f0p2RmT/teachme -> Group trello
                                   
