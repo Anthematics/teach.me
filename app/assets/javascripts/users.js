@@ -1,7 +1,7 @@
- $(document).ready(function() {
- 	var editableCodeMirror = CodeMirror.fromTextArea(document.getElementByClass('.codemirror-textarea'), {
-        mode: "ruby",
-        theme: "default",
-        lineNumbers: true
-    });
+$(document).ready(function() {
+   var code = $('.codemirror-textarea')[0];
+   var editor = CodeMirror.fromTextArea(code, {
+   	lineNumbers :true,
+   	mode: "text/x-ruby"
+   })
 });
