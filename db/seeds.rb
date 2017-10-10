@@ -23,7 +23,7 @@ chapter = Chapter.create!(
 )
 
 step = Step.create!(
-  name: "Create new variables"
-  description: "Try create some new variables yourself"
+  name: "Create new variables",
+  description: "Try create some new variables yourself",
   chapter: chapter
 )
