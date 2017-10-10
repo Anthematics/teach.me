@@ -65,7 +65,7 @@ Standards
 
              ______________________________  Helpful things ____________________________ 
              
- ```A: Some git commands: git init /// creates new git repository
+A: Some git commands: git init /// creates new git repository
 git add . /// adds files to staging
 git add --all ///adds files to staging (incl deleted) 
 git commit -m "<message>" /// moves files to repo
@@ -79,6 +79,13 @@ git branch -a /// shows all branches
 git branch <branch_name> /// creates <branch_name>
 git checkout <branch_name> /// switches to <branch_name>
 git merge <branch_name> /// brings new branch back to current branch. ```
+                
+```B: Some heroku commands 
+git remote -v will show both github and heroku remotes.  
+heroku create -> creates a new heroku app -> you will not need this. (but useful for your own projects)
+git push heroku master -> self explanatory 
+git add . , git commit -m "' -> functionality remains the same.
+                
                 
                 B: Relevant Links (in case you missed a link didnt bookmark not at main computer)
                           https://trello.com/b/3f0p2RmT/teachme -> Group trello
