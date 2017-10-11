@@ -12,51 +12,51 @@
 
 ActiveRecord::Schema.define(version: 20171010204236) do
 
-	# These are extensions that must be enabled in order to support this database
-	enable_extension "plpgsql"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-	create_table "chapters", force: :cascade do |t|
-		t.string "name"
-		t.text "description"
-		t.datetime "created_at", null: false
-		t.datetime "updated_at", null: false
-	end
+  create_table "chapters", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-	create_table "steps", force: :cascade do |t|
-		t.string "name"
-		t.text "description"
-		t.bigint "chapter_id"
-		t.datetime "created_at", null: false
-		t.datetime "updated_at", null: false
-		t.index ["chapter_id"], name: "index_steps_on_chapter_id"
-	end
+  create_table "steps", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "chapter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapter_id"], name: "index_steps_on_chapter_id"
+  end
 
-	create_table "users", force: :cascade do |t|
-		t.string "name"
-		t.string "password_digest"
-		t.string "email"
-		t.datetime "created_at", null: false
-		t.datetime "updated_at", null: false
-	end
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "password_digest"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
-	create_table "users_chapters", force: :cascade do |t|
-		t.bigint "users_id"
-		t.bigint "chapters_id"
-		t.datetime "created_at", null: false
-		t.datetime "updated_at", null: false
-		t.index ["chapters_id"], name: "index_users_chapters_on_chapters_id"
-		t.index ["users_id"], name: "index_users_chapters_on_users_id"
-	end
+  create_table "users_chapters", force: :cascade do |t|
+    t.bigint "users_id"
+    t.bigint "chapters_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapters_id"], name: "index_users_chapters_on_chapters_id"
+    t.index ["users_id"], name: "index_users_chapters_on_users_id"
+  end
 
-	create_table "users_steps", force: :cascade do |t|
-		t.bigint "users_id"
-		t.bigint "steps_id"
-		t.boolean "completion"
-		t.datetime "created_at", null: false
-		t.datetime "updated_at", null: false
-		t.index ["steps_id"], name: "index_users_steps_on_steps_id"
-		t.index ["users_id"], name: "index_users_steps_on_users_id"
-	end
+  create_table "users_steps", force: :cascade do |t|
+    t.bigint "users_id"
+    t.bigint "steps_id"
+    t.boolean "completion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["steps_id"], name: "index_users_steps_on_steps_id"
+    t.index ["users_id"], name: "index_users_steps_on_users_id"
+  end
 
-	add_foreign_key "steps", "chapters"
+  add_foreign_key "steps", "chapters"
 end
