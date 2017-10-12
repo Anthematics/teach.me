@@ -1,8 +1,21 @@
 class UsersController < ApplicationController
 
-	def index
-	end
+  def new
+    @user = User.new
+  end
 
-	def show
-	end
+  def create
+    @user = User.new
+
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
+
+    if @user.save
+      @user = current_user
+      redirect_to menu_index_path
+    else
+      render :new
+    end
+  end
 end
