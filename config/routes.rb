@@ -13,4 +13,7 @@ resources :steps
 
 resources :welcome, only: [:index]
 
+resources :sessions, only: [:new, :create, :destroy]
+
+resources :menu, only: [:index, :show]
 end

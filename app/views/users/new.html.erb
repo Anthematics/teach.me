@@ -1,0 +1,32 @@
+<div class="sign-up-form">
+  <h1>Sign Up Now to Start Coding</h1>
+
+  <p>Join others and put coding into your repetoire</p>
+  <br>
+
+  <button type="button" name="button">Sign up with Github</button>
+  <br>
+
+  <p>----------   OR   ----------</p>
+  <br>
+
+  <p>Create account with email address</p>
+
+  <%= form_for @user do |f| %>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.email_field :email %>
+    </p>
+    <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p>
+      <%= f.submit 'Sign Up' %>
+    </p>
+  <% end %>
+</div>
