@@ -12,7 +12,8 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
-      @user = current_user
+      session[:user_id] = @user.id
+
       redirect_to menu_index_path
     else
       render :new

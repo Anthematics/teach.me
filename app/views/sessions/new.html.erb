@@ -1,23 +1,25 @@
-<h1>Log in</h1>
+<div class="log-in-form">
+  <h1>Log in</h1>
 
-<p>Log in to resume your learning</p>
-<button type="button" name="button">Log in with Github</button>
-<br>
+  <p>Log in to resume your learning</p>
+  <button type="button" name="button">Log in with Github</button>
+  <br>
 
-<p>----------   OR   ----------</p>
-<br>
+  <p>----------   OR   ----------</p>
+  <br>
 
-<p>Log in with email address</p>
-  <%= form_tag sessions_path do %>
-    <div class="loginform">
-      <%=label_tag :email%>
-      <%= text_field_tag :email, params[:email]%>
-    </div>
-    <div class="passwordform">
-      <%=label_tag :password%>
-      <%= password_field_tag :password%>
-    </div>
-    <div class="loginbutton">
-      <%= submit_tag "Log in"%>
-    </div>
-  <% end %>
+  <p>Log in with email address</p>
+    <%= form_tag sessions_path do %>
+      <div class="loginform">
+        <%=label_tag :email%>
+        <%= text_field_tag :email, params[:email]%>
+      </div>
+      <div class="passwordform">
+        <%=label_tag :password%>
+        <%= password_field_tag :password%>
+      </div>
+      <div class="loginbutton">
+        <%= submit_tag "Log in"%>
+      </div>
+    <% end %>
+</div>
