@@ -8,6 +8,14 @@
   <p>----------   OR   ----------</p>
   <br>
 
+  <% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <% end %>
+
+  <% if flash[:alert] %>
+  <%= flash[:alert] %>
+  <% end %>
+
   <p>Log in with email address</p>
     <%= form_tag sessions_path do %>
       <div class="loginform">

@@ -17,3 +17,4 @@
 //= require ruby
 
 //= require_tree .
+//= require bootstrap-sprockets
