@@ -8,14 +8,12 @@
   <p>----------   OR   ----------</p>
   <br>
 
+  <% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <% end %>
 
-  <% if @user.errors.any? %>
-    <h2>The following error(s) occurred:</h2>
-    <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
+  <% if flash[:alert] %>
+  <%= flash[:alert] %>
   <% end %>
 
   <p>Log in with email address</p>

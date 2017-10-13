@@ -6,9 +6,16 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to menu_index_path #should work if there are issues LOOK HERE.
+      if session[:redirect_url]
+        redirect_url = session[:redirect_url]
+        session[:redirect_url] = nil
+        redirect_to redirect_url
+      else
+        redirect_to menu_index_path, notice: "Logged in!"
+      end
     else
-      render 'new'
+      flash.now[:alert] = ["Login failed, name and/or password are incorrect"]
+      render :new
     end
   end
 
