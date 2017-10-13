@@ -14,3 +14,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "codemirror";
+
+form.form-inline {
+		text-align: right;
+}
