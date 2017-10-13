@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Teachme</title>
-		<%= csrf_meta_tags %>
+  <head>
+    <title>Teachme</title>
+    <%= csrf_meta_tags %>
 
-		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-	</head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-	<main>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">TeachME</a>
-				</div>
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="/">Home</a></li>
-					<li><a href="#">About Us</a></li>
-					<li><a href="/languages">Languages</a></li>
-					<li><a href="#">Community</a></li>
-				</ul>
-				<p class="userinfo">
-					<%if current_user%>
-						Signed in as <%= current_user.email%>. <%=link_to "Log out", session_path("current"), :method => :delete%>
-					<% else %>
-					<button class ="login-button">	<%= link_to "Log in", new_session_path%></button> or <button class= "signup-button" ><%= link_to "Sign up", new_user_path%> </button>
-					<% end %>
-				</p>
-			</div>
-		</nav>
+  <main>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">TeachME</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="/languages">Languages</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+        <p class="userinfo">
+          <%if current_user%>
+            Signed in as <%= current_user.email%>. <%=link_to "Log out", session_path("current"), :method => :delete%>
+          <% else %>
+          <form class="form-inline">
+            <button class="btn btn-outline-success" type="button"><%= link_to "Log in", new_session_path%></button>
+            <button class="btn btn-outline-success" type="button"><%= link_to "Sign up", new_user_path%></button>
+          </form>
+          <% end %>
+        </p>
+      </div>
+    </nav>
 
-		<body>
-			<%= yield %>
-		</body>
+    <body>
+      <%= yield %>
+    </body>
 
-		<footer> TeachME copyright(c) 2017 Copyright Holder All Rights Reserved </footer>
-	</main>
+    <footer> TeachME copyright(c) 2017 Copyright Holder All Rights Reserved </footer>
+  </main>
 
 </html>
