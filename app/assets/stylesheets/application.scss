@@ -16,5 +16,21 @@
 @import "codemirror";
 
 form.form-inline {
-		text-align: right;
+    text-align: right;
+}
+
+.banner,
+.sign-up-form,
+.log-in-form, {
+  border: 10px;
+  border-color: black;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+#signupnow {
+  display: block;
 }

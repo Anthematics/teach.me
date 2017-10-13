@@ -25,8 +25,8 @@
             Signed in as <%= current_user.email%>. <%=link_to "Log out", session_path("current"), :method => :delete%>
           <% else %>
           <form class="form-inline">
-            <button class="btn btn-outline-success" type="button"><%= link_to "Log in", new_session_path%></button>
-            <button class="btn btn-outline-success" type="button"><%= link_to "Sign up", new_user_path%></button>
+            <button id='login' class="btn btn-outline-success" type="button"><%= link_to "Log in", new_session_path%></button>
+            <button id='signup' class="btn btn-outline-success" type="button"><%= link_to "Sign up", new_user_path%></button>
           </form>
           <% end %>
         </p>
