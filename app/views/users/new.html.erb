@@ -10,6 +10,15 @@
   <p>----------   OR   ----------</p>
   <br>
 
+  <% if @user.errors.any? %>
+    <h2>The following error(s) occurred:</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <p>Create account with email address</p>
 
   <%= form_for @user do |f| %>
