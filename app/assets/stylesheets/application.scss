@@ -15,10 +15,34 @@
 @import "bootstrap";
 @import "codemirror";
 
-form.form-inline {
-    text-align: right;
+// ------ Navbar styling below ------
+a.navbar-brand {
+  font-size: 3rem;
 }
 
+.navbar {
+  font-size: 2rem;
+}
+
+.navbar-nav.mr-auto {
+  margin: 0 auto;
+}
+
+.nav-item {
+  margin: 0 5rem;
+}
+
+.navbar-toggler {
+  width: 50px;
+  height: 50px;
+}
+
+.btn.btn-outline-success {
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+
+// ------ Homepage styling below ------
 .banner,
 .sign-up-form,
 .log-in-form, {
@@ -27,10 +51,16 @@ form.form-inline {
   text-align: center;
 }
 
-footer {
-  text-align: center;
+#banner-image {
+  max-width: 200%;
 }
 
 #signupnow {
   display: block;
+}
+
+
+// ------ Footer styling below ------
+footer {
+  text-align: center;
 }
