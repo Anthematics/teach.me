@@ -29,7 +29,7 @@ a.navbar-brand {
 }
 
 .nav-item {
-  margin: 0 5rem;
+  margin: 0 4rem;
 }
 
 .navbar-toggler {
@@ -40,27 +40,54 @@ a.navbar-brand {
 .btn.btn-outline-success {
   font-size: 2rem;
   margin: 0 2rem;
+  background-color: white;
+  color: #1495d5;
+  border-color: #1495d5;
 }
+
+.btn.btn-outline-success:hover, .btn.btn-outline-success:focus, .btn.btn-outline-success:active, .btn.btn-outline-success.active, .open>.dropdown-toggle.btn.btn-outline-success {
+  color: white;
+  background-color: #1495d5;
+  border-color: #1495d5; /*set the color you want here*/
+}
+
 
 // ------ Homepage styling below ------
 .banner,
 .sign-up-form,
 .log-in-form, {
-  border: 10px;
-  border-color: black;
   text-align: center;
+  position: relative;
+  margin: 0 auto;
 }
 
 #banner-image {
-  max-width: 200%;
+  max-width: 100%;
+  height: auto;
+}
+
+.banner.banner-tagline {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
 }
 
 #signupnow {
-  display: block;
+  color: white;
+  background-color: #1495d5;
+  border-color: #1495d5;
+  position: absolute;
+  bottom: 50px;
+  right: 44%;
+  font-size: 3rem;
 }
 
 
 // ------ Footer styling below ------
 footer {
   text-align: center;
+  color: white;
+  background-color: #1495d5;
+  font-size: 1.5rem;
 }
