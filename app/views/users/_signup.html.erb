@@ -21,7 +21,7 @@
 
   <p>Create account with email address</p>
 
-  <%= form_for @user do |f| %>
+  <%= form_for @user, url: user_path do |f| %>
     <p>
       <%= f.label :email %><br>
       <%= f.email_field :email %>

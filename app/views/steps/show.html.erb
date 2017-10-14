@@ -1,2 +1,9 @@
-<h1>Steps#show</h1>
-<p>Find me in app/views/steps/show.html.erb</p>
+<%= form_for @user, html: { id: 'submitcode'}, remote: true, :action => user_path, :method => :post do |f| %>
+<%= f.label :'Write your code here' %>
+<%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
+<%= submit_tag 'Run' %>
+<% end %>
+
+<h1>Result</h1>
+<div id="result">
+</div>
