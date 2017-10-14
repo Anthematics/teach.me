@@ -15,6 +15,7 @@
 4. Helpful stuff
 A. Git Commands 
 B. Relevent Links
+5. Solving production issues
   
   
   
@@ -65,7 +66,7 @@ Standards
 
              ______________________________  Helpful things ____________________________ 
              
- ```A: Some git commands: git init /// creates new git repository
+A: Some git commands: git init /// creates new git repository
 git add . /// adds files to staging
 git add --all ///adds files to staging (incl deleted) 
 git commit -m "<message>" /// moves files to repo
@@ -80,6 +81,24 @@ git branch <branch_name> /// creates <branch_name>
 git checkout <branch_name> /// switches to <branch_name>
 git merge <branch_name> /// brings new branch back to current branch. ```
                 
+```B: Some heroku commands 
+git remote -v will show both github and heroku remotes.  
+heroku create -> creates a new heroku app -> you will not need this. (but useful for your own projects)
+git push heroku master -> self explanatory 
+git add . , git commit -m "' -> functionality remains the same.
+                
+                
                 B: Relevant Links (in case you missed a link didnt bookmark not at main computer)
                           https://trello.com/b/3f0p2RmT/teachme -> Group trello
+                          https://teachmeproduction.herokuapp.com -> production app -> also in "our website" link
                                   
+
+------------------------------------------Solving Production Issues --------------------------------------------
+Issue: Cannot go to signup page in heroku production app 
+
+Log Error: FATAL -- : [c9be78c3-9abb-406f-8a14-3736b19ffc41] ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+
+fix: run a db migrate for heroku as that means your heroku data base does not know what a user is. 
+command: heroku run rake db:migrate 
+
+1) heroku run rake db:migrate
