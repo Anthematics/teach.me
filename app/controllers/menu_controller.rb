@@ -1,7 +1,7 @@
 class MenuController < ApplicationController
 
   def index
-    #code
+    @user = User.new
   end
 
   def show
