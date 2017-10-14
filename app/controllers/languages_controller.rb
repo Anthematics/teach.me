@@ -1,16 +1,21 @@
 class LanguagesController < ApplicationController
-	def show
-	end
+  def show
 
-	def new
-	end
+  end
 
-	def edit
-	end
+  def index
+    @user = User.new
+  end
 
-	def create
-	end
+  def new
+  end
 
-	def update
-	end
+  def edit
+  end
+
+  def create
+  end
+
+  def update
+  end
 end
