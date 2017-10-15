@@ -27,8 +27,8 @@
           <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
         </ul>
         <p class="userinfo">
-          <%if current_user%>
-            Signed in as <%= current_user.email%>. <%=link_to "Log out", session_path("current"), :method => :delete%>
+          <%if @user.persisted? %>
+            Signed in as <%= @user.email%>. <%=link_to "Log out", session_path("current"), :method => :delete%>
           <% else %>
           <form class="form-inline my-2 my-lg-0">
             <button id='signup' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>

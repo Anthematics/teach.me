@@ -1,9 +1,16 @@
 class StepsController < ApplicationController
 
-	def show
+	def index
 	end
 
 	def new
+		@step = Step.new
+	end
+
+	def show
+		@user = User.find(params[:id])
+		Step.find(params[:id])
+
 	end
 
 	def create
