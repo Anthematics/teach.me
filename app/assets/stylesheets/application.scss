@@ -15,9 +15,20 @@
 @import "bootstrap";
 @import "codemirror";
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: monospace, serif, sans-serif;
+}
 // ------ Navbar styling below ------
-a.navbar-brand {
-  font-size: 3rem;
+a.navbar-brand img {
+  display: block;
+  max-width:200px;
+  max-height:100%;
+  width: auto;
+  height: auto;
 }
 
 .navbar {
@@ -61,36 +72,69 @@ a.navbar-brand {
   margin: 0 auto;
 }
 
-#banner-image {
-  max-width: 100%;
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-indicators {
+  position: absolute;
+  right: 2rem;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 60px;
+  font-size: 4rem;
+}
+
+.carousel-item img {
+  margin: 0 auto;
+  display: block;
+  max-width:90%;
+  max-height:900px;
+  width: auto;
   height: auto;
 }
 
-.banner.banner-tagline {
-  position: absolute;
-  top: 25%;
-  left: 0;
-  width: 100%;
-}
-
-#signupnow {
+.signupnow {
   color: white;
   background-color: #1495d5;
   border-color: #1495d5;
-  position: absolute;
-  bottom: 50px;
-  right: 44%;
   font-size: 3rem;
+  font-weight: bold;
 }
 
 // ------ Languages cards styling below -----
-.languages-cards {
-  width: 20rem;
+
+.container {
+  display: grid;
+  grid-template-columns: auto 200px 200px 200px auto;
+  grid-template-rows: 80px 200px 300px auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;}
+
+.languages-page-title {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3,
 }
 
-.ruby-image:hover {
-  opacity: 0.2;
-  position: relative;
+#ruby-card {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4,
+}
+
+.languages-cards {
+  width: 20rem;
 }
 
 .card-title {
@@ -104,11 +148,6 @@ a.navbar-brand {
   width: 20rem;
   text-align: center;
   font-size: 2rem;  // not working properly ...
-}
-
-.card-body:hover {
-  opacity: 1;
-  visibility: visible;
 }
 
 // ------ Main Menu styling below ------
@@ -131,4 +170,8 @@ footer {
   color: white;
   background-color: #1495d5;
   font-size: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
 }
