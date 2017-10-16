@@ -14,7 +14,6 @@ class StepsController < ApplicationController
 	def create
 		@code = params[:step][:code]
 
-		render json: { redirect_to url:"https://teach-me-output.herokuapp.com/"}
 
 
 	end
