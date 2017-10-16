@@ -75,4 +75,21 @@ document.addEventListener("DOMContentLoaded", function() {
     pythonText.style.opacity = "0";
   }
 
+// On languages page, language cards styling below ------
+  // let cardBody = document.querySelector('.card-body');
+  // let cardImage = document.querySelector('.card-image');
+  // let languageCard = document.querySelector('.language-card');
+  //
+  // languageCard.addEventListener('mouseover', mouseoverCardDisplay);
+  // languageCard.addEventListener('mouseout', mouseoutCardDisplay);
+  //
+  // function mouseoverCardDisplay() {
+  //   cardImage.style.opacity = "0.1";
+  //   cardBody.style.opacity = "1";
+  // }
+  //
+  // function mouseoutCardDisplay() {
+  //   cardImage.style.opacity = "1";
+  //   cardBody.style.opacity = "0";
+  // }
 });
