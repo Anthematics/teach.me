@@ -1,21 +1,18 @@
 class ApplicationController < ActionController::Base
-  before_action :set_user
-  protect_from_forgery with: :exception
+	protect_from_forgery with: :exception
 
-  private
+	
+private
 
-  def set_user
-    if session[:user_id]
-      @user = User.find(session[:user_id])
-    else
-      @user = User.new
-    end
-  end
+	def current_user
+		@current_user ||= User.find(session[:user_id]) if session[:user_id]
+	end
 
-  def ensure_logged_in
-    unless @user.persisted?
-      flash[:alert] = "Please Log In"
-      redirect_to new_session_path
-    end
-  end
+helper_method :current_user
+	def ensure_logged_in
+		unless current_user
+			flash[:alert] = "Please Log In"
+			redirect_to root_path
+		end
+	end
 end

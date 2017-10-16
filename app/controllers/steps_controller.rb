@@ -13,9 +13,6 @@ class StepsController < ApplicationController
 
 	def create
 		@code = params[:step][:code]
-
-
-
 	end
 
 	def edit
