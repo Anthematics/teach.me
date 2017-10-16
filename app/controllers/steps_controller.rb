@@ -8,12 +8,14 @@ class StepsController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:id])
-		Step.find(params[:id])
-
+		@step = Step.find(params[:id])
 	end
 
 	def create
+		@code = params[:step][:code]
+
+
+
 	end
 
 	def edit
