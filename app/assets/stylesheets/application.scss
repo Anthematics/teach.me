@@ -1,0 +1,134 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "codemirror";
+
+// ------ Navbar styling below ------
+a.navbar-brand {
+  font-size: 3rem;
+}
+
+.navbar {
+  font-size: 2rem;
+}
+
+.navbar-nav.mr-auto {
+  margin: 0 auto;
+}
+
+.nav-item {
+  margin: 0 4rem;
+}
+
+.navbar-toggler {
+  width: 50px;
+  height: 50px;
+}
+
+.btn.btn-outline-success {
+  font-size: 2rem;
+  margin: 0 2rem;
+  background-color: white;
+  color: #1495d5;
+  border-color: #1495d5;
+}
+
+.btn.btn-outline-success:hover, .btn.btn-outline-success:focus, .btn.btn-outline-success:active, .btn.btn-outline-success.active, .open>.dropdown-toggle.btn.btn-outline-success {
+  color: white;
+  background-color: #1495d5;
+  border-color: #1495d5; /*set the color you want here*/
+}
+
+
+// ------ Homepage styling below ------
+.banner,
+.sign-up-form,
+.log-in-form, {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+#banner-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner.banner-tagline {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 100%;
+}
+
+#signupnow {
+  color: white;
+  background-color: #1495d5;
+  border-color: #1495d5;
+  position: absolute;
+  bottom: 50px;
+  right: 44%;
+  font-size: 3rem;
+}
+
+// ------ Languages cards styling below -----
+.languages-cards {
+  width: 20rem;
+}
+
+.ruby-image:hover {
+  opacity: 0.2;
+  position: relative;
+}
+
+.card-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.card-body {
+  opacity: 0;
+  position: absolute;
+  width: 20rem;
+  text-align: center;
+  font-size: 2rem;  // not working properly ...
+}
+
+.card-body:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+// ------ Main Menu styling below ------
+.main-menu {
+  text-align: center;
+}
+
+// ------ Log in form styling below ------
+.log-in-form {
+  font-size: 1.5rem;
+}
+
+// ------ Sign up form styling below ------
+.sign-up-form {
+  font-size: 1.5rem;
+}
+// ------ Footer styling below ------
+footer {
+  text-align: center;
+  color: white;
+  background-color: #1495d5;
+  font-size: 1.5rem;
+}

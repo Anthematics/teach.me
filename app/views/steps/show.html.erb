@@ -1,0 +1,9 @@
+<%= form_for @step, html: { id: 'submitcode'}, remote: true, :action => steps_path, :method => :post do |f| %>
+<%= f.label :'Write your code here' %>
+<%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
+<%= submit_tag 'Run' %>
+<% end %>
+
+<h1>Result</h1>
+<div id="result">
+</div>
