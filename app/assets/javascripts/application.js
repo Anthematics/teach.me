@@ -21,8 +21,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-  var signUp = document.querySelector('#signup');
-  var logIn = document.querySelector('#login');
+	var signUp = document.querySelector('#signup');
+	var logIn = document.querySelector('#login');
 
 
 });
