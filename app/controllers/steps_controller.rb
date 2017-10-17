@@ -13,12 +13,6 @@ class StepsController < ApplicationController
 
 	def create
 		@code = params[:step][:code]
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 2e8554a768d2db64e5ef59a85bf6b05dc6896e4a
 	end
 
 	def edit
