@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
 	"https://github.com/#{repo_name}.git"
 end
 
+<<<<<<< HEAD
 
+=======
+gem 'rest-client', '~> 1.8'
+>>>>>>> 2e8554a768d2db64e5ef59a85bf6b05dc6896e4a
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
