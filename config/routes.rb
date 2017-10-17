@@ -4,16 +4,14 @@ Rails.application.routes.draw do
 root 'welcome#index'
 
 resource :user
-
-resources :languages
-
-resources :chapters
-
-resources :steps
-
+resources :menu, only: [:index, :show]
 resources :welcome, only: [:index]
-
 resources :sessions, only: [:new, :create, :destroy]
 
-resources :menu, only: [:index, :show]
+resources :languages,only: [:index, :show] do
+  resources :chapters,only: [:index, :show]  do
+    resources :steps, only: [:index, :show]
+  end
+end
+
 end
