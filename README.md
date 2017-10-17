@@ -36,7 +36,15 @@ if there are any instructions regarding something we created that have to be fol
 OUR WORKFLOW
  1- Add features in develop -> Push to develop ONLY when Individual Bugs have been worked out to keep production clean.
  2- When Master is pushed to heroku there may be bugs (Production issues stopping the live app from working) when these           issues have been worked out we must push the master branch BACK to development.
+------------------------------------------------GITHUB-----------------------------------
+1) pull latest from develop
+2) create local branch -> checkout the branch 
+3) add change to local branch
+4) create temp branch 
+5) IF NO CONFLICT : git merge develop 
+6) git checkout local branch and merge to develop
 
+------------------------------------------------HEROKU-----------------------------------
 
                               ----Deploying to Heroku --- 
                               Go to github.com 
@@ -91,6 +99,7 @@ git add . , git commit -m "' -> functionality remains the same.
                 B: Relevant Links (in case you missed a link didnt bookmark not at main computer)
                           https://trello.com/b/3f0p2RmT/teachme -> Group trello
                           https://teachmeproduction.herokuapp.com -> production app -> also in "our website" link
+                                  
                                   
 
 ------------------------------------------Solving Production Issues --------------------------------------------
