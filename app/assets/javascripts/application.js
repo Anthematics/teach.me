@@ -21,8 +21,11 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	var signUp = document.querySelector('#signup');
-	var logIn = document.querySelector('#login');
+  var signUp = document.querySelector('#signup');
+  var logIn = document.querySelector('#login');
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2e8554a768d2db64e5ef59a85bf6b05dc6896e4a
 });

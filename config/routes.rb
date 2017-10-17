@@ -1,17 +1,25 @@
 Rails.application.routes.draw do
 
-	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root 'welcome#index'
 
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+root 'welcome#index'
+
+get '/callback' => 'sessions#callback'
+get '/oauth' => 'sessions#oauth'
+
 resource :user
-resources :menu, only: [:index, :show]
+
+resources :languages
+
+resources :chapters
+
+resources :steps
+
 resources :welcome, only: [:index]
+
 resources :sessions, only: [:new, :create, :destroy]
 
-resources :languages,only: [:index, :show] do
-	resources :chapters,only: [:index, :show]  do
-		resources :steps, only: [:index, :show]
-	end
-end
-
+resources :menu, only: [:index, :show]
 end
