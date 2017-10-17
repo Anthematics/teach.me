@@ -25,18 +25,19 @@ html {
 // ------ Navbar styling below ------
 a.navbar-brand img {
   display: block;
-  max-width:200px;
+  max-width:100px;
   max-height:100%;
   width: auto;
   height: auto;
 }
 
 .navbar {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .navbar-nav.mr-auto {
-  margin: 0 auto;
+  margin: 0 10rem;
+  text-align: center;
 }
 
 .nav-item {
@@ -46,6 +47,10 @@ a.navbar-brand img {
 .navbar-toggler {
   width: 50px;
   height: 50px;
+}
+
+.form-inline {
+  float: right;
 }
 
 .btn.btn-outline-success {
@@ -64,6 +69,52 @@ a.navbar-brand img {
 
 
 // ------ Homepage styling below ------
+
+.front-page-container {
+  display: grid;
+  grid-template-columns: auto 40% 100px 40% auto;
+  grid-template-rows: 800px 50px 100px 50px 400px auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;}
+
+.carousel-item {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-content: stretch;
+  align-self: stretch;
+}
+
+.front-page-intro {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  justify-content: stretch;
+  align-self: stretch;
+}
+
+#front-page-image-1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  justify-content: end;
+  align-self: stretch;
+}
+
+#front-page-feature-text-1 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  justify-content: start;
+  align-content: stretch;
+}
+
 .banner,
 .sign-up-form,
 .log-in-form, {
@@ -87,17 +138,16 @@ a.navbar-brand img {
 
 .carousel-caption {
   position: absolute;
-  bottom: 60px;
+  bottom: 25%;
   font-size: 4rem;
 }
 
 .carousel-item img {
   margin: 0 auto;
   display: block;
-  max-width:90%;
-  max-height:900px;
+  max-width:100%;
+  max-height:100%;
   width: auto;
-  height: auto;
 }
 
 .signupnow {
@@ -110,11 +160,11 @@ a.navbar-brand img {
 
 // ------ Languages cards styling below -----
 
-.container {
+.languages-container {
   display: grid;
   grid-template-columns: auto 200px 200px 200px auto;
   grid-template-rows: 80px 200px 300px auto;
-  grid-column-gap: 25px;
+  grid-column-gap: 100px;
   grid-row-gap: 25px;}
 
 .languages-page-title {
@@ -125,10 +175,31 @@ a.navbar-brand img {
   grid-row-end: 3,
 }
 
+.card-img-top {
+  height: 200px;
+}
+
 #ruby-card {
   text-align: center;
   grid-column-start: 2;
   grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: stretch;
+}
+
+#js-card {
+  text-align: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4,
+}
+
+#python-card {
+  text-align: center;
+  grid-column-start: 4;
+  grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4,
 }
@@ -147,7 +218,7 @@ a.navbar-brand img {
   position: absolute;
   width: 20rem;
   text-align: center;
-  font-size: 2rem;  // not working properly ...
+  font-size: 2rem;
 }
 
 // ------ Main Menu styling below ------
@@ -170,8 +241,6 @@ footer {
   color: white;
   background-color: #1495d5;
   font-size: 1.5rem;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 2rem;
 }

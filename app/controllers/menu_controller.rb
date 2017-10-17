@@ -1,9 +1,10 @@
 class MenuController < ApplicationController
 
-  def index
-  end
+	def index
+		@user = current_user
+	end
 
-  def show
-    #code
-  end
+	def show
+		#code
+	end
 end
