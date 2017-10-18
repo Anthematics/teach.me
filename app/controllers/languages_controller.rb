@@ -1,20 +1,16 @@
 class LanguagesController < ApplicationController
-  def show
-
-  end
+  before_action :current_user
+  before_action :current_language, only: [:show ]
 
   def index
   end
 
-  def new
+  def show
   end
 
-  def edit
-  end
 
-  def create
-  end
-
-  def update
-  end
+	def current_language
+		language_name = params[:language_id]
+		@current_language ||= Language.find_by!(name:language_name)
+	end
 end

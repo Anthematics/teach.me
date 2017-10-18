@@ -8,7 +8,10 @@
 
 User.destroy_all
 
-language = "Ruby"
+ruby = Language.create!(
+  name: "ruby",
+  description: "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language"
+)
 
 user = User.create!(
   name: "Sean",
@@ -17,13 +20,47 @@ user = User.create!(
   email: "sean@email.com"
 )
 
-chapter = Chapter.create!(
-  name: "Variables",
-  description: "The basic building blocks"
+chapter1 = Chapter.create!(
+  name: "Module1: Variables",
+  description: "The basic building blocks",
+  language_id: ruby.id
 )
 
-step = Step.create!(
+chapter2 = Chapter.create!(
+  name: "Module2: Methods",
+  description: "The basic building blocks",
+  language_id: ruby.id
+)
+chapter3 = Chapter.create!(
+  name: "Module3: Arrays & Hashes",
+  description: "The basic building blocks",
+  language_id: ruby.id
+)
+chapter4 = Chapter.create!(
+  name: "Module4: Loops & Iterations",
+  description: "The basic building blocks",
+  language_id: ruby.id
+)
+
+chapter5 = Chapter.create!(
+  name: "Module5: Object Oriented Programming",
+  description: "The basic building blocks",
+  language_id: ruby.id
+)
+
+chapter6 = Chapter.create!(
+  name: "Module6: Instance, Class & Inheritance",
+  description: "The basic building blocks",
+  language_id: ruby.id
+)
+
+step1 = Step.create!(
   name: "Create new variables",
   description: "Try create some new variables yourself",
-  chapter: chapter
+  chapter: chapter1
+)
+step2 = Step.create!(
+  name: "Control Structures",
+  description: "manage a program's control flow, allowing you to either execute or skip a block of code based on a condition that evaluates to true or false",
+  chapter: chapter1
 )

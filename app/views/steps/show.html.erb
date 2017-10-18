@@ -1,4 +1,4 @@
-<%= form_for @step, url:"https://codeapi.herokuapp.com/code/ruby", html: { id: 'submitcode'}, remote: true, :action => steps_path, :method => :post do |f| %>
+<%= form_for @step, url:"https://codeapi.herokuapp.com/code/ruby", html: { id: 'submitcode'}, remote: true, :action => language_chapter_step_path, :method => :post do |f| %>
 <%= f.label :'Write your code here' %>
 <%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
 <%= submit_tag 'Run' %>
@@ -6,4 +6,11 @@
 
 <h1>Result</h1>
 <div id="result">
+</div>
+
+<div class="steps" style="border: 2px solid red">
+  <h2>Step: <%= @step.id %> </h2>
+  <h2><%= @step.name%></h2>
+  <h2>Description: <%= @step.description %></h2>
+
 </div>
