@@ -5,10 +5,12 @@ class StepsController < ApplicationController
 	end
 
 	def new
+		@user = current_user
 		@step = Step.new
 	end
 
 	def show
+		@user = current_user
 		@step = Step.find(params[:id])
 	end
 
