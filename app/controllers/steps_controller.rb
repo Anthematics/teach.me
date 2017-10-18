@@ -1,3 +1,5 @@
+require 'httparty'
+
 class StepsController < ApplicationController
 	before_action :current_user
 	before_action :current_language, only: [:show, :index]
@@ -13,7 +15,7 @@ class StepsController < ApplicationController
 	end
 
 	def create
-		@code = params[:step][:code]
+		
 	end
 
 	def current_language

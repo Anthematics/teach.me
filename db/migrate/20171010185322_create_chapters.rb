@@ -3,6 +3,7 @@ class CreateChapters < ActiveRecord::Migration[5.1]
     create_table :chapters do |t|
       t.string :name
       t.text :description
+      t.references :language
 
       t.timestamps
     end

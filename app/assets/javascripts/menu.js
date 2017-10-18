@@ -74,4 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
   //   cardImage.style.opacity = "1";
   //   cardBody.style.opacity = "0";
   // }
+
+  
 });

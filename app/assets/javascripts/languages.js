@@ -1,7 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-<script>
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -16,4 +16,3 @@ for (i = 0; i < acc.length; i++) {
     }
   }
 }
-</script>

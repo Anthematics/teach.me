@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def sumbitCode
+
+  end
+  
   def show
   end
 
