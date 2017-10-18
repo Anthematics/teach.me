@@ -20,47 +20,9 @@ user = User.create!(
   email: "sean@email.com"
 )
 
-chapter1 = Chapter.create!(
-  name: "Module1: Variables",
-  description: "The basic building blocks",
-  language_id: ruby.id
-)
-
-chapter2 = Chapter.create!(
-  name: "Module2: Methods",
-  description: "The basic building blocks",
-  language_id: ruby.id
-)
-chapter3 = Chapter.create!(
-  name: "Module3: Arrays & Hashes",
-  description: "The basic building blocks",
-  language_id: ruby.id
-)
-chapter4 = Chapter.create!(
-  name: "Module4: Loops & Iterations",
-  description: "The basic building blocks",
-  language_id: ruby.id
-)
-
-chapter5 = Chapter.create!(
-  name: "Module5: Object Oriented Programming",
-  description: "The basic building blocks",
-  language_id: ruby.id
-)
-
-chapter6 = Chapter.create!(
-  name: "Module6: Instance, Class & Inheritance",
-  description: "The basic building blocks",
-  language_id: ruby.id
-)
-
-step1 = Step.create!(
-  name: "Create new variables",
-  description: "Try create some new variables yourself",
-  chapter: chapter1
-)
-step2 = Step.create!(
-  name: "Control Structures",
-  description: "manage a program's control flow, allowing you to either execute or skip a block of code based on a condition that evaluates to true or false",
-  chapter: chapter1
-)
+5.times do |i|
+  mode = ruby.chapters.create(name: "Module #{i.to_s}", description: "Yolo")
+  5.times do |i|
+    mode.steps.create(name: "Steps #{i.to_s}", description: "Please solve this step.. yolo")
+  end
+end

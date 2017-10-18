@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
-  has_many :steps
-  has_many :chapters
+  has_many :languages
+  has_many :user_steps
 
   validates :email, presence: true
   validates :email, uniqueness: true

@@ -3,7 +3,7 @@ class CreateSteps < ActiveRecord::Migration[5.1]
     create_table :steps do |t|
       t.string :name
       t.text :description
-      t.belongs_to :chapter, foreign_key: true
+      t.references :chapter
 
       t.timestamps
     end
