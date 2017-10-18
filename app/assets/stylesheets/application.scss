@@ -73,7 +73,7 @@ a.navbar-brand img {
 .front-page-container {
   display: grid;
   grid-template-columns: auto 40% 100px 40% auto;
-  grid-template-rows: 800px 50px 100px 50px 400px auto;
+  grid-template-rows: 800px 50px 100px 50px 400px 50px 400px 50px 400px 50px 100px auto;
   grid-column-gap: 25px;
   grid-row-gap: 25px;}
 
@@ -83,17 +83,17 @@ a.navbar-brand img {
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
-  justify-content: stretch;
+  justify-self: stretch;
   align-self: stretch;
 }
 
-.front-page-intro {
+#front-page-intro-head {
   text-align: center;
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
-  justify-content: stretch;
+  justify-self: stretch;
   align-self: stretch;
 }
 
@@ -102,8 +102,10 @@ a.navbar-brand img {
   grid-column-end: 3;
   grid-row-start: 5;
   grid-row-end: 6;
-  justify-content: end;
   align-self: stretch;
+  justify-self: end;
+  max-width: 80%;
+  height: auto;
 }
 
 #front-page-feature-text-1 {
@@ -111,8 +113,64 @@ a.navbar-brand img {
   grid-column-end: 5;
   grid-row-start: 5;
   grid-row-end: 6;
-  justify-content: start;
+  justify-self: start;
   align-content: stretch;
+  max-width: 80%;
+  height: auto;
+}
+
+#front-page-image-2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  align-self: stretch;
+  justify-self: start;
+  max-width: 80%;
+  height: auto;
+}
+
+#front-page-feature-text-2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  justify-self: end;
+  align-content: stretch;
+  max-width: 80%;
+  height: auto;
+}
+
+#front-page-image-3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  align-self: stretch;
+  justify-self: end;
+  max-width: 80%;
+  height: auto;
+}
+
+#front-page-feature-text-3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  justify-self: start;
+  align-content: stretch;
+  max-width: 80%;
+  height: auto;
+}
+
+#front-page-intro-tail {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  justify-self: stretch;
+  align-self: stretch;
 }
 
 .banner,
