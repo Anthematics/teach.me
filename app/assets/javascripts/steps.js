@@ -13,7 +13,6 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
 
   $('#savecode').on('click', function(e) {
     e.preventDefault();
-
     var code = $('.codemirror-textarea').val();
     var url = $('#step_url').val();
     $.ajax({
@@ -22,7 +21,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
       dataType: 'json',
       data: code
     }).done(function(response) {
-      console.log('dfdsfsdfs');
+      console.log(response);
 
     })
   });
