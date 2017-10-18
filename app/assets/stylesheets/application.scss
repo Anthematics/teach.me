@@ -304,7 +304,6 @@ a.navbar-brand img {
   text-align: center;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
     background-color: white;
     color: #1495d5;
@@ -318,7 +317,6 @@ button.accordion {
     font-weight: bold;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
     background-color: #1495d5;
     color: white;
