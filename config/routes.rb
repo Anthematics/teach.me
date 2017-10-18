@@ -8,13 +8,14 @@ root 'welcome#index'
 
 get '/callback' => 'sessions#callback'
 get '/oauth' => 'sessions#oauth'
+get '/languages/ruby' => 'languages#ruby'
 
 resource :user
 resources :welcome, only: [:index]
 resources :menu, only: [:index, :show]
 resources :sessions, only: [:new, :create, :destroy]
 
-resources :languages, only: [:index, :show] do
+resources :languages, only: [:index] do
   resources :chapters, only: [:index, :show]  do
     resources :steps, only: [:index, :show]
   end

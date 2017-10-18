@@ -4,7 +4,8 @@ class LanguagesController < ApplicationController
   def index
   end
 
-  def show
+  def ruby
+    @ruby = Language.find_by(name:"Ruby")
   end
 
 end

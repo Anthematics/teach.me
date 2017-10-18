@@ -1,0 +1,12 @@
+<h1>Welcome to <%= @ruby.name %> </h1>
+
+<h3>You've always had the power my Dear, you just had to learn it for yourself.</h3>
+<h5> - Glinda, the Good Witch of the South </h5>
+
+<ul>
+  <% @ruby.chapters.each do |chapter| %>
+  <li>
+    <%= chapter.name %>
+  </li>
+  <% end %>
+</ul>
