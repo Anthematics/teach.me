@@ -236,16 +236,16 @@ a.navbar-brand img {
   font-weight: bold;
 }
 
-// ------ Languages cards styling below -----
+// ------ Menu styling below -----
 
-.languages-container {
+.menu-container {
   display: grid;
   grid-template-columns: auto 200px 200px 200px auto;
   grid-template-rows: 80px 200px 300px auto;
   grid-column-gap: 100px;
   grid-row-gap: 25px;}
 
-.languages-page-title {
+.menu-page-title {
   text-align: center;
   grid-column-start: 2;
   grid-column-end: 5;
@@ -299,9 +299,38 @@ a.navbar-brand img {
   font-size: 2rem;
 }
 
-// ------ Main Menu styling below ------
-.main-menu {
+// ------ Languages page styling below ------
+.languages, .accordion {
   text-align: center;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion {
+    background-color: white;
+    color: #1495d5;
+    cursor: pointer;
+    padding: 5px;
+    width: 60%;
+    border-width: thick;
+    border-color: #1495d5;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover {
+    background-color: #1495d5;
+    color: white;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 // ------ Log in form styling below ------
