@@ -10,16 +10,21 @@ get '/callback' => 'sessions#callback'
 get '/oauth' => 'sessions#oauth'
 
 resource :user
-
-resources :languages
-
-resources :chapters
-
-resources :steps
-
 resources :welcome, only: [:index]
-
+resources :menu, only: [:index, :show]
 resources :sessions, only: [:new, :create, :destroy]
 
-resources :menu, only: [:index, :show]
+resources :languages, only: [:index, :show] do
+  resources :chapters, only: [:index, :show]  do
+    resources :steps, only: [:index, :show]
+  end
+end
+
+
+
+
+
+
+
+
 end

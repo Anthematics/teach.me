@@ -8,7 +8,10 @@
 
 User.destroy_all
 
-language = "Ruby"
+language = Language.create!(
+  name: "Ruby",
+  description: "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language"
+)
 
 user = User.create!(
   name: "Sean",
