@@ -9,7 +9,7 @@
 User.destroy_all
 
 ruby = Language.create!(
-  name: "Ruby",
+  name: "ruby",
   description: "Ruby is a dynamic, reflective, object-oriented, general-purpose programming language"
 )
 

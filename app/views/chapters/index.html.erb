@@ -1,1 +1,4 @@
-<h1>Ruby Modules</h1>
+<h1><%=@current_language.name%> Modules </h1>
+<% @current_language.chapters.each do |chapters| %>
+<li> <%=chapters.name%></li>
+<% end %>
