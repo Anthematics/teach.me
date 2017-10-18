@@ -24,7 +24,11 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/languages">Languages</a></li>
+          <% if current_user.present? %>
+            <li class="nav-item"><a class="nav-link" href="/languages">Languages</a></li>
+          <% else %>
+            <li class="nav-item"><a class="nav-link" href="/menu">What we teach</a></li>
+          <% end %>
           <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
         </ul>
         <p class="userinfo">

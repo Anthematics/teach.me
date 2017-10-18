@@ -1,9 +1,10 @@
 class MenuController < ApplicationController
-	before_action :current_user
+  before_action :current_user, only: [:show]
 
-	def index
-	end
+  def index
+    @current_user = User.new
+  end
 
-	def show
-	end
+  def show
+  end
 end
