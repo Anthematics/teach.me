@@ -1,10 +1,8 @@
 class ChaptersController < ApplicationController
-
+  before_action :current_user
   def index
-    @user = current_user
   end
 
   def show
-    @user = current_user
   end
 end
