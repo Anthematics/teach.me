@@ -1,8 +1,10 @@
 class LanguagesController < ApplicationController
-  def show
-  end
 
   def index
+    @user = current_user
+  end
+
+  def show
   end
 
 end
