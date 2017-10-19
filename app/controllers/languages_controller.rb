@@ -1,9 +1,8 @@
 class LanguagesController < ApplicationController
-  before_action :current_user
+  before_action :ensure_logged_in
   before_action :current_language, only: [:show ]
 
   def index
-    @current_user = User.new
   end
 
   def show

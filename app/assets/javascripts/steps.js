@@ -19,7 +19,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
       url: url,
       method: 'post',
       dataType: 'json',
-      data: code
+      data: {code: code}
     }).done(function(response) {
       console.log(response);
 
