@@ -327,58 +327,6 @@ a.navbar-brand img {
   text-align: center;
 }
 
-button.accordion {
-    background-color: white;
-    color: #1495d5;
-    cursor: pointer;
-    padding: 5px;
-    width: 60%;
-    border-width: thick;
-    border-color: #1495d5;
-    outline: none;
-    transition: 0.4s;
-    font-weight: bold;
-}
-
-button.accordion.active, button.accordion:hover {
-    background-color: #1495d5;
-    color: white;
-}
-
-div.panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-button.sub-accordion {
-    background-color: white;
-    color: #1495d5;
-    cursor: pointer;
-    padding: 5px;
-    width: 50%;
-    border-width: thick;
-    border-color: #1495d5;
-    outline: none;
-    transition: 0.4s;
-    font-weight: bold;
-}
-
-button.sub-accordion.active, button.sub-accordion:hover {
-    background-color: #1495d5;
-    color: white;
-}
-
-div.sub-panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
 // ------ Log in and Sign up form styling below ------
 .log-in-form, .sign-up-form {
   font-size: 1.5rem;
@@ -388,17 +336,29 @@ div.sub-panel {
   padding: 10px;
 }
 
+
+// ------ Temp Accordion styling below ------
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
 
 .gurjant {
     box-sizing: border-box;
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 300;
+    font-weight: 900;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .gurjant a {
     text-decoration: none;
-    color: inherit;
+    background-color: #1495d5;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    width: 60%;
+    border-width: thick;
+    border-color: #1495d5;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
 }
 
 .gurjant p {
@@ -422,9 +382,11 @@ div.sub-panel {
     padding: 0;
 
     .inner {
-        padding-left: 1em;
+        width: 80%;
+        margin: 0 auto;
         overflow: hidden;
         display: none;
+
 
         &.show {
           /*display: block;*/
@@ -434,20 +396,27 @@ div.sub-panel {
   li {
         margin: .5em 0;
 
+
         a.toggle {
             width: 100%;
             display: block;
-            background: rgba(0,0,0,0.78);
-            color: #fefefe;
-            padding: .75em;
+            background: white;
+            color: #1495d5;
+            padding: 2rem;
             border-radius: 0.15em;
+            border: 5px solid #1495d5;
             transition: background .3s ease;
-
-            &:hover {
-                background: rgba(0, 0, 0, 0.9);
-            }
         }
-    }
+        
+
+        a:focus, a:hover {
+                background: #1495d5;
+                color: white;
+        }
+
+
+      }
+
 }
 
 
