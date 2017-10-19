@@ -379,15 +379,78 @@ div.sub-panel {
     transition: max-height 0.2s ease-out;
 }
 
-// ------ Log in form styling below ------
-.log-in-form {
+// ------ Log in and Sign up form styling below ------
+.log-in-form, .sign-up-form {
   font-size: 1.5rem;
 }
 
-// ------ Sign up form styling below ------
-.sign-up-form {
-  font-size: 1.5rem;
+.github-button {
+  padding: 10px;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
+
+.gurjant {
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 300;
+}
+
+.gurjant a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gurjant p {
+    font-size:1.1em;
+    margin: 1em 0;
+}
+
+.gurjant .description {
+  margin: 1em auto 2.25em;
+}
+
+
+.gurjant h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 2.5em;
+}
+
+.gurjant ul {
+    list-style: none;
+    padding: 0;
+
+    .inner {
+        padding-left: 1em;
+        overflow: hidden;
+        display: none;
+
+        &.show {
+          /*display: block;*/
+        }
+    }
+
+  li {
+        margin: .5em 0;
+
+        a.toggle {
+            width: 100%;
+            display: block;
+            background: rgba(0,0,0,0.78);
+            color: #fefefe;
+            padding: .75em;
+            border-radius: 0.15em;
+            transition: background .3s ease;
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
+}
+
+
 // ------ Footer styling below ------
 footer {
   position: absolute;

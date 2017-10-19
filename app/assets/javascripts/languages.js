@@ -2,19 +2,19 @@
 // All this logic will automatically be available in application.js.
 document.addEventListener("DOMContentLoaded", function() {
 
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+  $('.toggle').click(function(e) {
+      e.preventDefault();
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight){
-        panel.style.maxHeight = null;
+      var $this = $(this);
+
+      if ($this.next().hasClass('show')) {
+          $this.next().removeClass('show');
+          $this.next().slideUp(350);
       } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      };
-    };
-  };
-
+          $this.parent().parent().find('li .inner').removeClass('show');
+          $this.parent().parent().find('li .inner').slideUp(350);
+          $this.next().toggleClass('show');
+          $this.next().slideToggle(350);
+      }
+  });
 });
