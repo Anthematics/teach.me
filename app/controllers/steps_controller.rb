@@ -11,14 +11,13 @@ class StepsController < ApplicationController
   def show
     @step = Step.find(params[:id])
 
-    @steps = Step.all
-    @user_steps = User.find(params[:id]).user_steps.all
+    @steps = current_language.chapters.find(params[:chapter_id]).steps.all
+    @user_steps = current_user.user_steps.count
 
     @total_steps = @steps.count
-    @user_finished_steps_count = @user_steps.count
 
-    @progress = (@user_finished_steps_count/@total_steps) * 100
-
+    @progress = ((@user_steps.to_f/@total_steps.to_f) * 100).to_i
+		
   end
 
   def create
