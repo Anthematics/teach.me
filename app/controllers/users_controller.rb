@@ -1,3 +1,5 @@
+require 'httparty'
+
 class UsersController < ApplicationController
   protect_from_forgery except: :submitcode
 
@@ -19,6 +21,13 @@ class UsersController < ApplicationController
   end
 
   def submitcode
+     @usercode = params[:code]
+     @step = Step.find(params[:step_id])
+     @step.code_tests.each do |test|
+       @testcode = @usercode + "\n" + test.input
+
+     end
+    # response = HTTParty.get("")
      render json: 'ok'
   end
 

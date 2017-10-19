@@ -1,7 +1,5 @@
-require 'httparty'
-
 class StepsController < ApplicationController
-	before_action :current_user
+	before_action :ensure_logged_in
 	before_action :current_language, only: [:show, :index]
 	def index
 	end
@@ -15,7 +13,7 @@ class StepsController < ApplicationController
 	end
 
 	def create
-		
+
 	end
 
 	def current_language

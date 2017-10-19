@@ -2,7 +2,7 @@
 
 <%= form_for @step, url:"https://codeapi.herokuapp.com/code/ruby", html: { id: 'submitcode'}, remote: true, :action => language_chapter_step_path, :method => :post do |f| %>
 <%= f.label :'Write your code here' %>
-<%= f.hidden_field :url, value: "/user/#{current_user.id}/step/#{params[:id]}/submitcode" %>
+<%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
 
 <%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
 <%= f.submit 'Test Your Code', name:'Test' %>
