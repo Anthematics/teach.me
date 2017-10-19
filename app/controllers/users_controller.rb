@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  protect_from_forgery except: :submitcode
 
   def new
   end
@@ -15,6 +16,10 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def submitcode
+     render json: 'ok'
   end
 
   def show

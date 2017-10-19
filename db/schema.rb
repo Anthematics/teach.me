@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171018040603) do
+ActiveRecord::Schema.define(version: 20171018191127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,9 +18,19 @@ ActiveRecord::Schema.define(version: 20171018040603) do
   create_table "chapters", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.bigint "language_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "language_id"
+    t.index ["language_id"], name: "index_chapters_on_language_id"
+  end
+
+  create_table "code_tests", force: :cascade do |t|
+    t.bigint "step_id"
+    t.string "input"
+    t.string "output"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["step_id"], name: "index_code_tests_on_step_id"
   end
 
   create_table "languages", force: :cascade do |t|
@@ -36,9 +46,17 @@ ActiveRecord::Schema.define(version: 20171018040603) do
     t.bigint "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "code"
-    t.integer "user_id"
     t.index ["chapter_id"], name: "index_steps_on_chapter_id"
+  end
+
+  create_table "user_steps", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "step_id"
+    t.text "userCode"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["step_id"], name: "index_user_steps_on_step_id"
+    t.index ["user_id"], name: "index_user_steps_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,24 +67,4 @@ ActiveRecord::Schema.define(version: 20171018040603) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users_chapters", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "chapters_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["chapters_id"], name: "index_users_chapters_on_chapters_id"
-    t.index ["users_id"], name: "index_users_chapters_on_users_id"
-  end
-
-  create_table "users_steps", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "steps_id"
-    t.boolean "completion"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["steps_id"], name: "index_users_steps_on_steps_id"
-    t.index ["users_id"], name: "index_users_steps_on_users_id"
-  end
-
-  add_foreign_key "steps", "chapters"
 end

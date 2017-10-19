@@ -8,6 +8,7 @@ root 'welcome#index'
 
 get '/callback' => 'sessions#callback'
 get '/oauth' => 'sessions#oauth'
+post '/user/:id/step/:step_id/submitcode' => 'users#submitcode', as: 'submitcode' 
 # get '/languages/ruby' => 'languages#ruby'
 
 resource :user
