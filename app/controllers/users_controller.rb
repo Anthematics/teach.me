@@ -36,7 +36,7 @@ class UsersController < ApplicationController
         end
       end
     if @total_test == @valid
-      @user_steps = UserStep.create(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode)
+      @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode)
       puts @user_steps
       render json: {message: "Congrualtions, you pass this Step!"}
     else
