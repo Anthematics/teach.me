@@ -1,3 +1,59 @@
 // Place all the styles related to the languages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// ------ Languages page styling below ------
+.languages, .accordion, .sub-accordion {
+  text-align: center;
+}
+
+button.accordion {
+    background-color: white;
+    color: #1495d5;
+    cursor: pointer;
+    padding: 5px;
+    width: 60%;
+    border-width: thick;
+    border-color: #1495d5;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #1495d5;
+    color: white;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+button.sub-accordion {
+    background-color: white;
+    color: #1495d5;
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border-width: thick;
+    border-color: #1495d5;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.sub-accordion.active, button.sub-accordion:hover {
+    background-color: #1495d5;
+    color: white;
+}
+
+div.sub-panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
