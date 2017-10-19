@@ -17,6 +17,8 @@ class StepsController < ApplicationController
     @total_steps = @steps.count
     @user_finished_steps_count = @user_steps.count
 
+    @progress = (@user_finished_steps_count/@total_steps) * 100
+
   end
 
   def create
