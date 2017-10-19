@@ -1,22 +1,31 @@
 class StepsController < ApplicationController
-	before_action :ensure_logged_in
-	before_action :current_language, only: [:show, :index]
-	def index
-	end
+  before_action :ensure_logged_in
+  before_action :current_language, only: [:show, :index]
+  def index
+  end
 
-	def new
-		@step = Step.new
-	end
+  def new
+    @step = Step.new
+  end
 
-	def show
-		@step = Step.find(params[:id])
-	end
+  def show
+    @step = Step.find(params[:id])
 
-	def create
+    @steps = Step.all
+    @user_steps = User.find(params[:id]).user_steps.all
 
-	end
+    @total_steps = @steps.count
+    @user_finished_steps_count = @user_steps.count
 
-	def current_language
+    @progress = (@user_finished_steps_count/@total_steps) * 100
+
+  end
+
+  def create
+
+  end
+
+  def current_language
     @current_language = Language.find_by! name: params[:language_language_id]
   end
 

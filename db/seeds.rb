@@ -21,8 +21,8 @@ user = User.create!(
 )
 
 5.times do |i|
-  mode = ruby.chapters.create(name: "Module #{i.to_s}", description: "Yolo")
+  mode = ruby.chapters.create(name: "Module #{(i+1).to_s}", description: "Yolo")
   5.times do |i|
-    mode.steps.create(name: "Steps #{i.to_s}", description: "Please solve this step.. yolo")
+    mode.steps.create(name: "Steps #{(i+1).to_s}", description: "Please solve this step.. yolo")
   end
 end
