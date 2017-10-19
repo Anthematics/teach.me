@@ -1,29 +1,17 @@
-# # require 'test_helper'
-# #
-# # class LanguagesControllerTest < ActionDispatch::IntegrationTest
-# # 	test "should get show" do
-# # 		get languages_show_url
-# # 		assert_response :success
-# # 	end
-# #
-# # 	test "should get new" do
-# # 		get languages_new_url
-# # 		assert_response :success
-# # 	end
-# #
-# # 	test "should get edit" do
-# # 		get languages_edit_url
-# # 		assert_response :success
-# # 	end
-# #
-# # 	test "should get create" do
-# # 		get languages_create_url
-# # 		assert_response :success
-# # 	end
-# #
-# # 	test "should get update" do
-# # 		get languages_update_url
-# # 		assert_response :success
-# # 	end
-# #
-# # end
+require 'test_helper'
+
+class LanguagesControllerTest < ActionDispatch::IntegrationTest
+	test "should get show" do
+		get 'http://localhost:3000/languages/1/'
+		assert_response :success
+	end
+
+#show needs to be rewritten to reflect new routes.
+
+	test "should get languages index " do
+		get 'http://localhost:3000/languages'
+		assert_response :success
+	end
+
+#index needs rewriting (routes)
+end
