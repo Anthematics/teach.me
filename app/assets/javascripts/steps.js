@@ -18,11 +18,15 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
     $.ajax({
       url: url,
       method: 'post',
-      dataType: 'json',
+      dataType: "json",
       data: {code: code}
     }).done(function(response) {
       console.log(response);
+      $('#results').html(response.message)
 
+    }).error(function(stuff) {
+      console.log('error!');
+      console.log(stuff);
     })
   });
 });
