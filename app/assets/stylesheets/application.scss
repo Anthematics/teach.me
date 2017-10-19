@@ -22,6 +22,10 @@
 html {
   font-family: monospace, serif, sans-serif;
 }
+
+body {
+  height: 100%;
+}
 //
 // body:before {
 //   content: ' ';
@@ -45,10 +49,14 @@ html {
 // ------ Navbar styling below ------
 a.navbar-brand img {
   display: block;
-  max-width:100px;
+  max-width:50%;
   max-height:100%;
-  width: auto;
+  width: 50%;
   height: auto;
+}
+
+.navbar-brand {
+  padding: 0;
 }
 
 .navbar {
@@ -62,6 +70,10 @@ a.navbar-brand img {
 
 .nav-item {
   margin: 0 4rem;
+}
+
+.userinfo {
+  float: right;
 }
 
 .navbar-toggler {
@@ -300,11 +312,10 @@ a.navbar-brand img {
 }
 
 // ------ Languages page styling below ------
-.languages, .accordion {
+.languages, .accordion, .sub-accordion {
   text-align: center;
 }
 
-/* Style the buttons that are used to open and close the accordion panel */
 button.accordion {
     background-color: white;
     color: #1495d5;
@@ -318,14 +329,38 @@ button.accordion {
     font-weight: bold;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
     background-color: #1495d5;
     color: white;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+button.sub-accordion {
+    background-color: white;
+    color: #1495d5;
+    cursor: pointer;
+    padding: 5px;
+    width: 50%;
+    border-width: thick;
+    border-color: #1495d5;
+    outline: none;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.sub-accordion.active, button.sub-accordion:hover {
+    background-color: #1495d5;
+    color: white;
+}
+
+div.sub-panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
