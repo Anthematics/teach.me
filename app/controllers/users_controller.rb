@@ -23,12 +23,25 @@ class UsersController < ApplicationController
   def submitcode
      @usercode = params[:code]
      @step = Step.find(params[:step_id])
+     @total_test = @step.code_tests.count
+     @valid = 0
      @step.code_tests.each do |test|
-       @testcode = @usercode + "\n" + test.input
-
-     end
-    # response = HTTParty.get("")
-     render json: 'ok'
+     @testcode = @usercode + "\n print " + test.input
+       response = HTTParty.post("https://codeapi.herokuapp.com/code/ruby",:body => {:step => {:code => @testcode}})
+        body = JSON.parse(response.body)
+        puts body.to_s
+        puts test.output
+        if body.to_s == test.output
+          @valid += 1
+        end
+      end
+    if @total_test == @valid
+      @user_steps = UserStep.create(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode)
+      puts @user_steps
+      render json: {message: "Congrualtions, you pass this Step!"}
+    else
+      render json: "Try again!, you passed #{@valid} test out of #{@total_test}."
+    end
   end
 
   def show
