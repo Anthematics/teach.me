@@ -16,5 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
           $this.next().toggleClass('show');
           $this.next().slideToggle(350);
       }
+
   });
 });

@@ -340,7 +340,7 @@ a.navbar-brand img {
 // ------ Temp Accordion styling below ------
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
 
-.gurjant {
+.accordion {
     box-sizing: border-box;
     font-weight: 900;
     width: 60%;
@@ -362,19 +362,9 @@ a.navbar-brand img {
 }
 
 .gurjant p {
-    font-size:1.1em;
+    font-size:1em;
     margin: 1em 0;
-}
-
-.gurjant .description {
-  margin: 1em auto 2.25em;
-}
-
-
-.gurjant h1 {
-    font-family: 'Pacifico', cursive;
-    font-weight: 400;
-    font-size: 2.5em;
+    text-align: left;
 }
 
 .gurjant ul {
@@ -386,16 +376,20 @@ a.navbar-brand img {
         margin: 0 auto;
         overflow: hidden;
         display: none;
+    }
 
+    .sub-accordion.active a.toggle.title {
+      background: #1495d5;
+      color: white;
+    }
 
-        &.show {
-          /*display: block;*/
-        }
+    .inner.show li a.toggle.subtitle {
+      background: #1495d5;
+      color: white;
     }
 
   li {
         margin: .5em 0;
-
 
         a.toggle {
             width: 100%;
@@ -407,16 +401,20 @@ a.navbar-brand img {
             border: 5px solid #1495d5;
             transition: background .3s ease;
         }
-        
 
-        a:focus, a:hover {
+        a.toggle.title {
+          font-size: 3rem;
+        }
+
+        a.toggle.sub-title {
+          font-size: 2rem;
+        }
+
+        a.show, a:hover {
                 background: #1495d5;
                 color: white;
         }
-
-
       }
-
 }
 
 
