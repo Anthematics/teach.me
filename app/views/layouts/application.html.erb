@@ -14,6 +14,7 @@
   <head>
 
   <main>
+
 <!--
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#">Navbar w/ text</a>
@@ -55,19 +56,22 @@
             <li class="nav-item"><a class="nav-link" href="/menu">What we teach</a></li>
           <% end %>
           <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
-        </ul>
-        <p class="userinfo">
+            </ul>
+          <ul class="navbar-nav">
 
+          <form class="form-inline my-2 my-lg-0" style="text-align: right !important;">
           <%if current_user.present? %>
-            Signed in as <%= current_user.email%>. <%=link_to "Log out", session_path("current"), :method => :delete%>
+            <li class="nav-item"> <span class="badge badge-pill badge-primary"> <%= current_user.name[0]%></span></li>
+            <li class="nav-item"><%=link_to "Log out", session_path("current"), :method => :delete, class: "nav-link"%></li>
           <% else %>
-          <form class="form-inline my-2 my-lg-0">
+
             <button id='signup' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
             <button id='login' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#logInModal">Log in</button>
           </form>
           <% end %>
-        </p>
-      </div>
+        </div>
+
+        </ul>
     </nav>
 
     <body>
