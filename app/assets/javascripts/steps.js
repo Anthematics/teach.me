@@ -13,7 +13,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
 
   $('#savecode').on('click', function(e) {
     var next = document.querySelector('#next');
-    next.style.display = "block";
+
     e.preventDefault();
     var code = $('.codemirror-textarea').val();
     var url = $('#step_url').val();
@@ -25,16 +25,18 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
     }).done(function(response) {
       console.log(response);
       $('#results').html(response.message)
-
+        if (response.pass){
+        next.style.display = "block";
+        console.log(response.url);
+      };
     }).error(function(stuff) {
       console.log('error!');
       console.log(stuff);
     })
   });
-
   $('#next').on('click', function(e){
-    window.location.href="http://localhost:3000/languages/ruby/chapters/1/steps/2"
-  })
+  window.location.href="http://localhost:3000/languages/ruby/chapters/1/steps/2"
+})
 
 
 });
