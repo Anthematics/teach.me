@@ -13,7 +13,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
 
   $('#savecode').on('click', function(e) {
     var next = document.querySelector('#next');
-    next.style.display = 'block';
+    next.style.display = "block";
     e.preventDefault();
     var code = $('.codemirror-textarea').val();
     var url = $('#step_url').val();
