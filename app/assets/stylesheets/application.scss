@@ -37,6 +37,10 @@ main {
 
 
 // ------ Navbar styling below ------
+.userinfo {
+  text-align: right;
+}
+
 a.navbar-brand img {
   width: 200px;
   height: auto;
@@ -62,6 +66,15 @@ a.navbar-brand img {
 .navbar-toggler {
   width: 50px;
   height: 50px;
+}
+
+.badge {
+  height: 50px;
+  width: 50px;
+}
+
+.badge-primary {
+  background-color: #1495d5;
 }
 
 .form-inline {
@@ -109,6 +122,18 @@ a.navbar-brand img {
   position: absolute;
   bottom: 10%;
   font-size: 3rem;
+  position: absolute;
+  bottom: 10%;
+  font-size: 3rem;
+  right: 15%;
+  left: 15%;
+  background: rgba(255, 255, 255, 0.6);
+  padding-bottom: 15px;
+}
+
+.carousel-caption h3, .carousel-caption p {
+  color: black;
+  font-weight: bold;
 }
 
 .carousel-item img {
@@ -146,23 +171,26 @@ a.navbar-brand img {
    padding: 3% 0;
  }
 
-.col-md-2 {
-  width: auto;
+.col-md-6 {
+  margin: 0 auto;
 }
 
-.col-md-4.left.image, .col-md-4.right.image, .col-md-4.left.text, .col-md-4.right.text {
+.col-md-6.left.image, .col-md-6.right.image, .col-md-6.left.text, .col-md-6.right.text {
   min-width: 450px;
   height: 300px;
   display: inline-block;
   position: relative;
 }
 
-.col-md-4.left.image img, .col-md-4.right.image img {
+.col-md-6.left.image img, .col-md-6.right.image img {
   width: auto;
   height: 300px;
   top: 0;
   left: 0;
+  // margin-left: 5%;
 }
+
+
 
 .homepage-end {
   padding-bottom: 100px;
@@ -190,7 +218,15 @@ a.navbar-brand img {
   font-size: 3rem;
   right: 15%;
   left: 15%;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.8);
+  padding-bottom: 15px;
+}
+//
+h1 .card-title {
+  font-weight: bold;
+}
+h2 .card-text {
+  font-weight: bold;
 }
 
 .col.menu {
@@ -266,6 +302,15 @@ a.navbar-brand img {
 .languages, .accordion, .sub-accordion {
   text-align: center;
 }
+
+.languages-tagline {
+  margin-top: 25px;
+}
+
+.languages-tagline h2 {
+  font-weight: bold;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
 
 .accordion {
@@ -324,18 +369,18 @@ a.navbar-brand img {
             display: block;
             background: white;
             color: #1495d5;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 0.15em;
             border: 5px solid #1495d5;
             transition: background .3s ease;
         }
 
         a.toggle.title {
-          font-size: 3rem;
+          font-size: 2rem;
         }
 
         a.toggle.sub-title {
-          font-size: 2rem;
+          font-size: 1.25rem;
         }
 
         a.show, a:hover {
@@ -357,8 +402,74 @@ a.navbar-brand img {
 
 
 // ------ Steps terminal and console panel stying below ------
-#steps-left-panel {
+.chapter-title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.chapter-title h2 {
+  font-weight: bold;
+}
+
+#steps-left-panel, #steps-right-panel {
   box-shadow: 10px 10px 10px #d4d4d8;
+}
+
+#submitcode {
+  border: 2px solid #1494d5;
+  padding: 5%;
+}
+
+.test-code, .submit-code {
+  margin-top: 25px;
+}
+
+.row.test-code, .row.submit-code {
+  margin: 0;
+  padding: 0;
+}
+
+.row.steps-panel {
+  padding-top: 0;
+}
+
+.test-code p, .submit-code p {
+  float: left;
+  margin-bottom: 0;
+}
+
+.test-code-button, .submit-code-button {
+  float: right;
+}
+
+#result {
+  border: 2px solid #1495d5;
+  height: 100px;
+  padding: 1%;
+}
+
+.CodeMirror-scroll {
+  background-color: #e0e0e5;
+}
+
+.CodeMirror.cim-s-default {
+  margin-bottom: 25px;
+}
+
+#steps-box {
+  padding: 3%;
+  height: 98%;
+}
+.steps h3 {
+  font-weight: bold;
+}
+
+.languages-link {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 50px;
 }
 
 // ------ Footer styling below ------
@@ -371,5 +482,5 @@ footer {
   background-color: #1495d5;
   font-size: 1rem;
   padding-top: 20px;
-  bottom: 0;
+  bottom: -60px;
 }
