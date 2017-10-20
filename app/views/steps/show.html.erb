@@ -2,31 +2,39 @@
 <div class="progress">
   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@progress%>%" aria-valuenow="<%=@progress%>" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
-<%= form_for @step, url:"https://codeapi.herokuapp.com/code/ruby", html: { id: 'submitcode'}, remote: true, :action => language_chapter_step_path, :method => :post do |f| %>
-<%= f.label :'Write your code here' %>
-<%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
 
-<%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
-<%= f.submit 'Test Your Code', name:'Test' %>
-<% end %>
-<br>
-<button id="savecode">Submit Your Code</button>
+<div class="row steps-panel">
 
-<h2>Results</h2>
-<div id="result">
-</div>
+  <div class="col-md-8 steps" id="steps-left-panel">
+    <%= form_for @step, url:"https://codeapi.herokuapp.com/code/ruby", html: { id: 'submitcode'}, remote: true, :action => language_chapter_step_path, :method => :post do |f| %>
+    <%= f.label :'Write your code here' %>
+    <%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
 
-<div class="terminalresults">
-  <p id="results"></p>
-</div>
-<br>
-<br>
+    <%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
+    <%= f.submit 'Test Your Code', name:'Test' %>
+    <% end %>
+    <br>
+    <button id="savecode">Submit Your Code</button>
 
-<button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
+    <h2>Results</h2>
+    <div id="result">
+    </div>
 
-<div class="steps" style="border: 2px solid red">
-  <h2>Step: <%= @step.id %> </h2>
-  <h2><%= @step.name%></h2>
-  <h2>Description: <%= @step.description %></h2>
+    <div class="terminalresults">
+      <p id="results"></p>
+    </div>
+    <br>
+    <br>
+  </div>
 
+  <div class="col-md-4 steps" id="steps-right-panel">
+    <button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
+
+    <div class="steps" style="border: 2px solid red">
+      <h2>Step: <%= @step.id %> </h2>
+      <h2><%= @step.name%></h2>
+      <h2>Description: <%= @step.description %></h2>
+
+    </div>
+  </div>
 </div>
