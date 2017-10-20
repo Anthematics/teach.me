@@ -18,7 +18,7 @@
 
 //= require_tree .
 //= require bootstrap-sprockets
-
+//
 document.addEventListener("DOMContentLoaded", function() {
 
   var signUp = document.querySelector('#signup');
