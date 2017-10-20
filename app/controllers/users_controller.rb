@@ -3,6 +3,7 @@ require 'httparty'
 class UsersController < ApplicationController
   protect_from_forgery except: :submitcode
 
+
   def new
   end
 
@@ -43,7 +44,8 @@ class UsersController < ApplicationController
       else
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode)
       end
-      url = reponse.domian + "/languages/" + current_language.name + "/chapters" + "/#{params[:chapter_id]}" + "/steps/" + (@step.id + 1)
+
+      url =  "/languages/" + @step.chapter.language.name + "/chapters/" + @step.chapter.id.to_s + "/steps/" + (@step.id + 1).to_s
       render json: {message: "Congrualtions, you pass this Step!", pass: true, url: url}
     else
       render json: {message: "Try again!, you passed #{@valid} test out of #{@total_test}.", pass:false}
@@ -51,6 +53,10 @@ class UsersController < ApplicationController
   end
 
   def show
+  end
+
+  def current_language
+    @current_language = Language.find_by! name: params[:language_language_id]
   end
 
 end

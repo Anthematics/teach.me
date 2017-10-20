@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
      lineNumbers :true,
      mode: "text/x-ruby"
   });
-
+$('#loader').css("display", "none")
 
 $('#submitcode').on("ajax:success",function(e, data,status,xhr){
  $('#result').html(e.detail[0]);
@@ -13,7 +13,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
 
   $('#savecode').on('click', function(e) {
     var next = document.querySelector('#next');
-
+    $('#loader').css("display","block")
     e.preventDefault();
     var code = $('.codemirror-textarea').val();
     var url = $('#step_url').val();
@@ -25,18 +25,22 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
     }).done(function(response) {
       console.log(response);
       $('#results').html(response.message)
-        if (response.pass){
+      if (response.pass){
         next.style.display = "block";
-        console.log(response.url);
+        $('#loader').css("display", "none")
+
+        $('#next').on('click', function(e){
+          window.location.href=response.url
+        })
       };
-    }).error(function(stuff) {
+    }).fail(function(response) {
+      $('#loader').css("display", "none")
+      $('#results').html(response.message)
       console.log('error!');
-      console.log(stuff);
+    
     })
   });
-  $('#next').on('click', function(e){
-  window.location.href="http://localhost:3000/languages/ruby/chapters/1/steps/2"
-})
+
 
 
 });
