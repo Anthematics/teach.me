@@ -20,12 +20,7 @@ user = User.create!(
   email: "sean@email.com"
 )
 
-5.times do |i|
-  mode = ruby.chapters.create(name: "Module #{(i+1).to_s}", description: "Yolo")
-  5.times do |i|
-    mode.steps.create(name: "Steps #{(i+1).to_s}", description: "Please solve this step.. yolo")
-  end
-end
+
 
 chapter1 = Chapter.create!(
   name: "Module1: Variables",
@@ -66,6 +61,10 @@ step1 = Step.create!(
   description: "There are multiple datatypes  are two types of numbers as data types 1) Integers (Whole Numbers)  and 2) Floats (or floating points aka numbers with decimals). In the datatypes chapter we will be executing some basic mathematical operations.",
   chapter: chapter1
 )
+step1.code_tests.create(input: "add(2,5)",output: "7")
+step1.code_tests.create(input: "add(5,5)",output: "10")
+step1.code_tests.create(input: "add(12,5)",output: "17")
+
 step2 = Step.create!(
   name: "Control Structures",
   description: "manage a program's control flow, allowing you to either execute or skip a block of code based on a condition that evaluates to true or false",
