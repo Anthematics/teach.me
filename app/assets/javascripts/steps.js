@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
    var code = $('.codemirror-textarea')[0];
    var editor = CodeMirror.fromTextArea(code, {
-   	lineNumbers :true,
-   	mode: "text/x-ruby"
+     lineNumbers :true,
+     mode: "text/x-ruby"
   });
 
 
@@ -12,6 +12,8 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
 
 
   $('#savecode').on('click', function(e) {
+    var next = document.querySelector('#next');
+    next.style.display = "block";
     e.preventDefault();
     var code = $('.codemirror-textarea').val();
     var url = $('#step_url').val();
@@ -29,4 +31,6 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
       console.log(stuff);
     })
   });
+
+
 });

@@ -28,11 +28,13 @@
   </div>
 
   <div class="col-md-4 steps" id="steps-right-panel">
+    <button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
+
     <div class="steps" style="border: 2px solid red">
       <h2>Step: <%= @step.id %> </h2>
       <h2><%= @step.name%></h2>
       <h2>Description: <%= @step.description %></h2>
-    </div>
 
+    </div>
   </div>
 </div>
