@@ -28,6 +28,7 @@ class UsersController < ApplicationController
      @step.code_tests.each do |test|
      @testcode = @usercode + "\n print " + test.input
        response = HTTParty.post("https://codeapi.herokuapp.com/code/ruby",:body => {:step => {:code => @testcode}})
+
         body = JSON.parse(response.body)
         puts body.to_s
         puts test.output
@@ -35,8 +36,14 @@ class UsersController < ApplicationController
           @valid += 1
         end
       end
+
     if @total_test == @valid
+      if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present?
+        @user_steps = UserStep.first.update_attributes(userCode: @usercode)
+        puts @user_steps
+      else
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode)
+      end
       puts @user_steps
       render json: {message: "Congrualtions, you pass this Step!"}
     else
