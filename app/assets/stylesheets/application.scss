@@ -35,29 +35,7 @@ main {
   min-height: 100%;
 }
 
-body {
-  padding-bottom:80px;
-}
-//
-// body:before {
-//   content: ' ';
-//   display: block;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   width: 100%;
-//   height: 100%;
-//   z-index: 1;
-//   opacity: 0.6;
-//   background-image: url('https://static.pexels.com/photos/249798/pexels-photo-249798.png');
-//   background-repeat: no-repeat;
-//   background-position: 50% 0;
-//   -ms-background-size: cover;
-//   -o-background-size: cover;
-//   -moz-background-size: cover;
-//   -webkit-background-size: cover;
-//   background-size: cover;
-// }
+
 // ------ Navbar styling below ------
 a.navbar-brand img {
   width: 200px;
@@ -106,110 +84,6 @@ a.navbar-brand img {
 
 
 // ------ Homepage styling below ------
-
-// .front-page-container {
-//   display: grid;
-//   grid-template-columns: auto 40% 100px 40% auto;
-//   grid-template-rows: 800px 50px 100px 50px 400px 50px 400px 50px 400px 50px 100px auto;
-//   grid-column-gap: 25px;
-//   grid-row-gap: 25px;}
-//
-// .carousel-item {
-//   text-align: center;
-//   grid-column-start: 2;
-//   grid-column-end: 5;
-//   grid-row-start: 1;
-//   grid-row-end: 2;
-//   justify-self: stretch;
-//   align-self: stretch;
-// }
-//
-// #front-page-intro-head {
-//   text-align: center;
-//   grid-column-start: 2;
-//   grid-column-end: 5;
-//   grid-row-start: 3;
-//   grid-row-end: 4;
-//   justify-self: stretch;
-//   align-self: stretch;
-// }
-//
-// #front-page-image-1 {
-//   grid-column-start: 2;
-//   grid-column-end: 3;
-//   grid-row-start: 5;
-//   grid-row-end: 6;
-//   align-self: stretch;
-//   justify-self: end;
-//   max-width: 80%;
-//   height: auto;
-// }
-//
-// #front-page-feature-text-1 {
-//   grid-column-start: 4;
-//   grid-column-end: 5;
-//   grid-row-start: 5;
-//   grid-row-end: 6;
-//   justify-self: start;
-//   align-content: stretch;
-//   max-width: 80%;
-//   height: auto;
-// }
-//
-// #front-page-image-2 {
-//   grid-column-start: 4;
-//   grid-column-end: 5;
-//   grid-row-start: 7;
-//   grid-row-end: 8;
-//   align-self: stretch;
-//   justify-self: start;
-//   max-width: 80%;
-//   height: auto;
-// }
-//
-// #front-page-feature-text-2 {
-//   grid-column-start: 2;
-//   grid-column-end: 3;
-//   grid-row-start: 7;
-//   grid-row-end: 8;
-//   justify-self: end;
-//   align-content: stretch;
-//   max-width: 80%;
-//   height: auto;
-// }
-//
-// #front-page-image-3 {
-//   grid-column-start: 2;
-//   grid-column-end: 3;
-//   grid-row-start: 9;
-//   grid-row-end: 10;
-//   align-self: stretch;
-//   justify-self: end;
-//   max-width: 80%;
-//   height: auto;
-// }
-//
-// #front-page-feature-text-3 {
-//   grid-column-start: 4;
-//   grid-column-end: 5;
-//   grid-row-start: 9;
-//   grid-row-end: 10;
-//   justify-self: start;
-//   align-content: stretch;
-//   max-width: 80%;
-//   height: auto;
-// }
-//
-// #front-page-intro-tail {
-//   text-align: center;
-//   grid-column-start: 2;
-//   grid-column-end: 5;
-//   grid-row-start: 11;
-//   grid-row-end: 12;
-//   justify-self: stretch;
-//   align-self: stretch;
-// }
-
 .banner,
 .sign-up-form,
 .log-in-form, {
@@ -268,7 +142,6 @@ a.navbar-brand img {
 
 .row {
    margin: 5%;
-  //  border: 5px solid black;
  }
 
 .col-md-2 {
@@ -294,50 +167,58 @@ a.navbar-brand img {
 }
 
 // ------ Menu styling below -----
-
-.menu-container {
-  display: grid;
-  grid-template-columns: auto 200px 200px 200px auto;
-  grid-template-rows: 80px 200px 300px auto;
-  grid-column-gap: 100px;
-  grid-row-gap: 25px;}
-
 .menu-page-title {
+  margin: 5%;
   text-align: center;
-  grid-column-start: 2;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 3,
 }
 
+.col.menu {
+  margin-bottom: 5%;
+}
+
+// .menu-container {
+//   display: grid;
+//   grid-template-columns: auto 200px 200px 200px auto;
+//   grid-template-rows: 80px 200px 300px auto;
+//   grid-column-gap: 100px;
+//   grid-row-gap: 25px;}
+//
+// .menu-page-title {
+//   text-align: center;
+//   grid-column-start: 2;
+//   grid-column-end: 5;
+//   grid-row-start: 1;
+//   grid-row-end: 3,
+// }
+//
 .card-img-top {
   height: 200px;
 }
 
-#ruby-card {
-  text-align: center;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  align-self: stretch;
-}
-
-#js-card {
-  text-align: center;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4,
-}
-
-#python-card {
-  text-align: center;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 4,
-}
+// #ruby-card {
+//   text-align: center;
+//   grid-column-start: 2;
+//   grid-column-end: 3;
+//   grid-row-start: 3;
+//   grid-row-end: 4;
+//   align-self: stretch;
+// }
+//
+// #js-card {
+//   text-align: center;
+//   grid-column-start: 3;
+//   grid-column-end: 4;
+//   grid-row-start: 3;
+//   grid-row-end: 4,
+// }
+//
+// #python-card {
+//   text-align: center;
+//   grid-column-start: 4;
+//   grid-column-end: 5;
+//   grid-row-start: 3;
+//   grid-row-end: 4,
+// }
 
 .languages-cards {
   width: 20rem;
@@ -351,27 +232,19 @@ a.navbar-brand img {
 .card-body {
   opacity: 0;
   position: absolute;
-  width: 20rem;
+  width: 15rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
+}
+
+.card-image {
+  width: 15rem;
 }
 
 // ------ Languages page styling below ------
 .languages, .accordion, .sub-accordion {
   text-align: center;
 }
-
-// ------ Log in and Sign up form styling below ------
-.log-in-form, .sign-up-form {
-  font-size: 1.5rem;
-}
-
-.github-button {
-  padding: 10px;
-}
-
-
-// ------ Temp Accordion styling below ------
 @import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
 
 .accordion {
@@ -452,15 +325,25 @@ a.navbar-brand img {
 }
 
 
+// ------ Log in and Sign up form styling below ------
+.log-in-form, .sign-up-form {
+  font-size: 1.5rem;
+}
+
+.github-button {
+  padding: 10px;
+}
+
+
 // ------ Footer styling below ------
 footer {
   position: absolute;
-  bottom: -80px;;
+  bottom: 0;
   width: 100%;
   height: 60px;
   text-align: center;
   color: white;
   background-color: #1495d5;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-top: 20px;
 }
