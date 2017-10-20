@@ -47,7 +47,7 @@ a.navbar-brand img {
 }
 
 .navbar {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .navbar-nav.mr-auto {
@@ -107,14 +107,14 @@ a.navbar-brand img {
 
 .carousel-caption {
   position: absolute;
-  bottom: 20%;
+  bottom: 10%;
   font-size: 3rem;
 }
 
 .carousel-item img {
   margin: 0 auto;
-  max-width: 90%;
-  height: auto;
+  max-width: 1500px;
+  height: 800px;
 }
 
 .signupnow {
@@ -141,7 +141,9 @@ a.navbar-brand img {
 }
 
 .row {
-   margin: 5%;
+   margin: 3%;
+   box-shadow: 10px 10px 10px #d4d4d8;
+   padding: 3% 0;
  }
 
 .col-md-2 {
@@ -168,8 +170,27 @@ a.navbar-brand img {
 
 // ------ Menu styling below -----
 .menu-page-title {
-  margin: 5%;
   text-align: center;
+}
+
+.card-img {
+  margin: 0 auto;
+  max-width: 1500px;
+  height: 800px;
+  position: relative;
+}
+
+.card-img-overlay {
+  position: relative;
+}
+
+.menu-intro-caption {
+  position: absolute;
+  bottom: 10%;
+  font-size: 3rem;
+  right: 15%;
+  left: 15%;
+  background-color: white;
 }
 
 .col.menu {
@@ -338,7 +359,6 @@ a.navbar-brand img {
 // ------ Footer styling below ------
 footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
   height: 60px;
   text-align: center;
