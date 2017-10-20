@@ -40,14 +40,13 @@ class UsersController < ApplicationController
     if @total_test == @valid
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present?
         @user_steps = UserStep.first.update_attributes(userCode: @usercode)
-        puts @user_steps
       else
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode)
       end
-      puts @user_steps
-      render json: {message: "Congrualtions, you pass this Step!"}
+      url = reponse.domian + "/languages/" + current_language.name + "/chapters" + "/#{params[:chapter_id]}" + "/steps/" + (@step.id + 1)
+      render json: {message: "Congrualtions, you pass this Step!", pass: true, url: url}
     else
-      render json: "Try again!, you passed #{@valid} test out of #{@total_test}."
+      render json: {message: "Try again!, you passed #{@valid} test out of #{@total_test}.", pass:false}
     end
   end
 
