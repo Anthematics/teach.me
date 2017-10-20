@@ -1,5 +1,13 @@
+<div class="chapter-title">
+  <h2>Ruby - Chapter 1 - Variables</h2>
+  <br>
+  <p>In this lesson, you will learn about different typees of variables in Ruby.</p>
+  <p>At the end of this chapter, pratice with our fun exercises to test your knowledge, and you will be a Ruby variables expert in no time!</p>
+</div>
 
-<div class="progress">
+<br>
+
+<div class="progress" style="width: 70%; margin: 0 auto;">
   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@progress%>%" aria-valuenow="<%=@progress%>" aria-valuemin="0" aria-valuemax="100"></div>
 </div>
 
@@ -11,19 +19,40 @@
     <%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
 
     <%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
-    <%= f.submit 'Test Your Code', name:'Test' %>
+
+    <div class="test-code">
+      <div class="row test-code">
+        <div class="col-sm-8">
+          <p>Test your code and see your answers below at the console. Are you getting it right?</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="test-code-button">
+            <%= f.submit 'Test Your Code', name:'Test' %>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
     <br>
-    <button id="savecode">Submit Your Code</button>
 
     <h2>Results</h2>
     <div id="result">
       <img src="/loader.gif" id="loader"  alt="">
     </div>
 
-    <div class="terminalresults">
-      <p id="results"></p>
+    <div class="submit-code">
+      <div class="row submit-code">
+        <div class="col-sm-8">
+          <p>If you didn't get the result correctly, don't worry, you can retry as many times as you want. Otherwise, submit your code and move onto the next step.</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="submit-code-button">
+            <button id="savecode">Submit Your Code</button>
+          </div>
+        </div>
+      </div>
     </div>
+
     <br>
     <br>
   </div>
@@ -31,11 +60,14 @@
   <div class="col-md-4 steps" id="steps-right-panel">
     <button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
 
-    <div class="steps" style="border: 2px solid red">
-      <h2>Step: <%= @step.id %> </h2>
-      <h2><%= @step.name%></h2>
-      <h2>Description: <%= @step.description %></h2>
-
+    <div id="steps-box" aclass="steps" style="border: 2px solid #1495d5">
+      <h4>Step: <%= @step.id %> </h4>
+      <h3><%= @step.name%></h3><br>
+      <p>Description: <%= @step.description %></p>
     </div>
+  </div>
+
+  <div class="languages-link">
+    <a href="/languages">Back to languages menu</a>
   </div>
 </div>
