@@ -32,5 +32,9 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
     })
   });
 
+  $('#next').on('click', function(e){
+    window.location.href="http://localhost:3000/languages/ruby/chapters/1/steps/2"
+  })
+
 
 });
