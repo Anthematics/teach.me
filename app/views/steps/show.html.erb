@@ -58,8 +58,6 @@
   </div>
 
   <div class="col-md-4 steps" id="steps-right-panel">
-    <button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
-
     <div id="steps-box" aclass="steps" style="border: 2px solid #1495d5">
       <h4>Step: <%= @step.id %> </h4>
       <h3><%= @step.name%></h3><br>
@@ -67,7 +65,17 @@
     </div>
   </div>
 
-  <div class="languages-link">
-    <a href="/languages">Back to languages menu</a>
+  <div class="container">
+    <div class="row steps-page-bottom">
+      <div class="col-md-3">
+        <button type="button" class="btn btn-primary btn-lg" id="previous" style="display: none">Previous</button>
+      </div>
+      <div class="col-md-6">
+        <a class="languages-link" href="/languages">Back to languages menu</a>
+      </div>
+      <div class="col-md-3">
+        <button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
+      </div>
+    </div>
   </div>
 </div>
