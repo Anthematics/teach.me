@@ -69,13 +69,18 @@ a.navbar-brand img {
   height: 50px;
 }
 
-.badge {
-  height: 50px;
-  width: 50px;
+.rounded-circle img {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #1495d5;
 }
 
-.badge-primary {
-  background-color: #1495d5;
+#dropdownMenu2 {
+  background-color: white;
+}
+
+.dropdown-menu.show {
+  padding: 20px;
 }
 
 .form-inline {
