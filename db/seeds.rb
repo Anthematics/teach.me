@@ -23,35 +23,35 @@ user = User.create!(
 
 
 chapter1 = Chapter.create!(
-  name: "Module1: Variables",
-  description: " What is a variable? What's the use of a variable? Why are they important? In this lesson, you will learn about different types of variables in Ruby. At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!",
+  name: "Variables",
+  description: "What is a variable? What's the use of a variable? Why are they important? In this lesson, you will learn about different types of variables in Ruby. At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!",
   language_id: ruby.id
 )
 
 chapter2 = Chapter.create!(
-  name: "Module2: Methods",
+  name: "Methods",
   description: "What is a variable? What's the use of a variable? Why are they important? In this lesson, you will learn about different types of variables in Ruby. At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!",
   language_id: ruby.id
 )
 chapter3 = Chapter.create!(
-  name: "Module3: Arrays & Hashes",
+  name: "Arrays & Hashes",
   description: "What is a variable? What's the use of a variable? Why are they important?In this lesson, you will learn about different types of variables in Ruby. At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!",
   language_id: ruby.id
 )
 chapter4 = Chapter.create!(
-  name: "Module4: Loops & Iterations",
+  name: "Loops & Iterations",
   description: "The basic building blocks",
   language_id: ruby.id
 )
 
 chapter5 = Chapter.create!(
-  name: "Module5: Object Oriented Programming",
+  name: "Object Oriented Programming",
   description: "The basic building blocks",
   language_id: ruby.id
 )
 
 chapter6 = Chapter.create!(
-  name: "Module6: Instance, Class & Inheritance",
+  name: "Instance, Class & Inheritance",
   description: "The basic building blocks",
   language_id: ruby.id
 )
