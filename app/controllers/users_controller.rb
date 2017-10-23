@@ -29,7 +29,7 @@ class UsersController < ApplicationController
      @step.code_tests.each do |test|
      @testcode = @usercode + "\n print " + test.input
        response = HTTParty.post("https://codeapi.herokuapp.com/code/ruby",:body => {:step => {:code => @testcode}})
-
+       puts response.body
         body = JSON.parse(response.body)
         puts body.to_s
         puts test.output
