@@ -6,6 +6,8 @@ class StepsControllerTest < ActionDispatch::IntegrationTest
 test "should get show" do
 		get '/languages/ruby/chapters/1/steps/1'
 		assert_response :redirect
+		follow_redirect!
+		assert_select "footer" , "TeachME copyright(c) 2017 Copyright Holder All Rights Reserved"
 	end
 # maybe we should assert a failure on test "should get show"
 	test "should get new" do
