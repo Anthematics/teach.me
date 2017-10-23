@@ -198,15 +198,15 @@ a.navbar-brand img {
 }
 
 .col-md-6.left.image, .col-md-6.right.image, .col-md-6.left.text, .col-md-6.right.text {
-  min-width: 450px;
-  height: 300px;
+  // min-width: 450px;
+  // height: 300px;
   display: inline-block;
   position: relative;
 }
 
 .col-md-6.left.image img, .col-md-6.right.image img {
   width: 80%;
-  height: 80%;
+  height: auto;
   top: 0;
   left: 0;
   // margin-left: 5%;
@@ -452,7 +452,7 @@ h2 .card-text {
 
 #submitcode {
   border: 2px solid #1494d5;
-  padding: 5%;
+  padding: 3%;
 }
 
 .test-code, .submit-code {
