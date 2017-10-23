@@ -12,7 +12,11 @@
         <div class="carousel-caption d-none d-md-block">
           <h3>Learn Coding Now!</h3>
           <p>Learn Learn Learn Learn Learn</p>
-          <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% if current_user.present? %>
+            <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal" style="display: none">Sign Up Now</button>
+          <% else %>
+            <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% end %>
         </div>
       </div>
       <div class="carousel-item">
@@ -20,7 +24,11 @@
         <div class="carousel-caption d-none d-md-block">
           <h3>Learn Coding Now!</h3>
           <p>Learn Learn Learn Learn Learn</p>
-          <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% if current_user.present? %>
+            <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal" style="display: none">Sign Up Now</button>
+          <% else %>
+            <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% end %>
         </div>
       </div>
       <div class="carousel-item">
@@ -28,7 +36,11 @@
         <div class="carousel-caption d-none d-md-block">
           <h3>Learn Coding Now!</h3>
           <p>Learn Learn Learn Learn Learn</p>
-          <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% if current_user.present? %>
+            <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal" style="display: none">Sign Up Now</button>
+          <% else %>
+            <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% end %>
         </div>
       </div>
     </div>
@@ -80,10 +92,14 @@
       </div>
     </div>
 
-    <div class="homepage-end">
-      <h2>Find out today why others love and learn with TeachME!</h2>
-      <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
-    </div>
+
+      <div class="homepage-end">
+          <% if !current_user.present? %>
+        <h2>Find out today why others love and learn with TeachME!</h2>
+        <button class='signupnow' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up Now</button>
+          <% end %>
+      </div>
+
   </div>
 
 </div>

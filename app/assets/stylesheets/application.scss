@@ -66,6 +66,10 @@ a.navbar-brand img {
   margin-left: 3rem;
 }
 
+#avatar {
+  margin: 0 auto;
+}
+
 .navbar-toggler {
   width: 50px;
   height: 50px;
@@ -84,6 +88,10 @@ a.navbar-brand img {
 
 .dropdown-menu.show {
   padding: 20px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
 }
 
 .form-inline {
@@ -197,8 +205,8 @@ a.navbar-brand img {
 }
 
 .col-md-6.left.image img, .col-md-6.right.image img {
-  width: auto;
-  height: 300px;
+  width: 80%;
+  height: 80%;
   top: 0;
   left: 0;
   // margin-left: 5%;
