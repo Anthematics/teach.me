@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery
+//= require jquery.min
 //= require codemirror
 //= require ruby
-
+//= require popper.min
 //= require_tree .
 //= require bootstrap-sprockets
 //

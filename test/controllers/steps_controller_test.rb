@@ -9,21 +9,21 @@ test "should get show" do
 		follow_redirect!
 		assert_select "footer" , "TeachME copyright(c) 2017 Copyright Holder All Rights Reserved"
 	end
-# maybe we should assert a failure on test "should get show"
+	
 	test "should get new" do
-		skip
+		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_new_url
 		assert_response :success
 	end
 
 	test "should get create" do
-		skip
+		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_create_url
 		assert_response :success
 	end
 
 	test "should get edit" do
-		skip
+		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_edit_url
 		assert_response :success
 	end
