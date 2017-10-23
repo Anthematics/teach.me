@@ -45,7 +45,7 @@ main {
 }
 
 a.navbar-brand img {
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
@@ -79,7 +79,7 @@ a.navbar-brand img {
 
 #dropdownMenu2 {
   background-color: white;
-  padding: 5px;
+  width: 50px;
 }
 
 .dropdown-menu.show {
@@ -457,7 +457,7 @@ h2 .card-text {
 }
 
 .row.steps-panel {
-  padding-top: 0;
+  padding: 0;
 }
 
 .test-code p, .submit-code p {
@@ -491,12 +491,27 @@ h2 .card-text {
   font-weight: bold;
 }
 
-.languages-link {
+.row.steps-page-bottom {
   text-align: center;
-  margin: 0 auto;
+}
+
+#next {
+  float: right;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+#previous {
+  float: left;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.languages-link {
   font-size: 2rem;
   font-weight: bold;
-  padding-top: 50px;
 }
 
 // ------ Footer styling below ------
