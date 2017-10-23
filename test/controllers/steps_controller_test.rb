@@ -9,7 +9,7 @@ test "should get show" do
 		follow_redirect!
 		assert_select "footer" , "TeachME copyright(c) 2017 Copyright Holder All Rights Reserved"
 	end
-# maybe we should assert a failure on test "should get show"
+	
 	test "should get new" do
 		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_new_url
@@ -29,7 +29,7 @@ test "should get show" do
 	end
 
 	test "Code submission" do
-		skip 
+		skip
 		get '/user/:id/step/:step_id/submitcode'
 		assert_response :success #probably will have to assert an input # instead here
 	end

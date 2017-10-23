@@ -8,6 +8,3 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
 		 ruby.destroy
 	end
 end
-
-def teardown;
-end
