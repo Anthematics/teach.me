@@ -36,7 +36,9 @@ main {
   background-image: url('memphis-colorful.png');
 }
 
-
+.container {
+  margin: 0 auto;
+}
 // ------ Navbar styling below ------
 .userinfo {
   text-align: right;
@@ -77,6 +79,7 @@ a.navbar-brand img {
 
 #dropdownMenu2 {
   background-color: white;
+  padding: 5px;
 }
 
 .dropdown-menu.show {
@@ -210,6 +213,11 @@ a.navbar-brand img {
 // ------ Menu styling below -----
 .menu-page-title {
   text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0);
+  border: none;
 }
 
 .card-img {
