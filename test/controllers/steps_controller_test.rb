@@ -11,25 +11,25 @@ test "should get show" do
 	end
 # maybe we should assert a failure on test "should get show"
 	test "should get new" do
-		skip
+		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_new_url
 		assert_response :success
 	end
 
 	test "should get create" do
-		skip
+		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_create_url
 		assert_response :success
 	end
 
 	test "should get edit" do
-		skip
+		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_edit_url
 		assert_response :success
 	end
 
 	test "Code submission" do
-		skip
+		skip 
 		get '/user/:id/step/:step_id/submitcode'
 		assert_response :success #probably will have to assert an input # instead here
 	end
