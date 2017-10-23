@@ -27,8 +27,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
       $('#results').html(response.message)
       if (response.pass){
         next.style.display = "block";
-        $('#loader').css("display", "none")
-
+        $('#loader').css("display", "none");
         $('#next').on('click', function(e){
           window.location.href=response.url
         })
@@ -37,7 +36,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
       $('#loader').css("display", "none")
       $('#results').html(response.message)
       console.log('error!');
-    
+
     })
   });
 
