@@ -33,6 +33,7 @@ html, body {
 main {
   position: relative;
   min-height: 100%;
+  background-image: url('memphis-colorful.png');
 }
 
 
@@ -68,13 +69,18 @@ a.navbar-brand img {
   height: 50px;
 }
 
-.badge {
-  height: 50px;
-  width: 50px;
+.rounded-circle img {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #1495d5;
 }
 
-.badge-primary {
-  background-color: #1495d5;
+#dropdownMenu2 {
+  background-color: white;
+}
+
+.dropdown-menu.show {
+  padding: 20px;
 }
 
 .form-inline {
@@ -173,6 +179,7 @@ a.navbar-brand img {
 
 .row.home {
    box-shadow: 10px 10px 10px #d4d4d8;
+   background-color: white;
 }
 
 .col-md-6 {
@@ -360,6 +367,13 @@ h2 .card-text {
       color: white;
     }
 
+    .inner.content.show {
+      background-color: white;
+      border: 2px solid #1495d5;
+      padding: 25px;
+      margin-top: 7px;
+    }
+
     .inner.show li a.toggle.subtitle {
       background: #1495d5;
       color: white;
@@ -417,6 +431,7 @@ h2 .card-text {
 
 #steps-left-panel, #steps-right-panel {
   box-shadow: 10px 10px 10px #d4d4d8;
+  background-color: white;
 }
 
 #submitcode {
