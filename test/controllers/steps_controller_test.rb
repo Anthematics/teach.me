@@ -5,9 +5,11 @@ class StepsControllerTest < ActionDispatch::IntegrationTest
 
 test "should get show" do
 		get '/languages/ruby/chapters/1/steps/1'
-		assert_response :success
+		assert_response :redirect
+		follow_redirect!
+		assert_select "footer" , "TeachME copyright(c) 2017 Copyright Holder All Rights Reserved"
 	end
-
+# maybe we should assert a failure on test "should get show"
 	test "should get new" do
 		skip
 		get steps_new_url
@@ -24,6 +26,12 @@ test "should get show" do
 		skip
 		get steps_edit_url
 		assert_response :success
+	end
+
+	test "Code submission" do
+		skip
+		get '/user/:id/step/:step_id/submitcode'
+		assert_response :success #probably will have to assert an input # instead here
 	end
 
 end
