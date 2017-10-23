@@ -1,8 +1,8 @@
 <div class="chapter-title">
-  <h2>Ruby - Chapter 1 - Variables</h2>
+  <h2><%=@current_language.name.capitalize%> - Chapter <%=@current_language.chapters.find(params[:chapter_id]).id%> - <%=@current_language.chapters.find(params[:chapter_id]).name%></h2>
   <br>
-  <p>In this lesson, you will learn about different typees of variables in Ruby.</p>
-  <p>At the end of this chapter, pratice with our fun exercises to test your knowledge, and you will be a Ruby variables expert in no time!</p>
+  <p>In this lesson, you will learn...</p>
+  <p><%=@current_language.chapters.find(params[:chapter_id]).description%></p>
 </div>
 
 <br>
