@@ -65,7 +65,7 @@
     <div id="steps-box" class="steps" style="border: 2px solid #1495d5">
       <h4>Step: <%= @step.id %> </h4>
       <h3><%= @step.name%></h3><br>
-      <p>Description: <%= @step.description %></p>
+      <p>Description: <%=raw @step.description %></p>
     </div>
   </div>
   <%# ------ Instruction and details panel ends here ------ %>

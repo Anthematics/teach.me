@@ -68,4 +68,23 @@ ActiveRecord::Schema.define(version: 20171018191127) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users_chapters", force: :cascade do |t|
+    t.bigint "users_id"
+    t.bigint "chapters_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapters_id"], name: "index_users_chapters_on_chapters_id"
+    t.index ["users_id"], name: "index_users_chapters_on_users_id"
+  end
+
+  create_table "users_steps", force: :cascade do |t|
+    t.bigint "users_id"
+    t.bigint "steps_id"
+    t.boolean "completion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["steps_id"], name: "index_users_steps_on_steps_id"
+    t.index ["users_id"], name: "index_users_steps_on_users_id"
+  end
+
 end
