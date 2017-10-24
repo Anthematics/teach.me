@@ -24,7 +24,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
       data: {code: code}
     }).done(function(response) {
       console.log(response);
-      $('#results').html(response.message)
+      $('#result').html(response.message)
       if (response.pass){
         next.style.display = "block";
         $('#loader').css("display", "none");
