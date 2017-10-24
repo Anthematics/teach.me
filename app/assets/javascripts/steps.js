@@ -33,7 +33,7 @@ $('#submitcode').on("ajax:success",function(e, data,status,xhr){
         })
       };
     }).fail(function(response) {
-      $('#loader').css("display", "none")
+      $('#loader').css("display", "block")
       $('#results').html(response.message)
       console.log('error!');
 

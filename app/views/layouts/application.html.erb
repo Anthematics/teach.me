@@ -13,29 +13,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   </head>
-    <body>
-      <main>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="/"><%= image_tag "logo.png" %>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-              <% if current_user.present? %>
-                <li class="nav-item"><a class="nav-link" href="/languages">Languages</a></li>
-              <% else %>
-                <li class="nav-item"><a class="nav-link" href="/menu">What we teach</a></li>
-              <% end %>
-              <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
-                </ul>
-              <ul class="navbar-nav">
+  <body>
+    <main>
+<%# ---------- Navbar content starts here ---------- %>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/"><%= image_tag "logo.png" %>
+        </a>
 
-              <form class="form-inline my-2 my-lg-0" style="text-align: right !important;" >
+        <%# ------ Navbar menu button when on mobile view ------ %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <%# ------ Navbar items starts here ------ %>
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+          <%# --- Navbar menu items begins --- %>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <% if current_user.present? %>
+              <li class="nav-item"><a class="nav-link" href="/languages">Languages</a></li>
+            <% else %>
+              <li class="nav-item"><a class="nav-link" href="/menu">What we teach</a></li>
+            <% end %>
+            <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+          </ul><%# --- Navbar menu items ends --- %>
+
+          <%# --- User info/sign up/login starts here --- %>
+          <ul class="navbar-nav">
+            <form class="form-inline my-2 my-lg-0" style="text-align: right !important;" >
               <%if current_user.present? %>
                 <li class="nav-item" id="avatar">
                   <div class="dropdown">
@@ -43,6 +51,7 @@
                     <div class="fa fa-angle-down" data-toggle="dropdown"></div>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                       <p>Logged in as <%= current_user.email%></p>
+                      <input type="hidden" id="admin" name="admin" value="<%=current_user.admin%>">
                       <button class="dropdown-item" type="button">Profile</button>
                       <button class="dropdown-item" type="button"><%=link_to "Log out", session_path("current"), :method => :delete, class: "nav-link"%></button>
                     </div>
@@ -51,47 +60,44 @@
               <% else %>
                 <button id='signup' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
                 <button id='login' class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#logInModal">Log in</button>
-
               <% end %>
-              </form>
-            </div>
+            </form>
+          </ul><%# --- User info/sign up/login ends here --- %>
+        </div><%# ------ Navbar items ends here ------ %>
+      </nav><%# ---------- Navbar content ends here ---------- %>
 
-            </ul>
-        </nav>
+      <%= yield %>
 
-          <%= yield %>
-
-          <footer> TeachME copyright(c) 2017 Copyright Holder All Rights Reserved </footer>
+      <footer> TeachME copyright(c) 2017 Copyright Holder All Rights Reserved </footer>
 
 
-          <%# The following is to use bootstrap to render partial the sign up form at home page when button is clicked %>
-          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <%= render "users/signup" %>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
+      <%# The following is to use bootstrap to render partial the sign up form at home page when button is clicked %>
+      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <%= render "users/signup" %>
+            </div><%# class "modal-body" closes here %>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div><%# class "modal-footer" closes here %>
+          </div><%# class "modal-content" closes here %>
+        </div><%# class "modal-dialog" closes here %>
+      </div><%# class "modal fade" closes here %>
 
-          <%# The following is to use bootstrap to render partial the log in form at home page when button is clicked %>
-          <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <%= render "sessions/login" %>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-  </main>
-</body>
-
+      <%# The following is to use bootstrap to render partial the log in form at home page when button is clicked %>
+      <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <%= render "sessions/login" %>
+            </div><%# class "modal-body" closes here %>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div><%# class "modal-footer" closes here %>
+          </div><%# class "modal-content" closes here %>
+        </div><%# class "modal-dialog" closes here %>
+      </div><%# class "modal fade" closes here %>
+    </main>
+  </body>
 </html>
