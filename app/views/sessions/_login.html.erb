@@ -10,31 +10,32 @@
   <br>
 
   <% if flash[:notice] %>
-  <%= flash[:notice] %>
+    <%= flash[:notice] %>
   <% end %>
 
   <% if flash[:alert] %>
-  <%= flash[:alert] %>
+    <%= flash[:alert] %>
   <% end %>
 
   <p>Log in with email address</p>
-    <%= form_tag sessions_path do %>
-      <div class="loginform">
-        <p>
-          <%=label_tag :email%><br>
-          <%= text_field_tag :email, params[:email]%>
-        </p>
-      </div>
-      <div class="passwordform">
-        <p>
-          <%=label_tag :password%><br>
-          <%= password_field_tag :password%>
-        </p>
-      </div>
-      <div class="loginbutton">
-        <p>
-          <%= submit_tag "Log in"%>
-        </p>
-      </div>
-    <% end %>
+
+  <%= form_tag sessions_path do %>
+    <div class="loginform">
+      <p>
+        <%=label_tag :email%><br>
+        <%= text_field_tag :email, params[:email]%>
+      </p>
+    </div><%# class "loginform" ends here %>
+    <div class="passwordform">
+      <p>
+        <%=label_tag :password%><br>
+        <%= password_field_tag :password%>
+      </p>
+    </div><%# class "passwordform" ends here %>
+    <div class="loginbutton">
+      <p>
+        <%= submit_tag "Log in"%>
+      </p>
+    </div><%# class "loginbutton" ends here %>
+  <% end %>
 </div>

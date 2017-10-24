@@ -6,7 +6,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 		assert_response :success
 	end
 
-
 	test "should create user" do
 		skip #UNTIL WE CAN CORRENTLY PASS INFORMATION FROM THE TEST TO THE CONTROLLER
 		post '/user'
