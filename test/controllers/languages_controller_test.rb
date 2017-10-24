@@ -14,4 +14,8 @@ class LanguagesControllerTest < ActionDispatch::IntegrationTest
 	end
 
 #index needs rewriting (routes)
+
+	test "add a language" do
+		skip
+	end
 end
