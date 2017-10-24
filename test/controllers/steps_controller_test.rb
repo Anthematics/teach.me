@@ -9,7 +9,7 @@ test "should get show" do
 		follow_redirect!
 		assert_select "footer" , "TeachME copyright(c) 2017 Copyright Holder All Rights Reserved"
 	end
-	
+
 	test "should get new" do
 		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
 		get steps_new_url
@@ -23,7 +23,7 @@ test "should get show" do
 	end
 
 	test "should get edit" do
-		skip #WRITE IN ONCE ADMINS CAN CREATE NEW STEPS
+		skip #WRITE IN ONCE ADMINS CAN EDIT NEW STEPS
 		get steps_edit_url
 		assert_response :success
 	end
