@@ -6,35 +6,40 @@
 </div>
 
 <br>
-
+<%# ---------- Progress bar here ---------- %>
 <div class="progress" style="width: 70%; margin: 0 auto;">
   <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%=@progress%>%" aria-valuenow="<%=@progress%>" aria-valuemin="0" aria-valuemax="100"><%= @progress %> %</div>
 </div>
 
 <div class="row steps-panel">
 
+  <%# ------ Test code terminal and result console begins here ------ %>
   <div class="col-md-8 steps" id="steps-left-panel">
+    <%# --- Test code terminal begins here --- %>
     <%= form_for @step, url:"https://codeapi.herokuapp.com/code/ruby", html: { id: 'submitcode'}, remote: true, :action => language_chapter_step_path, :method => :post do |f| %>
-    <%= f.label :'Write your code here' %>
-    <%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
+      <%= f.label :'Write your code here' %>
+      <%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
 
-    <%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
+      <%= f.text_area :code, :class => 'codemirror-textarea' , :value => 'puts 3+4'%>
 
-    <div class="test-code">
-      <div class="row test-code">
-        <div class="col-sm-8">
-          <p>Test your code and see your answers below at the console. Are you getting it right?</p>
-        </div>
-        <div class="col-sm-4">
-          <div class="test-code-button">
-            <%= f.submit 'Test Your Code', name:'Test' %>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="test-code">
+        <div class="row test-code">
+          <div class="col-sm-8">
+            <p>Test your code and see your answers below at the console. Are you getting it right?</p>
+          </div><%# class "col-sm-8" ends here %>
+          <div class="col-sm-4">
+            <div class="test-code-button">
+              <%= f.submit 'Test Your Code', name:'Test' %>
+            </div><%# class "test-code-button" ends here %>
+          </div><%# class "col-sm-4" ends here %>
+        </div><%# class "row test-code" ends here %>
+      </div><%# class "test-code" ends here %>
     <% end %>
+    <%# --- Test code terminal ends here --- %>
+
     <br>
 
+    <%# --- Result console begins here --- %>
     <h2>Results</h2>
     <div id="result">
       <img src="/loader.gif" id="loader"  alt="">
@@ -44,38 +49,40 @@
       <div class="row submit-code">
         <div class="col-sm-8">
           <p>If you didn't get the result correctly, don't worry, you can retry as many times as you want. Otherwise, submit your code and move onto the next step.</p>
-        </div>
+        </div><%# class "col-sm-8" ends here %>
         <div class="col-sm-4">
           <div class="submit-code-button">
             <button id="savecode">Submit Your Code</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div><%# class "submit-code-button" ends here %>
+        </div><%# class "col-sm-4" ends here %>
+      </div><%# class "row submit-code" ends here %>
+    </div><%# class "submit-code ends here %>"
+  </div><%# class "col-md-8 steps", id "steps-left-panel" ends here %>
+  <%# ------ Test code terminal and result consule ends here ------ %>
 
-    <br>
-    <br>
-  </div>
-
+  <%# ------ Instruction and details panel starts here ------ %>
   <div class="col-md-4 steps" id="steps-right-panel">
-    <div id="steps-box" aclass="steps" style="border: 2px solid #1495d5">
+    <div id="steps-box" class="steps" style="border: 2px solid #1495d5">
       <h4>Step: <%= @step.id %> </h4>
       <h3><%= @step.name%></h3><br>
       <p>Description: <%= @step.description %></p>
     </div>
   </div>
+  <%# ------ Instruction and details panel ends here ------ %>
 
+  <%# ------ Bottom navigation buttons starts here ------ %>
   <div class="container">
     <div class="row steps-page-bottom">
       <div class="col-md-3">
         <button type="button" class="btn btn-primary btn-lg" id="previous" style="display: none">Previous</button>
-      </div>
+      </div><%# class "col-md-3 ends here" %>
       <div class="col-md-6">
         <a class="languages-link" href="/languages">Back to languages menu</a>
-      </div>
+      </div><%# class "col-md-6 ends here" %>
       <div class="col-md-3">
         <button type="button" class="btn btn-primary btn-lg" id="next" style="display: none">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
+      </div><%# class "col-md-3" ends here %>
+    </div><%# class "row steps-page-bottom" ends here %>
+  </div><%# class "container" ends here %>
+
+</div><%# class "row steps-panel" ends here %>
