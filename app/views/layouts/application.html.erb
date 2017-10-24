@@ -51,6 +51,7 @@
                     <div class="fa fa-angle-down" data-toggle="dropdown"></div>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                       <p>Logged in as <%= current_user.email%></p>
+                      <input type="hidden" id="admin" name="admin" value="<%=current_user.admin%>">
                       <button class="dropdown-item" type="button">Profile</button>
                       <button class="dropdown-item" type="button"><%=link_to "Log out", session_path("current"), :method => :delete, class: "nav-link"%></button>
                     </div>
