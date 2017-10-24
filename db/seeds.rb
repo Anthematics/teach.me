@@ -57,8 +57,8 @@ chapter6 = Chapter.create!(
 )
 
 step1 = Step.create!(
-  name: "Step 1: Numbers",
-  description: "There are multiple datatypes  are two types of numbers as data types 1) Integers (Whole Numbers)  and 2) Floats (or floating points aka numbers with decimals). In the datatypes chapter we will be executing some basic mathematical operations.",
+  name: "Step 1: Data types",
+  description: "Some of the basic Data Types of Ruby are Numbers,String,Boolean,and Symbols. <br><b> Numbers</b> without decimal points (eg. <b>1, 250, 99999</b>) are called <b>integers</b>, and numbers with decimal points (eg. <b>1.5, 150.3985, 50.0</b>) are usually called <b>floating-point numbers </b>or, more simply, <b>floats</b>.<br>In order to print the output, we will use <b>puts</b> before the statement.<br><br> <em>puts 3 </em>, will display integer 3 in the console.<br>Here is your first exercise: <ul><li>1.Display an integer of your choice</li><li>2. Display an floats</li></ul>",
   chapter: chapter1
 )
 step1.code_tests.create(input: "add(2,5)",output: "7")
