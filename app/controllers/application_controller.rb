@@ -12,12 +12,16 @@ private
     User.new
   end
 
-
-
   def ensure_logged_in
     unless current_user
       flash[:alert] = "Please Log In"
       redirect_to root_path
+    end
+  end
+
+  def ensure_user_is_admin
+    unless current_user.admin == true
+      redirect_to languages_path
     end
   end
 

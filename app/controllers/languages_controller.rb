@@ -8,7 +8,8 @@ class LanguagesController < ApplicationController
 	def show
 	end
 
-
+	def edit
+	end
 	def current_language
 		language_id params[:language_id]
 		@current_language ||= Language.find(language_id)
