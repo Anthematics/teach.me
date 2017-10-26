@@ -211,6 +211,36 @@ a.navbar-brand img {
 }
 
 
+// ------ About Us styling below ------
+
+.about-us-intro {
+  text-align: center;
+  margin: 25px 10% 0 10%;
+}
+
+.about-us-intro h2 {
+  font-weight: bold;
+}
+
+.card.about-us {
+  box-shadow: 10px 10px 10px #111213;
+  width: 250px;
+  height: auto;
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+
+// .card-img-top.about-us {
+//   max-width: 250px;
+//   height: auto;
+// }
+
+.card.about-us p, .card.about-us h4 {
+  padding: 10px;
+  background: white;
+  margin: 0;
+}
+
 // ------ Menu styling below -----
 .menu-page-title {
   text-align: center;
