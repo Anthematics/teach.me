@@ -472,10 +472,27 @@ h2 .card-text {
 .chapter-title {
   text-align: center;
   margin: 25px 10% 0 10%;
+  position: relative;
 }
 
 .chapter-title h2 {
   font-weight: bold;
+}
+
+.totoro {
+  position: absolute;
+  z-index: 1;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+
+#loader {
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #1495d5;
+  margin: 0 auto;
 }
 
 #steps-left-panel, #steps-right-panel {
