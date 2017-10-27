@@ -103,10 +103,15 @@ a.navbar-brand img {
   margin: 0 2rem;
   background-color: white;
   color: #1495d5;
-  border-color: #1495d5;
+  border: 2px solid #1495d5;
+  font-weight: bold;
 }
 
-.btn.btn-outline-success:hover, .btn.btn-outline-success:focus, .btn.btn-outline-success:active, .btn.btn-outline-success.active, .open>.dropdown-toggle.btn.btn-outline-success {
+.btn.btn-outline-success:hover,
+.btn.btn-outline-success:focus,
+.btn.btn-outline-success:active,
+.btn.btn-outline-success.active,
+.open>.dropdown-toggle.btn.btn-outline-success {
   color: white;
   background-color: #1495d5;
   border-color: #1495d5; /*set the color you want here*/
@@ -490,10 +495,32 @@ h2 .card-text {
   float: right;
 }
 
-#result {
+#testcode,
+#savecode {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+#testcode:hover,
+#savecode:hover {
+  background: #007bff;
+}
+
+.result-container {
   border: 2px solid #1495d5;
+}
+
+#result {
+  background-color: #e0e0e5;
   height: 100px;
   padding: 1%;
+  margin: 2%;
+  color: #8c05ff;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .CodeMirror-scroll {
