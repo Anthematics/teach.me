@@ -1,4 +1,4 @@
-class Instructors::ChaptersController < ApplicationController
+class Instructors::StepsController < ApplicationController
   before_action :ensure_logged_in
 	before_action :ensure_user_is_admin
 	before_action :current_language, only: [:edit, :update]
@@ -8,21 +8,25 @@ class Instructors::ChaptersController < ApplicationController
 	def edit
     @language = current_language
     @chapter = @current_language.chapters.find(params[:id])
+    @step = @chapter.steps.find(params[:id])
+    @codeTest = @step.code_tests
 
 	end
 
   def update
     @language = current_language
     @chapter = @current_language.chapters.find(params[:id])
+    @step = @chapter.steps.find(params[:id])
 
-    @chapter.name = params["chapter"]["name"]
-    @chapter.description = params["chapter"]["description"]
+    @step.name = params["step"]["name"]
+    @step.description = params["step"]["description"]
 
-    if @chapter.save
+    if @step.save
       redirect_to languages_path
     else
       render :edit
     end
+
   end
 
   def current_language

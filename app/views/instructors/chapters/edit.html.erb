@@ -1,15 +1,22 @@
-Chapter <%=@chapter.id%> : <%= @chapter.name %>
+<h1>Chapter <%=@chapter.id%> : <%= @chapter.name %></h1>
 
-<%= form_for (@chapter, url: instructors_language_chapter_path) do |f| %>
+<%= form_for [:instructors, @language, @chapter] do |f| %>
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </p>
   <p>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </p>
   <p>
     <%= f.submit %>
   </p>
+<% end %>
+
+<h1>Steps </h1>
+
+<% @chapter.steps.each do |step| %>
+ <%=step.id%> <%= step.name %> | <%=link_to "Edit", "/instructors/languages/#{@language.id}/chapters/#{@chapter.id}/steps/#{step.id}/edit"%>
+ <br>
 <% end %>
