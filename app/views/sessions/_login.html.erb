@@ -1,9 +1,9 @@
 <div class="log-in-form">
-  <h1>Log in</h1>
-
+  <h2>Log in</h2>
+  <br>
   <p>Log in to resume your learning</p>
   <br>
-  <a class="github-button" href= "https://github.com/login/oauth/authorize?scope=user:email&client_id=74fe2b9c76d0ac9fbcce" type="button" name="button">Log in with Github</a>
+  <a class="btn btn-primary github-button" href= "https://github.com/login/oauth/authorize?scope=user:email&client_id=74fe2b9c76d0ac9fbcce" type="button" name="button"><%= image_tag 'GitHub-Mark-32px'%> Log in with Github</a>
   <br>
   <br>
   <p>----------   OR   ----------</p>
@@ -32,9 +32,10 @@
         <%= password_field_tag :password%>
       </p>
     </div><%# class "passwordform" ends here %>
-    <div class="loginbutton">
+    <br>
+    <div>
       <p>
-        <%= submit_tag "Log in"%>
+        <%= submit_tag "Log in", class: 'submit-login-form'%>
       </p>
     </div><%# class "loginbutton" ends here %>
   <% end %>

@@ -29,7 +29,7 @@
           </div><%# class "col-sm-8" ends here %>
           <div class="col-sm-4">
             <div class="test-code-button">
-              <%= f.submit 'Test Your Code', name:'Test' %>
+              <%= f.submit 'Test Your Code', name:'Test', id: 'testcode' %>
             </div><%# class "test-code-button" ends here %>
           </div><%# class "col-sm-4" ends here %>
         </div><%# class "row test-code" ends here %>
@@ -40,10 +40,12 @@
     <br>
 
     <%# --- Result console begins here --- %>
+    <img src="/loader.gif" id="loader"  alt="">
+
     <h2>Results</h2>
-    <div id="result">
-      <img src="/loader.gif" id="loader"  alt="">
-    </div>
+      <div class="result-container">
+        <div id="result"></div>
+      </div>
 
     <div class="submit-code">
       <div class="row submit-code">

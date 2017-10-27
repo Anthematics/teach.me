@@ -58,12 +58,13 @@ a.navbar-brand img {
 }
 
 .navbar-nav.mr-auto {
-  margin: 0 2rem;
+  margin: 0 auto;
   text-align: center;
 }
 
 .nav-item {
-  margin-left: 3rem;
+  margin-right: 5rem;
+  font-weight: bold;
 }
 
 #avatar {
@@ -103,10 +104,15 @@ a.navbar-brand img {
   margin: 0 2rem;
   background-color: white;
   color: #1495d5;
-  border-color: #1495d5;
+  border: 2px solid #1495d5;
+  font-weight: bold;
 }
 
-.btn.btn-outline-success:hover, .btn.btn-outline-success:focus, .btn.btn-outline-success:active, .btn.btn-outline-success.active, .open>.dropdown-toggle.btn.btn-outline-success {
+.btn.btn-outline-success:hover,
+.btn.btn-outline-success:focus,
+.btn.btn-outline-success:active,
+.btn.btn-outline-success.active,
+.open>.dropdown-toggle.btn.btn-outline-success {
   color: white;
   background-color: #1495d5;
   border-color: #1495d5; /*set the color you want here*/
@@ -210,6 +216,36 @@ a.navbar-brand img {
   padding-bottom: 100px;
 }
 
+
+// ------ About Us styling below ------
+
+.about-us-intro {
+  text-align: center;
+  margin: 25px 10% 0 10%;
+}
+
+.about-us-intro h2 {
+  font-weight: bold;
+}
+
+.card.about-us {
+  box-shadow: 10px 10px 10px #111213;
+  width: 250px;
+  height: auto;
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+
+// .card-img-top.about-us {
+//   max-width: 250px;
+//   height: auto;
+// }
+
+.card.about-us p, .card.about-us h4 {
+  padding: 10px;
+  background: white;
+  margin: 0;
+}
 
 // ------ Menu styling below -----
 .menu-page-title {
@@ -383,13 +419,40 @@ h2 .card-text {
 
 // ------ Log in and Sign up form styling below ------
 .log-in-form, .sign-up-form {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.github-button {
+.log-in-form h2, .sign-up-form h2 {
+  font-weight: bold;
+}
+
+.github-button,
+.submit-signup-form,
+.submit-login-form {
   padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
 }
 
+.submit-signup-form,
+.submit-login-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.submit-signup-form:hover,
+.submit-login-form:hover {
+  background: #007bff;
+}
+
+.close-form {
+  border: 2px solid #1495d5;
+  background-color: white;
+  color: #1495d5;
+  font-weight: bold;
+}
 
 // ------ Steps terminal and console panel stying below ------
 .chapter-title {
@@ -433,10 +496,32 @@ h2 .card-text {
   float: right;
 }
 
-#result {
+#testcode,
+#savecode {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+#testcode:hover,
+#savecode:hover {
+  background: #007bff;
+}
+
+.result-container {
   border: 2px solid #1495d5;
+}
+
+#result {
+  background-color: #e0e0e5;
   height: 100px;
   padding: 1%;
+  margin: 2%;
+  color: #8c05ff;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .CodeMirror-scroll {

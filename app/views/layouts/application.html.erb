@@ -32,13 +32,12 @@
           <%# --- Navbar menu items begins --- %>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="/aboutus">About Us</a></li>
             <% if current_user.present? %>
               <li class="nav-item"><a class="nav-link" href="/languages">Languages</a></li>
             <% else %>
               <li class="nav-item"><a class="nav-link" href="/menu">What we teach</a></li>
             <% end %>
-            <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
           </ul><%# --- Navbar menu items ends --- %>
 
           <%# --- User info/sign up/login starts here --- %>
@@ -52,7 +51,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                       <p>Logged in as <%= current_user.email%></p>
                       <input type="hidden" id="admin" name="admin" value="<%=current_user.admin%>">
-                      <button class="dropdown-item" type="button">Profile</button>
+                      <button class="dropdown-item" type="button"><%=link_to "Profile", user_path, :method => :get, class: "nav-link"%></button>
                       <button class="dropdown-item" type="button"><%=link_to "Log out", session_path("current"), :method => :delete, class: "nav-link"%></button>
                     </div>
                   </div>
@@ -79,7 +78,7 @@
               <%= render "users/signup" %>
             </div><%# class "modal-body" closes here %>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
             </div><%# class "modal-footer" closes here %>
           </div><%# class "modal-content" closes here %>
         </div><%# class "modal-dialog" closes here %>
@@ -93,7 +92,7 @@
               <%= render "sessions/login" %>
             </div><%# class "modal-body" closes here %>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
             </div><%# class "modal-footer" closes here %>
           </div><%# class "modal-content" closes here %>
         </div><%# class "modal-dialog" closes here %>

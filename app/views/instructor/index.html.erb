@@ -1,8 +1,0 @@
-<h1>Welcome Instructors</h1>
-
-<% @languages.each do | l | %>
-<b>Language:</b>
-<%= l.name.upcase %>
-<br> <%=link_to "Edit", instructor_editLanguages_path%> | Delete<br>
-
-<%end%>
