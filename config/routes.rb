@@ -20,7 +20,9 @@ resources :sessions, only: [:new, :create, :destroy]
 namespace :instructors do
   resources :languages, only: [:index, :edit, :update] do
     resources :chapters, only: [:edit, :update] do
-      resources :steps, only: [:edit, :update]
+      resources :steps, only: [:edit, :update] do
+        resources :code_test, only: [:edit, :update]
+      end
     end
 
   end
