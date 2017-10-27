@@ -45,7 +45,7 @@ main {
 }
 
 a.navbar-brand img {
-  width: 150px;
+  width: 225px;
   height: auto;
 }
 
@@ -63,7 +63,8 @@ a.navbar-brand img {
 }
 
 .nav-item {
-  margin-right: 5rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
   font-weight: bold;
 }
 
@@ -80,6 +81,10 @@ a.navbar-brand img {
   height: 40px;
   width: 40px;
   border: 1px solid #1495d5;
+}
+
+.dropdown {
+    width: 225px;
 }
 
 #dropdownMenu2 {
@@ -101,7 +106,7 @@ a.navbar-brand img {
 
 .btn.btn-outline-success {
   font-size: 1.25rem;
-  margin: 0 2rem;
+  margin: 0 1rem;
   background-color: white;
   color: #1495d5;
   border: 2px solid #1495d5;
@@ -419,7 +424,16 @@ h2 .card-text {
 
 // ------ Log in and Sign up form styling below ------
 .log-in-form, .sign-up-form {
-  font-size: 1rem;
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  margin: 50px auto;
+  margin-bottom: 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #d4d4d8;
 }
 
 .log-in-form h2, .sign-up-form h2 {
@@ -563,6 +577,37 @@ h2 .card-text {
   font-weight: bold;
 }
 
+
+// ------ Profile page styling below ------
+
+.profile {
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  margin: 50px auto;
+  margin-bottom: 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #d4d4d8;
+}
+
+.profile h2, .profile h4 {
+  font-weight: bold;
+}
+
+.rounded-circle.profile-pic {
+  width: 150px;
+}
+
+.edit-profile {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
 // ------ Footer styling below ------
 footer {
   position: absolute;
