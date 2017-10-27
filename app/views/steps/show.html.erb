@@ -3,6 +3,10 @@
   <br>
   <p>In this lesson, you will learn...</p>
   <p><%=@current_language.chapters.find(params[:chapter_id]).description%></p>
+  <div class="totoro">
+    <img src="/loader.gif" id="loader"  alt="">
+  </div>
+
 </div>
 
 <br>
@@ -40,8 +44,6 @@
     <br>
 
     <%# --- Result console begins here --- %>
-    <img src="/loader.gif" id="loader"  alt="">
-
     <h2>Results</h2>
       <div class="result-container">
         <div id="result"></div>
