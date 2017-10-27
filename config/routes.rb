@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'instructor/editLanguages' => 'instructor#editLanguages'
-
-  get 'instructor/editChapters' => 'instructor#editChapters'
-
-  get 'instructor/editSteps' => 'instructor#editSteps'
-
-  get 'instructor/editCodeTest' => 'instructor#editCodeTest'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 root 'welcome#index'
@@ -23,7 +16,9 @@ resource :user
 resources :welcome, only: [:index]
 resources :menu, only: [:index, :show]
 resources :sessions, only: [:new, :create, :destroy]
-resources :instructor, only: [:index]
+namespace :instructors do
+  resources :languages
+end
 
 
 resources :languages, only: [:index, :show, :edit], param: :language_id do

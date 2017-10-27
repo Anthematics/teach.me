@@ -1,0 +1,5 @@
+<h1>Welcome Instructors</h1>
+<h5> Available Current Languages </h5>
+<% @languages.each do | l | %>
+<%= l.name.upcase %> | <%=link_to "Edit", edit_instructors_language_path(l.id)%>
+<%end%>
