@@ -1,0 +1,38 @@
+<div class="profile">
+  <h2>Your Profile</h2>
+  <br>
+  <br>
+  <div class="profile-pic">
+    <h4>Profile Picture</h4>
+    <%= image_tag 'avatar.jpg', class: 'rounded-circle profile-pic' %>
+  </div>
+  <br>
+  <div class="username">
+    <h4>Username</h4>
+    <p>
+      <% if current_user.present? %>
+        <%= current_user.name %>
+      <% end %>
+    </p>
+  </div>
+  <br>
+  <div class="email">
+    <h4>Email address</h4>
+    <p>
+      <% if current_user.present? %>
+        <%= current_user.email %>
+      <% end %>
+      </p>
+  </div>
+  <br>
+  <div class="password">
+    <h4>Password</h4>
+    <p>
+      <% if current_user.present? %>
+        <%= current_user.password %>
+      <% end %>
+    </p>
+  </div>
+  <br>
+  <a class="btn btn-primary edit-profile" href="#" type='button' name='button'>Edit Profile</a>
+</div>
