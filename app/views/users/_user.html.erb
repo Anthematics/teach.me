@@ -7,32 +7,37 @@
     <%= image_tag 'avatar.jpg', class: 'rounded-circle profile-pic' %>
   </div>
   <br>
-  <div class="username">
-    <h4>Username</h4>
-    <p>
-      <% if current_user.present? %>
-        <%= current_user.name %>
-      <% end %>
-    </p>
-  </div>
-  <br>
-  <div class="email">
-    <h4>Email address</h4>
-    <p>
-      <% if current_user.present? %>
-        <%= current_user.email %>
-      <% end %>
-      </p>
-  </div>
-  <br>
-  <div class="password">
-    <h4>Password</h4>
-    <p>
-      <% if current_user.present? %>
-        <%= current_user.password %>
-      <% end %>
-    </p>
-  </div>
-  <br>
-  <a class="btn btn-primary edit-profile" href="#" type='button' name='button'>Edit Profile</a>
+  <% if current_user.present? %>
+    <%= form_for current_user do |f| %>
+      <div class="username">
+        <h4>Username</h4>
+        <p>
+          <%= f.text_field :name, value: current_user.name %>
+        </p>
+      </div>
+      <br>
+      <div class="email">
+        <h4>Email address</h4>
+        <p>
+          <%= f.text_field :email, value: current_user.email %>
+        </p>
+      </div>
+      <br>
+      <div class="password">
+        <h4>Password</h4>
+        <p>
+          <%= f.password_field :password, placeholder: '********' %>
+        </p>
+      </div>
+      <br>
+      <div class="password_confirmation">
+        <h4>Password Confirmation</h4>
+        <p>
+          <%= f.password_field :password_confirmation, placeholder: '********' %>
+        </p>
+      </div>
+      <br>
+      <%= f.submit 'Update Profile', class: 'btn btn-primary edit-profile' %>
+    <% end %>
+  <% end %>
 </div>

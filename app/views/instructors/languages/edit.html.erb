@@ -1,18 +1,24 @@
-<h1>Edit <%= @language.name.capitalize %> </h1>
+<div class="instructors-languages-edit">
+  <h2>Edit <%= @language.name.capitalize %> </h2>
 
-<%= form_for [:instructors, @language] do |f| %>
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  <%= form_for [:instructors, @language] do |f| %>
+    <p>
+      <%= f.label :"You can edit the language description below"%><br>
+      <%= f.text_area :description %>
+    </p>
+    <br>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+  <br>
+  <h2>Chapters</h2>
+  <br>
+  <% @language.chapters.each do |chapter| %>
+    <p>
+      <%=chapter.id%> <%= chapter.name %> | <%=link_to "Edit", edit_instructors_language_chapter_path(@language.id,chapter.id)%>
+    </p>
+    <br>
+  <% end %>
 
-<h1>Chapters</h1>
-
-<% @language.chapters.each do |chapter| %>
- <%=chapter.id%> <%= chapter.name %> | <%=link_to "Edit", edit_instructors_language_chapter_path(@language.id,chapter.id)%>
-<br>
-<% end %>
+</div>
