@@ -595,6 +595,33 @@ h2 .card-text {
 }
 
 
+// ------ Instructor Languages ------
+
+.instructors-languages,
+.instructors-languages-edit {
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  margin: 50px auto;
+  margin-bottom: 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #d4d4d8;}
+
+.instructors-languages h2,
+.instructors-languages h3,
+.instructors-languages-edit h2,
+.instructors-languages-edit h3 {
+  font-weight: bold;
+}
+
+#language_description {
+  width: 300px;
+  height: 200px;
+}
+
 // ------ Profile page styling below ------
 
 .profile {
