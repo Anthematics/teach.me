@@ -2,12 +2,8 @@
 
 <%= form_for [:instructors, @language] do |f| %>
   <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </p>
   <p>
     <%= f.submit %>
@@ -17,6 +13,6 @@
 <h1>Chapters</h1>
 
 <% @language.chapters.each do |chapter| %>
- <%= chapter.name %> | <%=link_to "Edit", "/instructors/languages/#{@language.id}/chapters/#{chapter.id}/edit"%>
+ <%=chapter.id%> <%= chapter.name %> | <%=link_to "Edit", "/instructors/languages/#{@language.id}/chapters/#{chapter.id}/edit"%>
 <br>
 <% end %>

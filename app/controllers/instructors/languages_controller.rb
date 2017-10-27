@@ -16,7 +16,6 @@ class Instructors::LanguagesController < ApplicationController
 
   def update
     @language = current_language
-    @language.name = params["language"]["name"]
     @language.description = params["language"]["description"]
 
     if @language.save
