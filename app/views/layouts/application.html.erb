@@ -45,7 +45,7 @@
 
           <%# --- User info/sign up/login starts here --- %>
           <ul class="navbar-nav">
-            <form class="form-inline my-2 my-lg-0" style="text-align: right !important;" >
+            <form class="mx-auto form-inline my-2 my-lg-0" style="text-align: right !important;" >
               <%if current_user.present? %>
                 <li class="nav-item" id="avatar">
                   <div class="dropdown">
@@ -54,7 +54,9 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                       <p>Logged in as <%= current_user.email%></p>
                       <input type="hidden" id="admin" name="admin" value="<%=current_user.admin%>">
-                      <button class="dropdown-item" type="button"><%=link_to "Profile", user_path, :method => :get, class: "nav-link"%></button>
+                      <button class="dropdown-item" type="button" data-toggle="modal" data-target="#profileModal">Profile
+                        <!-- <%=link_to "Profile", user_path, :method => :get, class: "nav-link"%> -->
+                      </button>
                       <button class="dropdown-item" type="button"><%=link_to "Log out", session_path("current"), :method => :delete, class: "nav-link"%></button>
                     </div>
                   </div>
@@ -100,6 +102,21 @@
           </div><%# class "modal-content" closes here %>
         </div><%# class "modal-dialog" closes here %>
       </div><%# class "modal fade" closes here %>
+
+      <%# The following is to use bootstrap to render partial the User Profile (after log in) at languages page when button is clicked (button inside avatar icon at top-right corner)%>
+      <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <%= render "users/user" %>
+            </div><%# class "modal-body" closes here %>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close-form" data-dismiss="modal">Close</button>
+            </div><%# class "modal-footer" closes here %>
+          </div><%# class "modal-content" closes here %>
+        </div><%# class "modal-dialog" closes here %>
+      </div><%# class "modal fade" closes here %>
+
     </main>
   </body>
 </html>
