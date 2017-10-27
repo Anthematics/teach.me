@@ -38,6 +38,9 @@
             <% else %>
               <li class="nav-item"><a class="nav-link" href="/menu">What we teach</a></li>
             <% end %>
+            <% if current_user.present? && current_user.admin == true %>
+              <li class="nav-item"><a class="nav-link" href="/instructors/languages">Instructors</a></li>
+            <% end %>
           </ul><%# --- Navbar menu items ends --- %>
 
           <%# --- User info/sign up/login starts here --- %>

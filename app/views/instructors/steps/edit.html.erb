@@ -18,8 +18,6 @@
 <h1>CodeTest for <%=@step.name%> </h1>
 
 <% @step.code_tests.each do |test| %>
- <%=test.id%> Test Input: <%= test.input %> Test Output: <%= test.output %>
+ <%=test.id%> Test Input: <%= test.input %> Test Output: <%= test.output %>  |  <%=link_to "Edit", edit_instructors_language_chapter_step_code_test_path(@language.id,@chapter.id,@step.id,test.id)%>
  <br>
 <% end %>
-<br>
-Edit

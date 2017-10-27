@@ -17,6 +17,6 @@
 <h1>Steps </h1>
 
 <% @chapter.steps.each do |step| %>
- <%=step.id%> <%= step.name %> | <%=link_to "Edit", "/instructors/languages/#{@language.id}/chapters/#{@chapter.id}/steps/#{step.id}/edit"%>
+ <%=step.id%> <%= step.name %> | <%=link_to "Edit", edit_instructors_language_chapter_step_path(@language.id,@chapter.id,step.id)%>
  <br>
 <% end %>
