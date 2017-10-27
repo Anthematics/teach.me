@@ -1,40 +1,41 @@
 <div class="sign-up-form">
-	<h1>Sign Up Now to Start Coding</h1>
+  <h2>Sign Up Now to Start Coding</h2>
+  <br>
+  <p>Join others and put coding into your repetoire</p>
+  <br>
+  <a class="btn btn-primary github-button" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=74fe2b9c76d0ac9fbcce" type="button" name="button"><%= image_tag 'GitHub-Mark-32px'%> Sign up with Github</a>
+  <br>
+  <br>
+  <p>----------   OR   ----------</p>
+  <br>
 
-	<p>Join others and put coding into your repetoire</p>
-	<br>
-	<a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=74fe2b9c76d0ac9fbcce" class="btn btn-info" role="button">Sign up with Github</a>
-	<br>
-	<br>
-	<p>----------   OR   ----------</p>
-	<br>
+  <% if new_user.errors.any? %>
+    <h3>The following error(s) occurred:</h3>
+    <ul>
+      <% new_user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
-	<% if new_user.errors.any? %>
-		<h2>The following error(s) occurred:</h2>
-		<ul>
-			<% new_user.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-			<% end %>
-		</ul>
-	<% end %>
+  <p>Create account with email address</p>
 
-	<p>Create account with email address</p>
-
-	<%= form_for new_user, url: user_path do |f| %>
-		<p>
-			<%= f.label :email %><br>
-			<%= f.email_field :email %>
-		</p>
-		<p>
-			<%= f.label :password %><br>
-			<%= f.password_field :password %>
-		</p>
-		<p>
-			<%= f.label :password_confirmation %><br>
-			<%= f.password_field :password_confirmation %>
-		</p>
-		<p>
-			<%= f.submit 'Sign Up' %>
-		</p>
-	<% end %>
+  <%= form_for new_user, url: user_path do |f| %>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.email_field :email%>
+    </p>
+    <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <br>
+    <p>
+      <%= f.submit 'Sign Up', class: 'submit-signup-form' %>
+    </p>
+  <% end %>
 </div>

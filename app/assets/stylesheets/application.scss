@@ -413,13 +413,40 @@ h2 .card-text {
 
 // ------ Log in and Sign up form styling below ------
 .log-in-form, .sign-up-form {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
-.github-button {
+.log-in-form h2, .sign-up-form h2 {
+  font-weight: bold;
+}
+
+.github-button,
+.submit-signup-form,
+.submit-login-form {
   padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
 }
 
+.submit-signup-form,
+.submit-login-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.submit-signup-form:hover,
+.submit-login-form:hover {
+  background: #007bff;
+}
+
+.close-form {
+  border: 2px solid #1495d5;
+  background-color: white;
+  color: #1495d5;
+  font-weight: bold;
+}
 
 // ------ Steps terminal and console panel stying below ------
 .chapter-title {
