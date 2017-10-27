@@ -18,11 +18,14 @@ resources :welcome, only: [:index]
 resources :menu, only: [:index, :show]
 resources :sessions, only: [:new, :create, :destroy]
 namespace :instructors do
-  resources :languages
+  resources :languages, only: [:index, :edit, :update] do
+    resources :chapters, only: [:show, :edit, :update]
+
+  end
 end
 
 
-  resources :languages, only: [:index, :show, :edit], param: :language_id do
+  resources :languages, only: [:index, :show, :update], param: :language_id do
     resources :chapters, only: [:index, :show]  do
       resources :steps, only: [:index, :show]
     end

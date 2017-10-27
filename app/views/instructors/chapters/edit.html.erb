@@ -1,0 +1,15 @@
+Chapter <%=@chapter.id%> : <%= @chapter.name %>
+
+<%= form_for (@chapter, url: instructors_language_chapter_path) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
