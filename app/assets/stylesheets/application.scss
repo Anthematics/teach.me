@@ -197,7 +197,7 @@ a.navbar-brand img {
  }
 
 .row.home {
-   box-shadow: 10px 10px 10px #d4d4d8;
+   box-shadow: 10px 10px 10px #a6abb2;
    background-color: white;
 }
 
@@ -226,7 +226,7 @@ a.navbar-brand img {
 
 .about-us-intro {
   text-align: center;
-  margin: 25px 10% 0 10%;
+  margin: 25px 15% 0 15%;
 }
 
 .about-us-intro h2 {
@@ -234,22 +234,30 @@ a.navbar-brand img {
 }
 
 .card.about-us {
-  box-shadow: 10px 10px 10px #111213;
+  box-shadow: 10px 10px 10px #a6abb2;
   width: 250px;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid #a6abb2;
   margin-bottom: 25px;
 }
 
-// .card-img-top.about-us {
-//   max-width: 250px;
-//   height: auto;
-// }
-
-.card.about-us p, .card.about-us h4 {
+.card.about-us p,
+.card.about-us h4,
+.social-media {
   padding: 10px;
-  background: white;
+  background-color: white;
   margin: 0;
+}
+
+.social-media {
+  width: 100%;
+  text-align: center;
+}
+
+.social-media img {
+  width: 25px;
+  height: auto;
+  margin: 0 10px;
 }
 
 // ------ Menu styling below -----
@@ -428,12 +436,12 @@ h2 .card-text {
   min-width: 250px;
   height: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a6abb2;
 }
 
 .log-in-form h2, .sign-up-form h2 {
@@ -496,7 +504,7 @@ h2 .card-text {
 }
 
 #steps-left-panel, #steps-right-panel {
-  box-shadow: 10px 10px 10px #d4d4d8;
+  box-shadow: 10px 10px 10px #a6abb2;
   background-color: white;
 }
 
@@ -606,12 +614,12 @@ h2 .card-text {
   min-width: 250px;
   height: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a6abb2;
 }
 
 .instructors-languages h2,
@@ -630,14 +638,20 @@ h2 .card-text {
 #chapter_description,
 #step_description,
 #code_test_output {
-  width: 300px;
-  height: 200px;
+  width: 325px;
+  height: 250px;
+  color: #5a2a77;
+  padding: 10px;
+  border: 2px solid #1495d5;
 }
 
 #chapter_name,
 #step_name,
 #code_test_input {
-  width: 300px;
+  width: 325px;
+  color: #5a2a77;
+  padding: 10px;
+  border: 2px solid #1495d5;
 }
 
 .instructors-update-button {
@@ -661,12 +675,12 @@ h2 .card-text {
   min-width: 250px;
   height: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a6abb2;
 }
 
 .profile h2, .profile h4 {
