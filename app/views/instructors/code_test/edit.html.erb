@@ -1,16 +1,21 @@
+<div class="instructors-codetests-edit">
+  <h2>Steps <%=@step.id%> Code Test </h2>
+  <br>
+  <%= form_for [:instructors, @language, @chapter, @step, @test] do |f| %>
+    <p>
+      <%= f.label :input %>
+      <br>
+      <%= f.text_field :input %>
+    </p>
+    <br>
+    <p>
+      <%= f.label :output %>
+      <br>
+      <%= f.text_area :output %>
+    </p>
+    <p>
+      <%= f.submit 'Update Code Test', class: 'btn btn-primary instructors-update-button' %>
+    </p>
+  <% end %>
 
-<h1>Steps <%=@step.id%> : </h1>
-
-<%= form_for [:instructors, @language, @chapter, @step, @test] do |f| %>
-  <p>
-    <%= f.label :input %><br>
-    <%= f.text_field :input %>
-  </p>
-  <p>
-    <%= f.label :output %><br>
-    <%= f.text_area :output %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+</div>

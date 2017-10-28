@@ -598,7 +598,10 @@ h2 .card-text {
 // ------ Instructor Languages ------
 
 .instructors-languages,
-.instructors-languages-edit {
+.instructors-languages-edit,
+.instructors-chapters-edit,
+.instructors-steps-edit,
+.instructors-codetests-edit {
   max-width: 500px;
   min-width: 250px;
   height: auto;
@@ -608,18 +611,47 @@ h2 .card-text {
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;}
+  border: 1px solid #d4d4d8;
+}
 
 .instructors-languages h2,
 .instructors-languages h3,
 .instructors-languages-edit h2,
-.instructors-languages-edit h3 {
+.instructors-languages-edit h3,
+.instructors-chapters-edit h2,
+.instructors-chapters-edit h3,
+.instructors-steps-edit h2,
+.instructors-steps-edit h3,
+.instructors-codetests-edit h2 {
   font-weight: bold;
 }
 
-#language_description {
+#language_description,
+#chapter_description,
+#step_description,
+#code_test_output {
   width: 300px;
   height: 200px;
+}
+
+#chapter_name,
+#step_name,
+#code_test_input {
+  width: 300px;
+}
+
+.instructors-update-button {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.edit-chapter-menu p,
+.edit-step-menu p,
+.edit-step-menu p {
+  font-weight: bold;
 }
 
 // ------ Profile page styling below ------

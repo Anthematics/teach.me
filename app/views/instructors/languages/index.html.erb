@@ -1,8 +1,10 @@
 <div class="instructors-languages">
-  <h2>Welcome back, <%= current_user.name %> the Instructor</h2>
-  <p>You can update the content of the following languages in our syllabus</p>
+  <h2>Welcome back, <%= current_user.name %></h2>
   <br>
-
+  <p>As an instructor, you can update the content of the following languages in our syllabus</p>
+  <br>
+  <p>----------------------------------------</p>
+  <br>
   <h3>
     <% @languages.each do | l | %>
       <%= l.name.upcase %> | <%=link_to "Edit", edit_instructors_language_path(l.id)%>
