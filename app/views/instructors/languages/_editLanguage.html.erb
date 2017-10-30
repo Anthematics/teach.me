@@ -1,0 +1,28 @@
+<div class="instructors-languages-edit">
+  <h2>Edit <%= @language.name.capitalize %> </h2>
+  <br>
+  <%= form_for [:instructors, @language] do |f| %>
+    <p>
+      <%= f.label :"You can edit the language description below"%>
+      <br>
+      <%= f.text_area :description %>
+    </p>
+    <p>
+      <%= f.submit 'Update Language Description', class: 'btn btn-primary instructors-update-button' %>
+    </p>
+  <% end %>
+  <br>
+  <p>----------------------------------------</p>
+  <br>
+  <div class="edit-chapter-menu">
+    <h3>Chapters</h3>
+    <br>
+    <% @language.chapters.each do |chapter| %>
+      <p>
+        <%=chapter.id%>.)  <%= chapter.name %> | <%=link_to "Edit", edit_instructors_language_chapter_path(@language.id,chapter.id)%>
+      </p>
+      <br>
+    <% end %>
+  </div>
+
+</div>

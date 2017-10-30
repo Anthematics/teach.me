@@ -244,14 +244,27 @@ a.navbar-brand img {
 .card.about-us p,
 .card.about-us h4,
 .social-media {
-  padding: 10px;
   background-color: white;
   margin: 0;
+}
+
+.card.about-us h4 {
+  font-weight: bold;
+  padding: 10px 10px 0 10px;
+}
+
+.role {
+  padding: 0 10px 10px 10px;
+}
+
+.card-text.about-us {
+  padding: 10px;
 }
 
 .social-media {
   width: 100%;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .social-media img {

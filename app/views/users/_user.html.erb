@@ -2,13 +2,13 @@
   <h2>Your Profile</h2>
   <br>
   <br>
-  <div class="profile-pic">
-    <h4>Profile Picture</h4>
-    <%= image_tag 'avatar.jpg', class: 'rounded-circle profile-pic' %>
-  </div>
-  <br>
   <% if current_user.present? %>
     <%= form_for current_user do |f| %>
+      <div class="profile-pic">
+        <h4>Profile Picture</h4>
+        <%= image_tag "http://api.adorable.io/avatar/250/#{current_user.email}" %>
+      </div>
+      <br>
       <div class="username">
         <h4>Username</h4>
         <p>
