@@ -14,7 +14,7 @@
         <p>
           <%= f.text_field :name, value: current_user.name %>
         </p>
-      </div>
+      </div>l
       <br>
       <div class="email">
         <h4>Email address</h4>
@@ -38,6 +38,10 @@
       </div>
       <br>
       <%= f.submit 'Update Profile', class: 'btn btn-primary edit-profile' %>
+
+      <% if flash[:notice] %>
+        <div class="update-success-notice"><%= flash[:notice] %></div>
+      <% end %>
     <% end %>
   <% end %>
 </div>

@@ -259,7 +259,7 @@ a.navbar-brand img {
 
 .card.about-us {
   box-shadow: 10px 10px 10px #a6abb2;
-  width: 450px;
+  width: 475px;
   height: auto;
   border: 1px solid #a6abb2;
   margin-bottom: 25px;
@@ -267,7 +267,7 @@ a.navbar-brand img {
 }
 
 .card-img-top.about-us {
-  height: 350px;
+  height: 375px;
   width: 100%;
 }
 
@@ -666,14 +666,20 @@ h2 .card-text {
 
 .instructors-languages h2,
 .instructors-languages h3,
+.instructors-languages h3 a,
 .instructors-languages-edit h2,
 .instructors-languages-edit h3,
+.instructors-languages-edit h3 a,
 .instructors-chapters-edit h2,
 .instructors-chapters-edit h3,
 .instructors-steps-edit h2,
 .instructors-steps-edit h3,
 .instructors-codetests-edit h2 {
   font-weight: bold;
+}
+
+.instructors-languages-edit p {
+  font-size: 1rem;
 }
 
 #language_description,
@@ -706,7 +712,7 @@ h2 .card-text {
 
 .edit-chapter-menu p,
 .edit-step-menu p,
-.edit-step-menu p {
+.edit-codetests-menu p {
   font-weight: bold;
 }
 

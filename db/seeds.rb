@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Language.destroy_all
+Chapter.destroy_all
+Step.destroy_all
 
 ruby = Language.create!(
   name: "ruby",
@@ -76,6 +79,8 @@ step1.code_tests.create(input: "my_string.class", output: "String")
 
 
 
+
+
 step2 = Step.create!(
   name: "Math",
   description: "Ruby is not limited to simple variable assignments. It also can do Math! <br>
@@ -91,16 +96,62 @@ step2 = Step.create!(
   Try some math practice in the editor.
 
   Using the following variables:
-  a = ? + ? <br>
-  b = ? - ? <br>
-  c = ? * ? <br>
-  d = ? / ? <br>
-  e = ? ** ? <br>
-  f = ? % ? <br>
+  <b>Replace</b> plus, minus, multiply, .... by arithmetic operators + , -, .. <br>
+  a = 10 plus 5 <br>
+  b = 9  minus 3 <br>
+  c = 2 multiply 4 <br>
+  d = 14 divided_by 2 <br>
+  e = 3 exponent 3 <br>
+  f = 20 modulus 3 <br>
 
   As per Step 1 call your variables using puts, p and check out the difference in display when you use print.
   ",
   chapter: chapter1
 )
 
-step2.code_tests.create(input: "",output: "")
+step2.code_tests.create(input: "a",output: "15")
+step2.code_tests.create(input: "b",output: "6")
+step2.code_tests.create(input: "c",output: "8")
+step2.code_tests.create(input: "d",output: "7")
+step2.code_tests.create(input: "e",output: "27")
+step2.code_tests.create(input: "f",output: "false")
+
+
+step3 = Step.create!(
+  name: "Method",
+  description: "<b>What are Methods?</b><br>
+
+A <em>method</em> is a named sequence of instructions.
+Some programming languages refer to it as a <em>function</em>
+It encapsulates logic for re-use:<ul>
+<li>Basically, it allows us to write code once, and reuse it in multiple places</li>
+<li>A building block toward Don't Repeat Yourself (DRY)</li>
+<li>Improves maintainability of our code when there's only one point of failure</li></ul><br><b>code style guide </b><br>
+<ul><li> no spaces between method name and parameter list</li><li>Do: <em>def method(something)</em></li><li>Don't: <em>def method (something) </em></li></ul><br>
+<b> Let's do some method </b><br><b>type</b>  def double(number)<br>
+ <b>type</b> number * 2 <br><b>type</b>  end<br> Now you can all the method and pass any number <br>
+example: puts double(5) will display 10 <br>
+",
+  chapter: chapter2
+)
+step3.code_tests.create(input: "double(6)",output: "12")
+step3.code_tests.create(input: "double(9)",output: "18")
+step3.code_tests.create(input: "double(11)",output: "22")
+
+step4 = Step.create!(
+  name: "Method",
+  description: "<b>What are Methods?</b><br>
+
+A <em>method</em> is a named sequence of instructions.
+Some programming languages refer to it as a <em>function</em>
+<b> A simple method to add two numbers</b><br>
+<b>type</b>  def add(x,y)<br>
+ <b>type</b>  x + y <br><b>type</b>  end<br><br><br> Now you can all the method and pass any two numbers <br>
+example: puts add(5,12) will display 17<br>
+",
+  chapter: chapter2
+)
+
+step4.code_tests.create(input: "add(6,2)",output: "8")
+step4.code_tests.create(input: "add(4,2)",output: "6")
+step4.code_tests.create(input: "add(1,1)",output: "2")
