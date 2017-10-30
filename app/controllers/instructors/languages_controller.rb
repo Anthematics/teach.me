@@ -8,6 +8,21 @@ class Instructors::LanguagesController < ApplicationController
   end
 
   def show
+    @stepsperchapter = {}
+    @testperstep = {}
+    @userperchapter = {}
+    @userperstep = {}
+    current_language.chapters.each do |chapter|
+      @stepsperchapter[chapter.name] = chapter.steps.count
+      step_id = chapter.steps.all.pluck(:id)
+      @userperchapter[chapter.name] = UserStep.where(id: step_id).count
+      chapter.steps.each do |step|
+        @testperstep[step.name] = step.code_tests.count
+        @userperstep[step.name] = step.user_steps.count
+      end
+    end
+
+
   end
 
   def edit

@@ -13,7 +13,8 @@
   <br>
   <h3>
     <% @languages.each do | l | %>
-        <%= l.name.upcase %> | <%= link_to "Edit", edit_instructors_language_path(l.id) %>
+      <%= l.name.upcase %> <br>
+      <small> <%=link_to "Edit", edit_instructors_language_path(l.id)%> | <%=link_to "Analytics", instructors_language_path(l.id)%> </small>
     <%end%>
   </h3>
 </div>
