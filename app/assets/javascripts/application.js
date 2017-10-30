@@ -15,6 +15,8 @@
 //= require codemirror
 //= require ruby
 //= require popper.min
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 //= require bootstrap-sprockets
 //
