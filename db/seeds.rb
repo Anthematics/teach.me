@@ -58,15 +58,48 @@ chapter6 = Chapter.create!(
 
 step1 = Step.create!(
   name: "Step 1: Data types",
-  description: "Some of the basic Data Types of Ruby are Numbers,String,Boolean,and Symbols. <br><b> Numbers</b> without decimal points (eg. <b>1, 250, 99999</b>) are called <b>integers</b>, and numbers with decimal points (eg. <b>1.5, 150.3985, 50.0</b>) are usually called <b>floating-point numbers </b>or, more simply, <b>floats</b>.<br>In order to print the output, we will use <b>puts</b> before the statement.<br><br> <em>puts 3 </em>, will display integer 3 in the console.<br>Here is your first exercise: <ul><li>1.Display an integer of your choice</li><li>2. Display an floats</li></ul>",
+  description: "Some of the basic <b>DataTypes</b> of Ruby are <b>Numbers</b>, <b>String</b> ('Welcome to learning Ruby!'), and
+  <b>Boolean</b>(true or false).<br> <b>Numbers</b> without decimal points (eg. <b>1, 250, 99999</b>) are called <b>integers</b>,
+  and numbers with decimal points (eg. <b>1.5, 150.3985, 50.0</b>) are usually called <b>floating-point numbers
+  </b>or, more simply, <b>floats</b>.<br>In order to print the output, we will use <b>puts</b> before the statement.
+  <br><br>It is important to remember that Ruby is case sensitive
+    (it cares about capitalization)<br>Here is your first exercise: <ul><li>Set a variable using an integer,a float and a string.
+    </li><li> Use following variables to set your DataTypes: my_int = 2, my_float = ?, my_string = ?, my_boolean = ?.
+    <br>After assigning your variables, call your variables using puts or p before the variable name. Remember to Test your Code before Submiting!</li></ul>",
   chapter: chapter1
 )
-step1.code_tests.create(input: "add(2,5)",output: "7")
-step1.code_tests.create(input: "add(5,5)",output: "10")
-step1.code_tests.create(input: "add(12,5)",output: "17")
+
+step1.code_tests.create(input: "my_int.class", output: "Fixnum")
+step1.code_tests.create(input: "my_float.class", output: "Float")
+step1.code_tests.create(input: "my_string.class", output: "String")
+
+
 
 step2 = Step.create!(
-  name: "Control Structures",
-  description: "manage a program's control flow, allowing you to either execute or skip a block of code based on a condition that evaluates to true or false",
+  name: "Math",
+  description: "Ruby is not limited to simple variable assignments. It also can do Math! <br>
+  We are going to focus on six arithmetic operators: <br>
+  Addition (+) <br>
+  Subtraction (-) <br>
+  Multiplication (*) <br>
+  Division (/) <br>
+  Exponentiation (**) ex: 2**3 = 8<br>
+  Modulo (%) returns true if the numerator is exactly divisible by denominator else returns false. <br>
+  ex:12%3 = true <br>
+  ex: 12%5 = false <br>
+  Try some math practice in the editor.
+
+  Using the following variables:
+  a = ? + ? <br>
+  b = ? - ? <br>
+  c = ? * ? <br>
+  d = ? / ? <br>
+  e = ? ** ? <br>
+  f = ? % ? <br>
+
+  As per Step 1 call your variables using puts, p and check out the difference in display when you use print.
+  ",
   chapter: chapter1
 )
+
+step2.code_tests.create(input: "",output: "")
