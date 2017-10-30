@@ -31,16 +31,13 @@ class UsersController < ApplicationController
      @valid = 0
      @step.code_tests.each do |test|
        @code = remove_puts(@usercode)
-       if test.input == " "
-         @valid += 1
-       else
      @testcode = @code + "\n print " + test.input # requires an explicit result to print in this case so we can compare with output.
        response = HTTParty.post("https://codeapi.herokuapp.com/code/ruby",:body => {:step => {:code => @testcode}}) #ajax call to mini app for eval
         if response.body.to_s == test.output # now compare the 2 and if they = each other
           @valid += 1 #another test is valid
         end
       end
-    end
+    
 
     if @total_test == @valid # if we pass all tests
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
