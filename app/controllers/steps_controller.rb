@@ -9,10 +9,11 @@ class StepsController < ApplicationController
   end
 
   def show
-    @step = Step.find(params[:id])
+    check_step_access
+    @step = current_language.chapters.find(params[:chapter_id]).steps.find(params[:id])
 
     #array of steps of current chapter of current language
-    @steps = current_language.chapters.find(params[:chapter_id]).steps.all
+    @steps = Step.where(chapter_id: current_language.chapters.pluck(:id))
     #number of steps finished by current user
     @user_steps = current_user.user_steps.count
     # total steps are total steps of current chapter
@@ -23,6 +24,17 @@ class StepsController < ApplicationController
   end
 
   def create
+  end
+
+  def check_step_access
+    if params[:id].to_i > 1
+      if !UserStep.where(step_id: (params[:id].to_i-1)).empty?
+        puts "Access"
+      else
+        redirect_to root_path
+      end
+
+    end
   end
 
   def current_language
