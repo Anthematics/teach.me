@@ -18,7 +18,7 @@ resources :welcome, only: [:index]
 resources :menu, only: [:index, :show]
 resources :sessions, only: [:new, :create, :destroy]
 namespace :instructors do
-  resources :languages, only: [:index, :edit, :update] do
+  resources :languages, only: [:index,:show, :edit, :update] do
     resources :chapters, only: [:edit, :update] do
       resources :steps, only: [:edit, :update] do
         resources :code_test, only: [:edit, :update]

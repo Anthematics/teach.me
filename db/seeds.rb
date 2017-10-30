@@ -18,9 +18,10 @@ ruby = Language.create!(
 
 user = User.create!(
   name: "Sean",
-  password: "Password12*",
-  password_confirmation: "Password12*",
-  email: "sean@email.com"
+  password: "Password1#",
+  password_confirmation: "Password1#",
+  email: "sean@email.com",
+  admin: true
 )
 
 
@@ -60,7 +61,7 @@ chapter6 = Chapter.create!(
 )
 
 step1 = Step.create!(
-  name: "Step 1: Data types",
+  name: "Data types",
   description: "Some of the basic <b>DataTypes</b> of Ruby are <b>Numbers</b>, <b>String</b> ('Welcome to learning Ruby!'), and
   <b>Boolean</b>(true or false).<br> <b>Numbers</b> without decimal points (eg. <b>1, 250, 99999</b>) are called <b>integers</b>,
   and numbers with decimal points (eg. <b>1.5, 150.3985, 50.0</b>) are usually called <b>floating-point numbers
