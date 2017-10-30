@@ -197,7 +197,7 @@ a.navbar-brand img {
  }
 
 .row.home {
-   box-shadow: 10px 10px 10px #d4d4d8;
+   box-shadow: 10px 10px 10px #a6abb2;
    background-color: white;
 }
 
@@ -226,7 +226,7 @@ a.navbar-brand img {
 
 .about-us-intro {
   text-align: center;
-  margin: 25px 10% 0 10%;
+  margin: 25px 15% 0 15%;
 }
 
 .about-us-intro h2 {
@@ -234,22 +234,43 @@ a.navbar-brand img {
 }
 
 .card.about-us {
-  box-shadow: 10px 10px 10px #111213;
+  box-shadow: 10px 10px 10px #a6abb2;
   width: 250px;
   height: auto;
-  border: 1px solid black;
+  border: 1px solid #a6abb2;
   margin-bottom: 25px;
 }
 
-// .card-img-top.about-us {
-//   max-width: 250px;
-//   height: auto;
-// }
-
-.card.about-us p, .card.about-us h4 {
-  padding: 10px;
-  background: white;
+.card.about-us p,
+.card.about-us h4,
+.social-media {
+  background-color: white;
   margin: 0;
+}
+
+.card.about-us h4 {
+  font-weight: bold;
+  padding: 10px 10px 0 10px;
+}
+
+.role {
+  padding: 0 10px 10px 10px;
+}
+
+.card-text.about-us {
+  padding: 10px;
+}
+
+.social-media {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.social-media img {
+  width: 25px;
+  height: auto;
+  margin: 0 10px;
 }
 
 // ------ Menu styling below -----
@@ -428,12 +449,12 @@ h2 .card-text {
   min-width: 250px;
   height: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a6abb2;
 }
 
 .log-in-form h2, .sign-up-form h2 {
@@ -496,7 +517,7 @@ h2 .card-text {
 }
 
 #steps-left-panel, #steps-right-panel {
-  box-shadow: 10px 10px 10px #d4d4d8;
+  box-shadow: 10px 10px 10px #a6abb2;
   background-color: white;
 }
 
@@ -598,28 +619,66 @@ h2 .card-text {
 // ------ Instructor Languages ------
 
 .instructors-languages,
-.instructors-languages-edit {
+.instructors-languages-edit,
+.instructors-chapters-edit,
+.instructors-steps-edit,
+.instructors-codetests-edit {
   max-width: 500px;
   min-width: 250px;
   height: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;}
+  border: 1px solid #a6abb2;
+}
 
 .instructors-languages h2,
 .instructors-languages h3,
 .instructors-languages-edit h2,
-.instructors-languages-edit h3 {
+.instructors-languages-edit h3,
+.instructors-chapters-edit h2,
+.instructors-chapters-edit h3,
+.instructors-steps-edit h2,
+.instructors-steps-edit h3,
+.instructors-codetests-edit h2 {
   font-weight: bold;
 }
 
-#language_description {
-  width: 300px;
-  height: 200px;
+#language_description,
+#chapter_description,
+#step_description,
+#code_test_output {
+  width: 325px;
+  height: 250px;
+  color: #5a2a77;
+  padding: 10px;
+  border: 2px solid #1495d5;
+}
+
+#chapter_name,
+#step_name,
+#code_test_input {
+  width: 325px;
+  color: #5a2a77;
+  padding: 10px;
+  border: 2px solid #1495d5;
+}
+
+.instructors-update-button {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.edit-chapter-menu p,
+.edit-step-menu p,
+.edit-step-menu p {
+  font-weight: bold;
 }
 
 // ------ Profile page styling below ------
@@ -629,12 +688,12 @@ h2 .card-text {
   min-width: 250px;
   height: auto;
   background-color: white;
-  box-shadow: 0px 10px 10px #d4d4d8, -10px 10px 10px #d4d4d8, 10px 10px 10px #d4d4d8;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
-  border: 1px solid #d4d4d8;
+  border: 1px solid #a6abb2;
 }
 
 .profile h2, .profile h4 {

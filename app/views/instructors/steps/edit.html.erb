@@ -1,23 +1,34 @@
+<div class="instructors-steps-edit">
+  <h2>Steps <%=@step.id%> : <%= @step.name %></h2>
+  <br>
+  <%= form_for [:instructors, @language, @chapter, @step] do |f| %>
+    <p>
+      <%= f.label :name %>
+      <br>
+      <%= f.text_field :name %>
+    </p>
+    <br>
+    <p>
+      <%= f.label :description %>
+      <br>
+      <%= f.text_area :description %>
+    </p>
+    <p>
+      <%= f.submit 'Update Step Description', class: 'btn btn-primary instructors-update-button' %>
+    </p>
+  <% end %>
+  <br>
+  <p>----------------------------------------</p>
+  <br>
+  <div class="edit-step-menu">
+    <h3>CodeTest for <%=@step.name%></h3>
+    <br>
+    <% @step.code_tests.each do |test| %>
+      <p>
+        <%=test.id%>.)  Test Input: <%= test.input %> Test Output: <%= test.output %>  |  <%=link_to "Edit", edit_instructors_language_chapter_step_code_test_path(@language.id,@chapter.id,@step.id,test.id)%>
+      </p>
+      <br>
+      <% end %>
+  </div>
 
-<h1>Steps <%=@step.id%> : <%= @step.name %></h1>
-
-<%= form_for [:instructors, @language, @chapter, @step] do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-
-<h1>CodeTest for <%=@step.name%> </h1>
-
-<% @step.code_tests.each do |test| %>
- <%=test.id%> Test Input: <%= test.input %> Test Output: <%= test.output %>  |  <%=link_to "Edit", edit_instructors_language_chapter_step_code_test_path(@language.id,@chapter.id,@step.id,test.id)%>
- <br>
-<% end %>
+</div>

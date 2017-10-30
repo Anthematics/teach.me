@@ -1,18 +1,18 @@
 class Instructors::LanguagesController < ApplicationController
   before_action :ensure_logged_in
-	before_action :ensure_user_is_admin
-	before_action :current_language, only: [:show, :edit ]
+  before_action :ensure_user_is_admin
+  before_action :current_language, only: [:show, :edit ]
 
-	def index
+  def index
     @languages = Language.all
-	end
+  end
 
-	def show
-	end
+  def show
+  end
 
-	def edit
+  def edit
     @language = current_language
-	end
+  end
 
   def update
     @language = current_language
@@ -26,7 +26,7 @@ class Instructors::LanguagesController < ApplicationController
   end
 
   def current_language
-		@current_language ||= Language.find(params[:id])
-	end
+    @current_language ||= Language.find(params[:id])
+  end
 
 end
