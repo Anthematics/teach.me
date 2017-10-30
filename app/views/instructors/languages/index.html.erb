@@ -1,3 +1,9 @@
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Instructor Home</li>
+  </ol>
+</nav>
+
 <div class="instructors-languages">
   <h2>Welcome back, <%= current_user.name %></h2>
   <br>
@@ -7,7 +13,7 @@
   <br>
   <h3>
     <% @languages.each do | l | %>
-      <%= l.name.upcase %> | <%=link_to "Edit", edit_instructors_language_path(l.id)%>
+        <%= l.name.upcase %> | <%= link_to "Edit", edit_instructors_language_path(l.id) %>
     <%end%>
   </h3>
 </div>
