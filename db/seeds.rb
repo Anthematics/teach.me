@@ -211,7 +211,7 @@ step6 = Step.create!(
   customer1 = { \"firstname\" => \"Will\", \"lastname\" => \"Smith\", \"profession\" => \"Actor\"}<br><br>
   If I want the firstname of customer1, the key of this <b>hash</b> is 'firstname', <br>
   customer1[\"firstname\"] returns the value <b>Will</b> <br>
-  Now let's try!: <br> <br>
+  Now let's try! <br> <br>
   Create a hash and assign the name <b> my_hash</b>Use the key-value pair to create this hash<br>
   Check out your hash by using  <b>puts my_hash</b> <br>
   Now trying calling a value in a given key by using <b>puts my_hash[ ? ]</b><br><br>
@@ -222,24 +222,31 @@ step6.code_tests.create(input: "my_hash.class", output: "Hash")
 
 step7 = Step.create!(
   name: "Loop & Iterations",
-  description: "Loops in Ruby are used to execute the same block of code a specified number of times.<br>
-  The most commonly used iterations that you will come across will be .each<br>
-  example:<br>
-  shopping_list = ['chips','orange','egg','milk']<br>
-  In order to all the list,type the following in the editor<br>
-  shopping_list.each do |item| <br>
-    puts item<br>
-  end<br>",
+  description: "Loops in Ruby are used to execute the same block of code a specified number of times.<br><br>
+  The most commonly used iterations that you will come across will be<br><br>
+  <b>.each</b> <br>
+  For example:<br>
+  shopping_list = ['chips','orange','egg','milk']<br><br>
+  In order to print each element of the shopping_list,type the following in the editor<br><br>
+  <b>shopping_list.each do |each_item|</b> <br>
+    <b>puts each_item</b><br>
+  <b>end</b><br>
+  Now you give it a shot!!<br> <br>
+  Build an array using the variable my_list with atleast 5 elements. <br>
+  Then do an iteration using <b>.each</b> to display each item in the console. <br>
+  Now use a methods we already learned, we are going to use a method called <b>display_item</b> to take an array and print each item. <br><br>
+  HINT! You do not need to print each_item inside the iteration as you will be calling the method display_item using <b>puts display_item(my_list)</b><br><br>
+  Remember to Test your Code before Submitting!",
   chapter: chapter4
 )
-step7.code_tests.create(input:"", output: "")
+step7.code_tests.create(input:"display_item(my_list = [\"hi\",\"hello\"])", output: "\"hi\",\"hello\"")
 
-step7 = Step.create!(
+step8 = Step.create!(
   name: "",
   description: "",
   chapter: chapter5
 )
-step8 = Step.create!(
+step9 = Step.create!(
   name: "",
   description: "",
   chapter: chapter6
