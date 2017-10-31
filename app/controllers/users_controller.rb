@@ -1,3 +1,4 @@
+
 require 'httparty'
 
 class UsersController < ApplicationController
@@ -39,6 +40,8 @@ class UsersController < ApplicationController
   def submitcode
      @usercode = params[:code]
      @step = Step.find(params[:step_id]) #finds which step you are on so it knows which tests to run
+     @chapter = Chapter.find(params[:id])
+     @language = @chapter.language
      @total_test = @step.code_tests.count #can test multiple times if code works this way
      @valid = 0
      @step.code_tests.each do |test|
@@ -59,12 +62,15 @@ class UsersController < ApplicationController
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-      @language_name = current_language.name
+      @language_id = @language.id.to_s
       # @next_chapter_id = (@step.next.chapter.id).to_s
       @next_step = @step.next
-      @next_chapter_id = @next_step.chapter_id
+      #byebug
+      if @language.id != @next_step.chapter.language.id
+        url = "javacript:alert('Congrualations! You have now completed the lagnuage!')"
+      end
 
-      url =  "/languages/" + @language_name + "/chapters/" + @next_chapter_id + "/steps/" + @next_step
+      url =  "/languages/" + @language_id + "/chapters/" + @next_step.chapter_id.to_s + "/steps/" + @next_step.id.to_s
 
       render json: {message: "Congratulations, you pass this Step!", pass: true, url: url}
     else
