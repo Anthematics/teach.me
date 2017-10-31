@@ -1,24 +1,38 @@
-<h1> Analytics</h1>
-<div class="row">
-  <div class="col-md-6">
-  <h3> Steps per Chapter</h3>
-  <%= pie_chart(@stepsperchapter) %>
-</div>
-<div class="col-md-6">
-<h3> Tests per Steps</h3>
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><a href="/instructors/languages">Instructor Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Analytics</li>
+  </ol>
+</nav>
 
-<%= pie_chart(@testperstep) %>
-</div>
+<div class="analytics">
+  <h1>Analytics</h1>
+  <div class="row">
+    <%# --- User per chapter chart starts here --- %>
+    <div class="col-md-6">
+      <h3> Users per Chapter</h3>
+      <%= pie_chart(@userperchapter) %>
+    </div>
 
-<div class="col-md-6">
-<h3> User Per Chapter</h3>
+    <%# --- steps per chapter chart starts here --- %>
+    <div class="col-md-6">
+      <h3> Steps per Chapter</h3>
+      <%= pie_chart(@stepsperchapter) %>
+    </div>
+  </div><%# --- class "row" ends here --- %>
 
-<%= pie_chart(@userperchapter) %>
-</div>
+  <div class="row">
+    <%# --- Tests per steps chart starts here --- %>
+    <div class="col-md-6">
+      <h3> Tests per Step</h3>
+      <%= pie_chart(@testperstep) %>
+    </div>
 
-<div class="col-md-6">
-<h3> User per Steps</h3>
+    <%# --- User per steps chart starts here --- %>
+    <div class="col-md-6">
+      <h3> Users per Step</h3>
+      <%= pie_chart(@userperstep) %>
+    </div>
 
-<%= pie_chart(@userperstep) %>
-</div>
-</div>
+  </div><%# --- class "row" ends here --- %>
+</div><%# --- class "analytics" ends here --- %>
