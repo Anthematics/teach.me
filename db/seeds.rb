@@ -226,12 +226,12 @@ step7 = Step.create!(
 )
 step7.code_tests.create(input:"", output: "")
 
-step7 = Step.create!(
+step8 = Step.create!(
   name: "",
   description: "",
   chapter: chapter5
 )
-step8 = Step.create!(
+step9 = Step.create!(
   name: "",
   description: "",
   chapter: chapter6
