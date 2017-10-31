@@ -260,7 +260,7 @@ a.navbar-brand img {
 .card.about-us {
   box-shadow: 10px 10px 10px #a6abb2;
   width: 475px;
-  height: auto;
+  height: 775px;
   border: 1px solid #a6abb2;
   margin-bottom: 25px;
   background-color: white;
@@ -294,6 +294,8 @@ a.navbar-brand img {
   width: 100%;
   text-align: center;
   padding-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
 }
 
 .social-media img {
@@ -597,12 +599,13 @@ h2 .card-text {
 
 #result {
   background-color: #e0e0e5;
-  height: 100px;
   padding: 1%;
   margin: 2%;
   color: #8c05ff;
   font-weight: bold;
   font-size: 1.25rem;
+  min-height: 100px;
+  height: auto;
 }
 
 .CodeMirror-scroll {

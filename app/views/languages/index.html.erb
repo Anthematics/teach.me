@@ -1,3 +1,9 @@
+<% if flash[:alert] %>
+  <div class="flash-notice">
+    <%= javascript_tag "alert('User profile successfully updated.')" %>
+  </div>
+<% end %>
+
 <div class="languages">
   <div class="languages-tagline">
     <h2>Languages</h2>
@@ -81,7 +87,7 @@
         </ul><%# class "inner" ends here %>
       </li><%# class "sub-accordion" ends here %>
       <%# --- The Javascript accordion ends %>
-      
+
     </ul><%# class "accordion" ends here %>
 
   </div><%# class "gurjant" ends here %>

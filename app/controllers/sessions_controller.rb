@@ -41,7 +41,7 @@ session_code = request.env['rack.request.query_hash']['code']
     end
     puts @user
     session[:user_id] = @user.id
-  redirect_to languages_path, notice: "Logged in!"
+    redirect_to languages_path, notice: "Logged in!"
   end
 
   def create
