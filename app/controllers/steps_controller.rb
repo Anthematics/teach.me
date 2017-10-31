@@ -10,9 +10,9 @@ class StepsController < ApplicationController
 
   def show
     check_step_access
-    @step = current_language.chapters.find(params[:chapter_id]).steps.find(params[:id])
 
-    #array of steps of current chapter of current language
+    @step = Step.find_by(chapter_id: params[:chapter_id], id: params[:id])
+
     @steps = Step.where(chapter_id: current_language.chapters.pluck(:id))
     #number of steps finished by current user
     @user_steps = current_user.user_steps.count
@@ -33,12 +33,14 @@ class StepsController < ApplicationController
       else
         redirect_to root_path
       end
-
     end
   end
 
   def current_language
-    @current_language = Language.find_by! name: params[:language_language_id]
+    @current_language = Language.find_by! id: params[:language_language_id]
+
   end
+
+
 
 end

@@ -5,6 +5,7 @@ class CreateUserSteps < ActiveRecord::Migration[5.1]
       t.references :user
       t.references :step
       t.text :userCode
+      t.boolean :successfully_completed
 
       t.timestamps
     end
