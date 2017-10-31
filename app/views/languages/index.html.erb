@@ -14,45 +14,34 @@
 
   <br>
 
-<%# ---------- The languages selction accordion starts here ---------- %>
+
+
+
+<%# ---------- The languages selction accordion starts here ----------%>
   <div class="gurjant">
-    <%# ------ The accordion begins ------ %>
+    <% @languages.each do | language| %>
     <ul class="accordion">
-      <%# --- The Ruby accordion begins %>
+      <%# --- The Ruby accordion begins%>
       <li class="sub-accordion">
-        <a class="toggle title" href="javascript:void(0);">Ruby</a>
+        <a class="toggle title" href="javascript:void(0);"><%=language.name.capitalize %></a>
         <ul class="inner">
+          <% language.chapters.each do | chapter| %>
           <li>
-            <a href="#" class="toggle sub-title">Chapter 1: Variables</a>
+            <a href="#" class="toggle sub-title">Chapter <%=chapter.id%> : <%=chapter.name %> ✔ </a>
             <div class="inner content">
-              <p>What is a variable? What's the use of a variable? Why are they important?</p>
-              <p>In this lesson, you will learn about different types of variables in Ruby.</p>
-              <p>At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!</p>
-              <a class="start-button" href= '/languages/ruby/chapters/1/steps/1' type="button" name="button">Start Now</a>
+              <p><%=chapter.description%></p>
+              <a class="start-button" href= "<%=language_chapter_step_path(language.id,chapter.id,chapter.steps.first.id)%>" type="button" name="button">Start Now</a>
             </div><%# class "inner content" ends %>
-          </li>
-          <li>
-            <a href="#" class="toggle sub-title">Chapter 2: Methods</a>
-            <div class="inner content">
-              <p>What is a variable? What's the use of a variable? Why are they important?</p>
-              <p>In this lesson, you will learn about different types of variables in Ruby.</p>
-              <p>At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!</p>
-              <a class="start-button" href= "/" type="button" name="button">Start Now</a>
-            </div><%# class "inner content" ends %>
-          </li>
-          <li>
-            <a href="#" class="toggle sub-title">Chapter 3: Arrays & Hashes</a>
-            <div class="inner content">
-              <p>What is a variable? What's the use of a variable? Why are they important?</p>
-              <p>In this lesson, you will learn about different types of variables in Ruby.</p>
-              <p>At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!</p>
-              <a class="start-button" href= "/" type="button" name="button">Start Now</a>
-            </div><%# class "inner content" ends %>
+            <% end %>
           </li>
         </ul><%# class "inner" ends here %>
       </li><%# class "sub-accordion" ends here %>
+    </ul><%# class "accordion" ends here %>
+  </div><%# class "gurjant" ends here %>
+  <% end %>
+</div><%# class "languages" ends here %>
       <%# --- The Ruby accordion ends %>
-
+<!--
       <%# --- The Javascript accordion begins %>
       <li class="sub-accordion">
         <a class="toggle title" href="javascript:void(0);">Javascript</a>
@@ -86,9 +75,4 @@
           </li>
         </ul><%# class "inner" ends here %>
       </li><%# class "sub-accordion" ends here %>
-      <%# --- The Javascript accordion ends %>
-
-    </ul><%# class "accordion" ends here %>
-
-  </div><%# class "gurjant" ends here %>
-</div><%# class "languages" ends here %>
+      <%# --- The Javascript accordion ends %> -->

@@ -155,3 +155,26 @@ example: puts add(5,12) will display 17<br>
 step4.code_tests.create(input: "add(6,2)",output: "8")
 step4.code_tests.create(input: "add(4,2)",output: "6")
 step4.code_tests.create(input: "add(1,1)",output: "2")
+
+
+step5 = Step.create!(
+  name: "",
+  description: "",
+  chapter: chapter3
+)
+
+step6 = Step.create!(
+  name: "",
+  description: "",
+  chapter: chapter4
+)
+step7 = Step.create!(
+  name: "",
+  description: "",
+  chapter: chapter5
+)
+step8 = Step.create!(
+  name: "",
+  description: "",
+  chapter: chapter6
+)

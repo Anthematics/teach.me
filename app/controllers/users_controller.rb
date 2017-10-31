@@ -58,7 +58,13 @@ class UsersController < ApplicationController
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-      url =  "/languages/" + @step.chapter.language.name + "/chapters/" + @step.chapter.id.to_s + "/steps/" + (@step.id + 1).to_s
+      @language_name = current_language.name
+      # @next_chapter_id = (@step.next.chapter.id).to_s
+      @next_step = @step.next
+      @next_chapter_id = @next_step.chapter_id
+
+      url =  "/languages/" + @language_name + "/chapters/" + @next_chapter_id + "/steps/" + @next_step
+
       render json: {message: "Congratulations, you pass this Step!", pass: true, url: url}
     else
       render json: {message: "Try again!, you passed #{@valid} test out of #{@total_test}.", pass:false}
