@@ -27,7 +27,11 @@
         <ul class="inner">
           <% language.chapters.each do | chapter| %>
           <li>
-            <a href="#" class="toggle sub-title">Chapter <%=chapter.id%> : <%=chapter.name %> ✔ </a>
+            <a href="#" class="toggle sub-title">Chapter <%=chapter.id%> : <%=chapter.name %>
+              <% if is_chapter_completed(chapter.id) %>
+                ✔ 
+              <% end %>
+           </a>
             <div class="inner content">
               <p><%=chapter.description%></p>
               <a class="start-button" href= "<%=language_chapter_step_path(language.id,chapter.id,chapter.steps.first.id)%>" type="button" name="button">Start Now</a>

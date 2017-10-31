@@ -50,12 +50,13 @@ class UsersController < ApplicationController
         end
       end
 
+    #TODO: save code even when not valid
 
     if @total_test == @valid # if we pass all tests
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
         @user_steps = UserStep.first.update_attributes(userCode: @usercode)
       else
-      @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode) #creates a new space in the DB with new code assuming it hasn't been written yet.
+      @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
       @language_name = current_language.name
