@@ -1,5 +1,6 @@
 require 'httparty'
 
+
 class UsersController < ApplicationController
   protect_from_forgery except: :submitcode
 
@@ -8,16 +9,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-
-    @user.email = params[:user][:email]
-    @user.password = params[:user][:password]
-    @user.password_confirmation = params[:user][:password_confirmation]
-    @user.admin = false
+    @user = User.new(user_params)
 
     if @user.save
       session[:user_id] = @user.id
-
       redirect_to menu_index_path
     else
       render :new
@@ -50,7 +45,7 @@ class UsersController < ApplicationController
         end
       end
 
-    #TODO: save code even when not valid
+    #Todo: save code even when not valid
 
     if @total_test == @valid # if we pass all tests
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
@@ -75,6 +70,7 @@ class UsersController < ApplicationController
   def show
   end
 
+
   def remove_puts(code)
     a = code.split("\n")
     a.delete_if {|w| w.include? "puts"}
@@ -85,6 +81,10 @@ class UsersController < ApplicationController
 
   def current_language
     @current_language = Language.find_by! name: params[:language_language_id]
+  end
+
+  def user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
 end

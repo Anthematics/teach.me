@@ -158,16 +158,50 @@ step4.code_tests.create(input: "add(1,1)",output: "2")
 
 
 step5 = Step.create!(
-  name: "",
-  description: "",
+  name: "Array and Hashes",
+  description: "Ruby arrays are ordered, integer-indexed collections of any object. Each element in an array is associated with and referred to by an index.
+  Array indexing starts at 0.Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.<br><br>
+  example:<br>
+   fruits = ['apple', 'orange', 'banana'] <br>
+   mixed = ['me',12, 'Hi I m string', true, [ 1, 2, 3 ]]<br>
+   Now your turn:<br>
+   build one array with 5 elements and assign the name as <b>my_array</b><br>
+  ",
   chapter: chapter3
 )
+step5.code_tests.create(input: "my_array.class", output: "Array")
+step5.code_tests.create(input: "my_array.length", output: "5")
 
 step6 = Step.create!(
-  name: "",
-  description: "",
+  name: "Aray and Hashes",
+  description: "A Hash is a collection of key-value pairs like this: \"employee\" = > \"salary\". It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.<br>
+  If you attempt to access a hash with a key that does not exist, the method will return nil.<br>
+  example:<br>
+  customer1 = { \"firstname\" => \"Will\", \"lastname\" => \"Smith\", \"profession\" => \"Actor\"}<br>
+  If I want the firstname of customer1, key is 'firstname', <br>
+  customer1[\"first\"] will return Will <br>
+  Now your turn: <br>
+  create a hash and assign the name <b> my_hash</b><br>
+  <b>type</b>  puts my_hash<br>
+  <b>type</b>  puts my_hash[ ? ]<br>",
+  chapter: chapter3
+)
+step6.code_tests.create(input: "my_hash.class", output: "Hash")
+
+step7 = Step.create!(
+  name: "Loop & Iterations",
+  description: "Loops in Ruby are used to execute the same block of code a specified number of times.<br>
+  The most commonly used iterations that you will come across will be .each<br>
+  example:<br>
+  shopping_list = ['chips','orange','egg','milk']<br>
+  In order to all the list,type the following in the editor<br>
+  shopping_list.each do |item| <br>
+    puts item<br>
+  end<br>",
   chapter: chapter4
 )
+step7.code_tests.create(input:"", output: "")
+
 step7 = Step.create!(
   name: "",
   description: "",

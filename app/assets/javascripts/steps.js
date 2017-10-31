@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 $('#loader').css("display", "none")
 
 $('#submitcode').on("ajax:success",function(e, data,status,xhr){
-  console.log(e);
+  console.log(e.detail[0]);
  $('#result').html(e.detail[0]);
    });
 
