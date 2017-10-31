@@ -1,5 +1,5 @@
-require 'httparty'
 
+require 'httparty'
 
 class UsersController < ApplicationController
   protect_from_forgery except: :submitcode
@@ -9,10 +9,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
+    @user = User.new
+
+    @user.email = params[:user][:email]
+    @user.password = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
+    @user.admin = false
 
     if @user.save
       session[:user_id] = @user.id
+
       redirect_to menu_index_path
     else
       render :new
@@ -34,6 +40,8 @@ class UsersController < ApplicationController
   def submitcode
      @usercode = params[:code]
      @step = Step.find(params[:step_id]) #finds which step you are on so it knows which tests to run
+     @chapter = Chapter.find(params[:id])
+     @language = @chapter.language
      @total_test = @step.code_tests.count #can test multiple times if code works this way
      @valid = 0
      @step.code_tests.each do |test|
@@ -45,7 +53,7 @@ class UsersController < ApplicationController
         end
       end
 
-    #Todo: save code even when not valid
+    #TODO: save code even when not valid
 
     if @total_test == @valid # if we pass all tests
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
@@ -54,12 +62,15 @@ class UsersController < ApplicationController
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-      @language_name = current_language.name
+      @language_id = @language.id.to_s
       # @next_chapter_id = (@step.next.chapter.id).to_s
       @next_step = @step.next
-      @next_chapter_id = @next_step.chapter_id
+      #byebug
+      if @language.id != @next_step.chapter.language.id
+        url = "javacript:alert('Congrualations! You have now completed the lagnuage!')"
+      end
 
-      url =  "/languages/" + @language_name + "/chapters/" + @next_chapter_id + "/steps/" + @next_step
+      url =  "/languages/" + @language_id + "/chapters/" + @next_step.chapter_id.to_s + "/steps/" + @next_step.id.to_s
 
       render json: {message: "Congratulations, you pass this Step!", pass: true, url: url}
     else
@@ -69,7 +80,6 @@ class UsersController < ApplicationController
 
   def show
   end
-
 
   def remove_puts(code)
     a = code.split("\n")
@@ -81,10 +91,6 @@ class UsersController < ApplicationController
 
   def current_language
     @current_language = Language.find_by! name: params[:language_language_id]
-  end
-
-  def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
 end

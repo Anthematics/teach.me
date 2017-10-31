@@ -23,13 +23,13 @@
     <ul class="accordion">
       <%# --- The Ruby accordion begins%>
       <li class="sub-accordion">
-        <a class="toggle title" href="javascript:void(0);"><%=language.name.capitalize %></a>
+        <a class="toggle title" href="javascript:void(0);"><%=language.name.capitalize %> </a>
         <ul class="inner">
           <% language.chapters.each do | chapter| %>
           <li>
             <a href="#" class="toggle sub-title">Chapter <%=chapter.id%> : <%=chapter.name %>
               <% if is_chapter_completed(chapter.id) %>
-                ✔ 
+                ✔
               <% end %>
            </a>
             <div class="inner content">
