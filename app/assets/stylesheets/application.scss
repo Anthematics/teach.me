@@ -599,12 +599,13 @@ h2 .card-text {
 
 #result {
   background-color: #e0e0e5;
-  height: 100px;
   padding: 1%;
   margin: 2%;
   color: #8c05ff;
   font-weight: bold;
   font-size: 1.25rem;
+  min-height: 100px;
+  height: auto;
 }
 
 .CodeMirror-scroll {
