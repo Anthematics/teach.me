@@ -125,10 +125,10 @@ step2 = Step.create!(
 
 step2.code_tests.create(input: "a",output: "30")
 step2.code_tests.create(input: "b",output: "20")
+
 step2.code_tests.create(input: "c",output: "50")
 step2.code_tests.create(input: "d",output: "10")
 step2.code_tests.create(input: "e",output: "27")
-
 
 
 step3 = Step.create!(
@@ -166,11 +166,12 @@ step4 = Step.create!(
   name: "Method",
   description: "<b>So...What are Methods?</b><br><?br>
 A <em>method</em> is a named sequence of instructions.
-Some programming languages refer to it as a <em>function</em>
+Some programming languages refer to it as a <em>function</em> <br><br>
+Let's try the following method!<br>
 <b> A simple method to add two numbers</b><br>
 <b>type</b>  def add(x,y)<br>
- <b>type</b>  x + y <br><b>type</b>  end<br><br><br>
- Now you can all the method and pass any two numbers <br>
+<b>type</b>  x + y <br><b>type</b>  end<br><br><br>
+Now you can call the method and pass any two numbers <br>
 example: puts add(5,12) will display 17<br>
 Remember to Test your Code before Submitting!",
   chapter: chapter2
@@ -183,13 +184,17 @@ step4.code_tests.create(input: "add(1,1)",output: "2")
 
 step5 = Step.create!(
   name: "Array and Hashes",
-  description: "Ruby arrays are ordered, integer-indexed collections of any object. Each element in an array is associated with and referred to by an index.
-  Array indexing starts at 0.Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.<br><br>
-  example:<br>
+  description: "Ruby arrays are ordered, integer-indexed collections of any object.
+  Each element in an array is associated with and referred to by an index.
+  Array indexing starts at 0.
+  Ruby arrays can hold objects such as String, Integer, Fixnum, Hash, Symbol, even other Array objects.<br><br>
+  For Instance:<br>
    fruits = ['apple', 'orange', 'banana'] <br>
-   mixed = ['me',12, 'Hi I m string', true, [ 1, 2, 3 ]]<br>
+   mixed_array = ['me',12, 'Hi I m string', true, [ 1, 2, 3 ]]<br><br>
    Now your turn:<br>
-   build one array with 5 elements and assign the name as <b>my_array</b><br>
+   Build an array with 5 elements and assign the name as <b>my_array</b><br>
+   Display your arrray in the console using <b>puts my_array</b>. <br> <br>
+   Remember to Test your Code before Submitting!
   ",
   chapter: chapter3
 )
@@ -198,16 +203,19 @@ step5.code_tests.create(input: "my_array.length", output: "5")
 
 step6 = Step.create!(
   name: "Aray and Hashes",
-  description: "A Hash is a collection of key-value pairs like this: \"employee\" = > \"salary\". It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.<br>
+  description: "A Hash is a collection of key-value pairs as below: <br>
+  {\"employee\" = > \"salary\"} <br><br>
+  It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.<br>
   If you attempt to access a hash with a key that does not exist, the method will return nil.<br>
-  example:<br>
-  customer1 = { \"firstname\" => \"Will\", \"lastname\" => \"Smith\", \"profession\" => \"Actor\"}<br>
-  If I want the firstname of customer1, key is 'firstname', <br>
-  customer1[\"first\"] will return Will <br>
-  Now your turn: <br>
-  create a hash and assign the name <b> my_hash</b><br>
-  <b>type</b>  puts my_hash<br>
-  <b>type</b>  puts my_hash[ ? ]<br>",
+  For example:<br>
+  customer1 = { \"firstname\" => \"Will\", \"lastname\" => \"Smith\", \"profession\" => \"Actor\"}<br><br>
+  If I want the firstname of customer1, the key of this <b>hash</b> is 'firstname', <br>
+  customer1[\"firstname\"] returns the value <b>Will</b> <br>
+  Now let's try!: <br> <br>
+  Create a hash and assign the name <b> my_hash</b>Use the key-value pair to create this hash<br>
+  Check out your hash by using  <b>puts my_hash</b> <br>
+  Now trying calling a value in a given key by using <b>puts my_hash[ ? ]</b><br><br>
+  Remember to Test your Code before Submitting!",
   chapter: chapter3
 )
 step6.code_tests.create(input: "my_hash.class", output: "Hash")
