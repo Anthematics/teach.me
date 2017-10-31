@@ -31,8 +31,8 @@ class UsersController < ApplicationController
     @user.password = params[:user][:password]
     @user.password_confirmation = params[:user][:password_confirmation]
     if @user.save
-      flash[:notice] = "User profile successfully updated."
-      redirect_to root_path
+      flash[:alert] = "User profile successfully updated."
+      redirect_to languages_path
     end
   end
 
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
           @valid += 1 #another test is valid
         end
       end
-    
+
 
     if @total_test == @valid # if we pass all tests
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
