@@ -32,28 +32,8 @@ html, body {
 main {
   position: relative;
   min-height: 100%;
-  background-image: url('memphis-colorful.png');
+  background-image: url('playstation-pattern.png');
 }
-
-// main:after {
-//     content: ' ';
-//     display: block;
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1;
-//     opacity: 0.6;
-//     background-image: url('memphis-colorful.png');
-//     background-repeat: no-repeat;
-//     background-position: 50% 0;
-//     -ms-background-size: cover;
-//     -o-background-size: cover;
-//     -moz-background-size: cover;
-//     -webkit-background-size: cover;
-//     background-size: cover;
-// }
 
 .container {
   margin: 0 auto;
@@ -650,21 +630,39 @@ h2 .card-text {
 
 // ------ Instructor Languages ------
 
+.analytics,
 .instructors-languages,
 .instructors-languages-edit,
 .instructors-chapters-edit,
 .instructors-steps-edit,
 .instructors-codetests-edit {
-  max-width: 500px;
-  min-width: 250px;
+  max-width: 650px;
+  min-width: 325px;
   height: auto;
   background-color: white;
   box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
-  margin: 50px auto;
+  margin: 25px auto;
   margin-bottom: 0;
   padding: 25px;
   text-align: center;
   border: 1px solid #a6abb2;
+}
+
+.analytics {
+  max-width: 70%;
+  min-width: 500px;
+}
+
+.analytics h1 {
+  font-weight: bold;
+}
+
+.analytics .row {
+  margin: 1%;
+}
+
+.analytics .row {
+  padding: 2% 0;
 }
 
 .instructors-languages h2,
@@ -689,7 +687,7 @@ h2 .card-text {
 #chapter_description,
 #step_description,
 #code_test_output {
-  width: 325px;
+  width: 90%;
   height: 250px;
   color: #5a2a77;
   padding: 10px;
@@ -699,7 +697,7 @@ h2 .card-text {
 #chapter_name,
 #step_name,
 #code_test_input {
-  width: 325px;
+  width: 90%;
   color: #5a2a77;
   padding: 10px;
   border: 2px solid #1495d5;
