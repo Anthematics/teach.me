@@ -36,7 +36,7 @@ session_code = request.env['rack.request.query_hash']['code']
     @user = User.find_by_email(auth_result['private_emails'][0]['email'])
 
     if !@user.present?
-      @user= User.create(name: auth_result["name"], email: auth_result['private_emails'][0]['email'] ,password:'Oauth',password_confirmation: 'Oauth' )
+      @user= User.create(name: auth_result["name"], email: auth_result['private_emails'][0]['email'] ,password:'Oauth#123#df',password_confirmation: 'Oauth#123#df' )
     end
     puts @user
     session[:user_id] = @user.id
