@@ -8,9 +8,15 @@ class Step < ApplicationRecord
     next_step = self.chapter.steps.where(id: self.id + 1)
 
     if next_step.present?
-      next_step.first
+      return next_step.first
     else
-      nil
+      @next_chapter = Chapter.where(id: self.chapter_id + 1, language_id: self.chapter.language_id)
+      if @next_chapter.present?
+        @new_step = @next_chapter.first.steps
+          return @new_step.first
+      else
+        nil
+      end
     end
 
   end

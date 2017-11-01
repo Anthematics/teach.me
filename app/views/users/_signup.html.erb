@@ -9,18 +9,14 @@
   <p>----------   OR   ----------</p>
   <br>
 
-  <% if new_user.errors.any? %>
-    <h3>The following error(s) occurred:</h3>
-    <ul>
-      <% new_user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
-
   <p>Create account with email address</p>
 
   <%= form_for new_user, url: user_path do |f| %>
+  <% if new_user.errors.any? %>
+    <% new_user.errors.full_messages.each do |message|%>
+      <%=message%><br>
+    <%end%>
+  <% end %>
     <p>
       <%= f.label :email %><br>
       <%= f.email_field :email%>
