@@ -30,7 +30,7 @@ class StepsController < ApplicationController
 
   def check_step_access
     if params[:id].to_i > 1
-      if !UserStep.where(step_id: (params[:id].to_i-1)).empty?
+      if !UserStep.where(step_id: (params[:id].to_i-1)).where(user_id: current_user.id).empty?
         puts "Access"
       else
         redirect_to root_path
