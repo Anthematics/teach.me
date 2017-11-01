@@ -10,14 +10,13 @@
   <br>
 
   <p>Create account with email address</p>
+
   <%= form_for new_user, url: user_path do |f| %>
-    <% if flash[:user] != nil %>
-      <% if flash[:user].errors.any? %>
-        <% flash[:user].errors.full_messages.each do |message|%>
-          <%=message%><br>
-        <%end%>
-      <% end %>
+  <% if new_user.errors.any? %>
+    <% new_user.errors.full_messages.each do |message|%>
+      <%=message%><br>
     <%end%>
+  <% end %>
     <p>
       <%= f.label :email %><br>
       <%= f.email_field :email%>
