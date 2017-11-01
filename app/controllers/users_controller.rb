@@ -9,16 +9,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new
-
-    @user.email = params[:user][:email]
-    @user.password = params[:user][:password]
-    @user.password_confirmation = params[:user][:password_confirmation]
+    @user = User.new(user_params)
     @user.admin = false
 
     if @user.save
       session[:user_id] = @user.id
-
       redirect_to menu_index_path
     else
       render :new
@@ -61,13 +56,8 @@ class UsersController < ApplicationController
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-      # @language_id = @language.id.to_i
-      # @next_chapter_id = (@step.next.chapter.id).to_s
+
       @next_step = @step.next
-      #byebug
-      # if @language.id != @next_step.chapter.language.id
-      #   url = "javacript:alert('Congrualations! You have now completed the lagnuage!')"
-      # end
 
       if @next_step.nil?
         render json: {message: "Congratulations, you have now completed the language!", pass: true, url: languages_path}
@@ -92,6 +82,10 @@ class UsersController < ApplicationController
 
   def current_language
     @current_language = Language.find_by! id: params[:language_language_id]
+  end
+
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
 end
