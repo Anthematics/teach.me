@@ -56,13 +56,17 @@ chapter5 = Chapter.create!(
 
 chapter6 = Chapter.create!(
   name: "Instance, Class & Inheritance",
-  description: "The basic building blocks",
+  description: "Ruby is pure object-oriented language and everything appears to Ruby as an object. Every value in Ruby is an object, even the most primitive things: strings, numbers and even true and false. Even a class itself is an object that is an instance of the Class class.",
   language_id: ruby.id
 )
 
 step1 = Step.create!(
   name: "Data types",
-  description: "Some of the basic <b>DataTypes</b> of Ruby are <b>Numbers</b>, <b>String</b> ('Welcome to learning Ruby!'), and <b>Boolean</b>(true or false).<br> <b>Numbers</b> without decimal points (eg. <b>1, 250, 99999</b>) are called <b>integers</b>, and numbers with decimal points (eg. <b>1.5, 150.3985, 50.0</b>) are usually called <b>floating-point numbers </b>or, more simply, <b>floats</b>.
+  description: "Some of the basic <b>DataTypes</b> of Ruby are <b>Numbers</b>,
+  <b>String</b> ('Welcome to learning Ruby!'), and <b>Boolean</b>(true or false).<br>
+  <b>Numbers</b> without decimal points (eg. <b>1, 250, 99999</b>) are called <b>integers</b>,
+  and numbers with decimal points (eg. <b>1.5, 150.3985, 50.0</b>) are usually called <b>floating-point numbers </b>
+  or, more simply, <b>floats</b>.
 <br>
 In order to print the output, we will use <b>puts</b> before the statement.
 <br><br>
@@ -183,7 +187,7 @@ step4.code_tests.create(input: "add(1,1)",output: "2")
 
 
 step5 = Step.create!(
-  name: "Array and Hashes",
+  name: "Arrays",
   description: "Ruby arrays are ordered, integer-indexed collections of any object.
   Each element in an array is associated with and referred to by an index.
   Array indexing starts at 0.
@@ -202,7 +206,7 @@ step5.code_tests.create(input: "my_array.class", output: "Array")
 step5.code_tests.create(input: "my_array.length", output: "5")
 
 step6 = Step.create!(
-  name: "Aray and Hashes",
+  name: "Hashes",
   description: "A Hash is a collection of key-value pairs as below: <br>
   {\"employee\" = > \"salary\"} <br><br>
   It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.<br>
@@ -231,23 +235,82 @@ step7 = Step.create!(
   <b>shopping_list.each do |each_item|</b> <br>
     <b>puts each_item</b><br>
   <b>end</b><br>
-  Now you give it a shot!!<br> <br>
-  Build an array using the variable my_list with atleast 5 elements. <br>
-  Then do an iteration using <b>.each</b> to display each item in the console. <br>
-  Now use a methods we already learned, we are going to use a method called <b>display_item</b> to take an array and print each item. <br><br>
-  HINT! You do not need to print each_item inside the iteration as you will be calling the method display_item using <b>puts display_item(my_list)</b><br><br>
+  Now you give it a shot!! Lets try doing an Iteration using Methods!<br> <br>
+  <ul>
+  <li>Build an array using the variable <b>my_list</b> with atleast 5 elements.</li>
+  <li>Then do an iteration on <em>my_list</em> using <b>.each</b> to display each item in the console.</li>
+  <li>Final Step we are going to use a method called <b>display_item</b> which accepts an argument and returns each item. <br><br>
+  HINT! You do not need to use <em>puts each_item</em> inside the iteration as you will be calling the method display_item using <b>puts display_item(my_list)</b><br><br>
   Remember to Test your Code before Submitting!",
   chapter: chapter4
 )
-step7.code_tests.create(input:"display_item(my_list = [\"hi\",\"hello\"])", output: "\"hi\",\"hello\"")
+step7.code_tests.create(input:"display_item(my_list=[1,2,3,4,5]).class", output: "Array")
 
 step8 = Step.create!(
-  name: "",
-  description: "",
+  name: "OOP",
+  description: "To implement object-oriented programming by using Ruby,
+  you need to first learn how to create objects and classes in Ruby.<br><br>
+  A class in Ruby always starts with the keyword class followed by the name of the class.
+  The name should always be initialized in <em>capitals</em>. <br><br>
+  The class <b>Person</b> can be displayed as:<br><br>
+
+  <b>class Person</b> <br>
+  <b>end</b> <br><br><br>
+
+  You terminate a class by using the keyword end.<br>
+  All the data members in the class are between the class definition and the end keyword.<br>
+  <ul>
+  <li>Create a class called <b>Student</b></li>
+  <li>Use a variable to display a new instance of this class(puts a=Student.new)</li>
+  </ul>
+
+  This strange object returned back is the new instance of the Student class!<br><br>
+
+
+Remember to Test your Code before Submitting!
+",
   chapter: chapter5
 )
+
+step8.code_tests.create(input: "Student.class", output: "Class")
+
 step9 = Step.create!(
-  name: "",
-  description: "",
+  name: "Instance, Class & Inheritance",
+  description: "
+  Instance variables are available across methods within a class for any particular object.
+  That means that the values of instance variables are distinct from object to object.
+  Instance variables are preceded by the at sign <b>@</b> followed by the variable name.<br><br>
+
+  <b>class Person</b> <br><br>
+  #Reader method --- # in Ruby is used to write single line comments <br>
+  def name<br>
+    @name<br>
+    end<br><br>
+  #Writer method <br>
+    def name=(str)<br>
+      @name = str <br>
+    end<br>
+  <b>end</b><br><br>
+
+  person = Person.new<br>
+  person.name = 'Dennis'<br>
+  person.name # => \"Dennis\"<br><br>
+
+
+  The equal sign after the writer method name is special Ruby syntax that indicates that the value can be assigned using the equal sign,
+  rather than the typical syntax of calling a method by passing the argument in between round brackets. <br><br>
+
+  Now let's try it out for ourselves! <br><br>
+  <ul>
+  <li>Create a class called <b>Student</b></li>
+  <li>Create a reader and write method called <b>name</b></li>
+  </ul>
+  Use the example above to initialize the class Student by giving it a variable. (Don't forget to use puts to see the instance on the console.)
+  Now call use the writer method to give name a value and now you can call this method and it should return the name you have provided. <br><br>
+
+  Remember to Test your Code before Submitting!
+  ",
   chapter: chapter6
 )
+
+step9.code_tests.create(input: "Student.class", output: "Class")
