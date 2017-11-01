@@ -16,6 +16,9 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to languages_path
     else
+      if @user.errors.any?
+        flash[:notice] = @user.errors.full_messages.to_s
+      end
       render :new
     end
   end

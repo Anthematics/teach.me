@@ -12,11 +12,7 @@
   <p>Create account with email address</p>
 
   <%= form_for new_user, url: user_path do |f| %>
-  <% if new_user.errors.any? %>
-    <% new_user.errors.full_messages.each do |message|%>
-      <%=message%><br>
-    <%end%>
-  <% end %>
+   <%=flash[:notice]%>
     <p>
       <%= f.label :email %><br>
       <%= f.email_field :email%>
