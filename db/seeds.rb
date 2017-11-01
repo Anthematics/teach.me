@@ -34,23 +34,23 @@ chapter1 = Chapter.create!(
 
 chapter2 = Chapter.create!(
   name: "Methods",
-  description: "What is a variable? What's the use of a variable? Why are they important? In this lesson, you will learn about different types of variables in Ruby. At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!",
+  description: "Some codes are meant to be executed many times in a program. Instead of writing the same code over and over, there's a feature in most programming languages called a procedure, which allows you to extract the common code to one place. In Ruby, we call it a method.",
   language_id: ruby.id
 )
 chapter3 = Chapter.create!(
   name: "Arrays & Hashes",
-  description: "What is a variable? What's the use of a variable? Why are they important?In this lesson, you will learn about different types of variables in Ruby. At the end of the module, practice with our fun exercises to test your knowledge, and you will be a Ruby master in no time!",
+  description: "Arrays and Hashes are collections of data and objects in Ruby. They are widely used in all programming languages, hence making it one of the most vital piece of knowledge required for any developers. They are very similar yet possess some stark differences. Come find out more in this chapter",
   language_id: ruby.id
 )
 chapter4 = Chapter.create!(
   name: "Loops & Iterations",
-  description: "The basic building blocks",
+  description: "Loops and Iterations allow you to access and loop over a large block of elements (i.e. an array) and work with each element as we iterate over it. Understand it as the repetitive execution of a piece of code for a given amount of repetitions over a block of data. Sounds complicated? Then you should check out this chapter now. ",
   language_id: ruby.id
 )
 
 chapter5 = Chapter.create!(
   name: "Object Oriented Programming",
-  description: "The basic building blocks",
+  description: "Objecte Oriented Programming (OOP) is essentially a programming language model that organizes around objects rather than actions. It cares about the object that we operates upon rather than the logic required behind the scene. What does that mean? Click the start now button to find out more!",
   language_id: ruby.id
 )
 
