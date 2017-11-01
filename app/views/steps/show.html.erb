@@ -6,9 +6,6 @@
   <div class="totoro">
     <img src="/loader.gif" id="loader"  alt="">
   </div>
-  <div class="close-totoro">
-    <p id="closer">[x]Close</p>
-  </div>
 </div>
 
 <br>
@@ -26,7 +23,7 @@
       <%= f.label :'Write your code here' %>
       <%= f.hidden_field :url, value: "/user/#{params[:id]}/step/#{params[:id]}/submitcode" %>
 
-      <%= f.text_area :code, :class => 'codemirror-textarea' , :value => '#enter your code here'%>
+      <%= f.text_area :code, :class => 'codemirror-textarea' , :value => "#enter your code here" %>
 
       <div class="test-code">
         <div class="row test-code">
