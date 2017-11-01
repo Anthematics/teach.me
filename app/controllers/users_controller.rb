@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to menu_index_path
+      redirect_to languages_path
     else
       render :new
     end
@@ -53,10 +53,10 @@ class UsersController < ApplicationController
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
         @user_steps = UserStep.first.update_attributes(userCode: @usercode)
       else
-      @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
+        @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-      @next_step = @step.next
+        @next_step = @step.next
 
       if @next_step.nil?
         render json: {message: "Congratulations, you have now completed the language!", pass: true, url: languages_path}

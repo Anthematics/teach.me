@@ -71,7 +71,9 @@
           </ul><%# --- User info/sign up/login ends here --- %>
         </div><%# ------ Navbar items ends here ------ %>
       </nav><%# ---------- Navbar content ends here ---------- %>
-    
+      <% if  flash[:message] %>
+        <div class="flash"><%= flash[:message] %></div>
+      <% end %>
       <%= yield %>
 
       <footer> TeachME copyright(c) 2017 Copyright Holder All Rights Reserved </footer>
