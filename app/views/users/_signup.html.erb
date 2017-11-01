@@ -8,12 +8,11 @@
   <br>
   <p>----------   OR   ----------</p>
   <br>
-
   <% if new_user.errors.any? %>
-    <h3>The following error(s) occurred:</h3>
+  <h3>The following error(s) occurred:</h3>
     <ul>
-      <% new_user.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
+      <% new_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
       <% end %>
     </ul>
   <% end %>

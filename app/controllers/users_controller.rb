@@ -56,7 +56,6 @@ class UsersController < ApplicationController
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-
       @next_step = @step.next
 
       if @next_step.nil?

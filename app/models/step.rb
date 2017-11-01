@@ -12,7 +12,7 @@ class Step < ApplicationRecord
     else
       nil
     end
-  
+
   end
 
 end
