@@ -12,20 +12,20 @@ class Step < ApplicationRecord
     else
       nil
     end
-
   #
-  #   if @next_step.present?
-  #     return @next_step
-  #   else
-  # # #     @next_chapter = Chapter.find_by(chapter_id: self.chapter_id + 1, language_id: self.chapter.language_id)
-  # # #     puts @next_chapter
-  # # #       if @next_chapter.present?
-  # # #          @new_step = @next_chapter.steps.first
-  # # #          return @new_step
-  # #     else
-  #         return nil
-  #     end
-  # #   end
+  # #
+  # #   if @next_step.present?
+  # #     return @next_step
+  # #   else
+  # # # #     @next_chapter = Chapter.find_by(chapter_id: self.chapter_id + 1, language_id: self.chapter.language_id)
+  # # # #     puts @next_chapter
+  # # # #       if @next_chapter.present?
+  # # # #          @new_step = @next_chapter.steps.first
+  # # # #          return @new_step
+  # # #     else
+  # #         return nil
+  # #     end
+  # # #   end
   end
 
 end
