@@ -205,9 +205,13 @@ a.navbar-brand img {
   margin: 0 auto;
 }
 
-.col-md-6.left.image, .col-md-6.right.image, .col-md-6.left.text, .col-md-6.right.text {
+.col-md-6.image, .col-md-6.image, .col-md-6.text, .col-md-6.text {
   display: inline-block;
   position: relative;
+}
+
+.col-md-6.text {
+  padding: 0 25px;
 }
 
 .col-md-6.left.image img, .col-md-6.right.image img {
@@ -218,7 +222,7 @@ a.navbar-brand img {
 }
 
 .homepage-end {
-  padding-bottom: 100px;
+  padding: 40px 0 60px 0;
 }
 
 
