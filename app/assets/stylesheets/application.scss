@@ -523,6 +523,15 @@ h2 .card-text {
   height: auto;
 }
 
+.close-totoro {
+  position: absolute;
+  z-index: 2;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
 #loader {
   z-index: 1;
   max-width: 100%;
