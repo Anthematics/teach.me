@@ -21,6 +21,7 @@ class UsersController < ApplicationController
 
       redirect_to menu_index_path
     else
+        flash[:user] = @user
       render :new
     end
   end
