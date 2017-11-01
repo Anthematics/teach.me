@@ -243,8 +243,8 @@ a.navbar-brand img {
 
 .card.about-us {
   box-shadow: 10px 10px 10px #a6abb2;
-  width: 475px;
-  height: 775px;
+  width: 500px;
+  height: 800px;
   border: 1px solid #a6abb2;
   margin-bottom: 25px;
   background-color: white;
@@ -267,7 +267,7 @@ a.navbar-brand img {
 }
 
 .role {
-  padding: 0 10px 10px 10px;
+  padding: 0 10px 5px 10px;
 }
 
 .card-text.about-us {
@@ -275,11 +275,7 @@ a.navbar-brand img {
 }
 
 .social-media {
-  width: 100%;
-  text-align: center;
   padding-bottom: 10px;
-  position: absolute;
-  bottom: 10px;
 }
 
 .social-media img {
@@ -324,9 +320,11 @@ a.navbar-brand img {
 h1 .card-title {
   font-weight: bold;
 }
-h2 .card-text {
+h2 .card-text,
+.card-text.menu {
   font-weight: bold;
 }
+
 
 .col.menu {
   margin-bottom: 5%;
