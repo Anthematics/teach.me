@@ -40,8 +40,8 @@ class UsersController < ApplicationController
   def submitcode
      @usercode = params[:code]
      @step = Step.find(params[:step_id]) #finds which step you are on so it knows which tests to run
-     @chapter = Chapter.find(params[:id])
-     @language = @chapter.language
+     @chapter = Chapter.find(@step.chapter_id)
+     @language = @chapter.language_id
      @total_test = @step.code_tests.count #can test multiple times if code works this way
      @valid = 0
      @step.code_tests.each do |test|
@@ -53,7 +53,6 @@ class UsersController < ApplicationController
         end
       end
 
-    #TODO: save code even when not valid
 
     if @total_test == @valid # if we pass all tests
       if UserStep.find_by(user_id: current_user.id, step_id: @step.id).present? #in the user test table , if this person already wrote this test and they're making adjustments we are giving the ability for the database -> because when updated we dont want to make the file bigger
@@ -62,17 +61,20 @@ class UsersController < ApplicationController
       @user_steps = UserStep.create!(user_id: current_user.id, step_id: params[:step_id], userCode: @usercode, successfully_completed: true) #creates a new space in the DB with new code assuming it hasn't been written yet.
       end
 
-      @language_id = @language.id.to_s
+      # @language_id = @language.id.to_i
       # @next_chapter_id = (@step.next.chapter.id).to_s
       @next_step = @step.next
       #byebug
-      if @language.id != @next_step.chapter.language.id
-        url = "javacript:alert('Congrualations! You have now completed the lagnuage!')"
+      # if @language.id != @next_step.chapter.language.id
+      #   url = "javacript:alert('Congrualations! You have now completed the lagnuage!')"
+      # end
+
+      if @next_step.nil?
+        render json: {message: "Congratulations, you have now completed the language!", pass: true, url: languages_path}
+      else
+        url =  "/languages/" + @language.to_s + "/chapters/" + @next_step.chapter.id.to_s + "/steps/" + @next_step.id.to_s
+        render json: {message: "Congratulations, you pass this Step!", pass: true, url: url}
       end
-
-      url =  "/languages/" + @language_id + "/chapters/" + @next_step.chapter_id.to_s + "/steps/" + @next_step.id.to_s
-
-      render json: {message: "Congratulations, you pass this Step!", pass: true, url: url}
     else
       render json: {message: "Try again!, you passed #{@valid} test out of #{@total_test}.", pass:false}
     end
@@ -84,13 +86,12 @@ class UsersController < ApplicationController
   def remove_puts(code)
     a = code.split("\n")
     a.delete_if {|w| w.include? "puts"}
-    a.delete_if {|w| w.include? "p" }
     a.delete_if {|w| w.include? "print" }
     a.join("\n")
   end
 
   def current_language
-    @current_language = Language.find_by! name: params[:language_language_id]
+    @current_language = Language.find_by! id: params[:language_language_id]
   end
 
 end
