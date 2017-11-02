@@ -1,0 +1,1455 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+*/
+/* BASICS */
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600");
+/* line 3, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: 300px;
+  color: black;
+  direction: ltr;
+}
+
+/* PADDING */
+/* line 13, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-lines {
+  padding: 4px 0;
+  /* Vertical padding around content */
+}
+
+/* line 16, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror pre {
+  padding: 0 4px;
+  /* Horizontal padding of content */
+}
+
+/* line 20, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white;
+  /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+/* line 26, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+
+/* line 32, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+
+/* line 40, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-guttermarker {
+  color: black;
+}
+
+/* line 41, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-guttermarker-subtle {
+  color: #999;
+}
+
+/* CURSOR */
+/* line 45, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-cursor {
+  border-left: 1px solid black;
+  border-right: none;
+  width: 0;
+}
+
+/* Shown when moving in bi-directional text */
+/* line 51, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+
+/* line 54, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0 !important;
+  background: #7e7;
+}
+
+/* line 59, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1;
+}
+
+/* line 63, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-animate-fat-cursor {
+  width: auto;
+  border: 0;
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+  background-color: #7e7;
+}
+
+@-moz-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+/* Can style cursor different in overwrite (non-insert) mode */
+/* line 90, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-tab {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* line 92, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-rulers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -50px;
+  bottom: -20px;
+  overflow: hidden;
+}
+
+/* line 97, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+/* DEFAULT THEME */
+/* line 105, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-header {
+  color: blue;
+}
+
+/* line 106, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-quote {
+  color: #090;
+}
+
+/* line 107, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-negative {
+  color: #d44;
+}
+
+/* line 108, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-positive {
+  color: #292;
+}
+
+/* line 109, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-header, .cm-strong {
+  font-weight: bold;
+}
+
+/* line 110, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-em {
+  font-style: italic;
+}
+
+/* line 111, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-link {
+  text-decoration: underline;
+}
+
+/* line 112, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-strikethrough {
+  text-decoration: line-through;
+}
+
+/* line 114, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-keyword {
+  color: #708;
+}
+
+/* line 115, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-atom {
+  color: #219;
+}
+
+/* line 116, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-number {
+  color: #164;
+}
+
+/* line 117, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-def {
+  color: #00f;
+}
+
+/* line 122, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-variable-2 {
+  color: #05a;
+}
+
+/* line 123, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {
+  color: #085;
+}
+
+/* line 124, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-comment {
+  color: #a50;
+}
+
+/* line 125, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-string {
+  color: #a11;
+}
+
+/* line 126, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-string-2 {
+  color: #f50;
+}
+
+/* line 127, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-meta {
+  color: #555;
+}
+
+/* line 128, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-qualifier {
+  color: #555;
+}
+
+/* line 129, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-builtin {
+  color: #30a;
+}
+
+/* line 130, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-bracket {
+  color: #997;
+}
+
+/* line 131, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-tag {
+  color: #170;
+}
+
+/* line 132, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-attribute {
+  color: #00c;
+}
+
+/* line 133, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-hr {
+  color: #999;
+}
+
+/* line 134, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-link {
+  color: #00c;
+}
+
+/* line 136, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-s-default .cm-error {
+  color: #f00;
+}
+
+/* line 137, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-invalidchar {
+  color: #f00;
+}
+
+/* line 139, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-composing {
+  border-bottom: 2px solid;
+}
+
+/* Default styles for common addons */
+/* line 143, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0f0;
+}
+
+/* line 144, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: #f22;
+}
+
+/* line 145, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-matchingtag {
+  background: rgba(255, 150, 0, 0.3);
+}
+
+/* line 146, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-activeline-background {
+  background: #e8f2ff;
+}
+
+/* STOP */
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+/* line 153, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+/* line 159, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-scroll {
+  overflow: scroll !important;
+  /* Things will break if this is overridden */
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px;
+  margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: none;
+  /* Prevent dragging from highlighting the element */
+  position: relative;
+}
+
+/* line 169, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 30px solid transparent;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actual scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+/* line 177, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+
+/* line 182, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-vscrollbar {
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 187, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-hscrollbar {
+  bottom: 0;
+  left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+/* line 192, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-scrollbar-filler {
+  right: 0;
+  bottom: 0;
+}
+
+/* line 195, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter-filler {
+  left: 0;
+  bottom: 0;
+}
+
+/* line 199, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutters {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  z-index: 3;
+}
+
+/* line 204, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -30px;
+}
+
+/* line 211, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: none !important;
+  border: none !important;
+}
+
+/* line 217, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+}
+
+/* line 222, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+
+/* line 227, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter-wrapper ::selection {
+  background-color: transparent;
+}
+
+/* line 228, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-gutter-wrapper ::-moz-selection {
+  background-color: transparent;
+}
+
+/* line 230, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-lines {
+  cursor: text;
+  min-height: 1px;
+  /* prevents collapsing before first draw */
+}
+
+/* line 234, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror pre {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+}
+
+/* line 253, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-wrap pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+/* line 259, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* line 265, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+}
+
+/* line 273, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-rtl pre {
+  direction: rtl;
+}
+
+/* line 275, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-code {
+  outline: none;
+}
+
+/* Force content-box sizing for the elements where we expect it */
+/* line 280, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 289, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 297, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-cursor {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* line 301, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-measure pre {
+  position: static;
+}
+
+/* line 303, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+/* line 308, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+div.CodeMirror-dragcursors {
+  visibility: visible;
+}
+
+/* line 312, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+
+/* line 316, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-selected {
+  background: #d9d9d9;
+}
+
+/* line 317, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-focused .CodeMirror-selected {
+  background: #d7d4f0;
+}
+
+/* line 318, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-crosshair {
+  cursor: crosshair;
+}
+
+/* line 319, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection {
+  background: #d7d4f0;
+}
+
+/* line 320, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection {
+  background: #d7d4f0;
+}
+
+/* line 322, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-searching {
+  background-color: #ffa;
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+/* Used to force a border model for a node */
+/* line 328, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-force-border {
+  padding-right: .1px;
+}
+
+@media print {
+  /* Hide the cursor when printing */
+  /* line 332, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
+/* See issue #2901 */
+/* line 338, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+.cm-tab-wrap-hack:after {
+  content: '';
+}
+
+/* Help users use markselection to safely style text background */
+/* line 341, /home/navi/Desktop/teach.me/app/assets/codemirror/codemirror.css */
+span.CodeMirror-selectedtext {
+  background: none;
+}
+
+/* line 19, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 23, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+html {
+  font-family: monospace, serif, sans-serif;
+}
+
+/* line 27, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 33, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+main {
+  position: relative;
+  min-height: 100%;
+  background-image: url(/assets/playstation-pattern-9611f5f158a9b7e794b895be98e757d31fa58858f40dd536ccfe870e50058552.png);
+}
+
+/* line 39, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.container {
+  margin: 0 auto;
+}
+
+/* line 44, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.userinfo {
+  text-align: right;
+}
+
+/* line 48, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+a.navbar-brand img {
+  width: 225px;
+  height: auto;
+}
+
+/* line 53, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.navbar-brand {
+  padding: 0;
+}
+
+/* line 57, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.navbar {
+  font-size: 1.25rem;
+}
+
+/* line 61, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.navbar-nav.mr-auto {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 66, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.nav-item {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  font-weight: bold;
+}
+
+/* line 72, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#avatar {
+  margin: 0 auto;
+}
+
+/* line 76, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.navbar-toggler {
+  width: 50px;
+  height: 50px;
+}
+
+/* line 81, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.rounded-circle img {
+  height: 40px;
+  width: 40px;
+  border: 1px solid #1495d5;
+}
+
+/* line 87, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.dropdown {
+  width: 225px;
+}
+
+/* line 91, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#dropdownMenu2 {
+  background-color: white;
+  width: 50px;
+}
+
+/* line 96, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.dropdown-menu.show {
+  padding: 20px;
+}
+
+/* line 100, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+}
+
+/* line 104, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.form-inline {
+  float: right;
+}
+
+/* line 108, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.btn.btn-outline-success {
+  font-size: 1.25rem;
+  margin: 0 1rem;
+  background-color: white;
+  color: #1495d5;
+  border: 2px solid #1495d5;
+  font-weight: bold;
+}
+
+/* line 117, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.btn.btn-outline-success:hover,
+.btn.btn-outline-success:focus,
+.btn.btn-outline-success:active,
+.btn.btn-outline-success.active,
+.open > .dropdown-toggle.btn.btn-outline-success {
+  color: white;
+  background-color: #1495d5;
+  border-color: #1495d5;
+  /*set the color you want here*/
+}
+
+/* line 129, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.banner,
+.sign-up-form,
+.log-in-form {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 137, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.carousel-inner {
+  position: relative;
+}
+
+/* line 141, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.carousel-item {
+  position: relative;
+  max-width: 100%;
+  max-height: 1000px;
+}
+
+/* line 147, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.carousel-caption {
+  position: absolute;
+  bottom: 10%;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 10%;
+  font-size: 3rem;
+  right: 15%;
+  left: 15%;
+  background: rgba(255, 255, 255, 0.6);
+  padding-bottom: 15px;
+}
+
+/* line 160, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.carousel-caption h3, .carousel-caption p {
+  color: black;
+  font-weight: bold;
+}
+
+/* line 165, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.carousel-item img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* line 171, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.signupnow {
+  color: white;
+  background-color: #1495d5;
+  border-color: #1495d5;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/* line 181, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.signupnow:hover {
+  color: #1495d5;
+  background-color: white;
+  border-color: #1495d5;
+}
+
+/* line 187, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.homepage-intro {
+  margin: 50px 0;
+}
+
+/* line 191, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.homepage-intro h2 {
+  font-weight: bold;
+}
+
+/* line 195, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.row {
+  margin: 3%;
+  padding: 3% 0;
+}
+
+/* line 200, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.row.home {
+  box-shadow: 10px 10px 10px #a6abb2;
+  background-color: white;
+}
+
+/* line 205, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.col-md-6 {
+  margin: 0 auto;
+}
+
+/* line 209, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.col-md-6.image, .col-md-6.image, .col-md-6.text, .col-md-6.text {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 214, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.col-md-6.text {
+  padding: 0 25px;
+}
+
+/* line 218, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.col-md-6.left.image img, .col-md-6.right.image img {
+  width: 80%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+/* line 225, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.homepage-end {
+  padding: 40px 0 60px 0;
+}
+
+/* line 231, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.row.about-us {
+  margin: 0;
+  padding: 3% 0 1% 0;
+}
+
+/* line 236, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.about-us-intro {
+  text-align: center;
+  margin: 25px 15% 0 15%;
+}
+
+/* line 241, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.about-us-intro h2 {
+  font-weight: bold;
+}
+
+/* line 245, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card.about-us {
+  box-shadow: 10px 10px 10px #a6abb2;
+  width: 500px;
+  height: 800px;
+  border: 1px solid #a6abb2;
+  margin-bottom: 25px;
+  background-color: white;
+}
+
+/* line 254, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-img-top.about-us {
+  height: 375px;
+  width: 100%;
+}
+
+/* line 259, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card.about-us p,
+.card.about-us h4,
+.social-media {
+  margin: 0;
+}
+
+/* line 265, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card.about-us h4 {
+  font-weight: bold;
+  padding: 10px 10px 0 10px;
+}
+
+/* line 270, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.role {
+  padding: 0 10px 5px 10px;
+}
+
+/* line 274, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-text.about-us {
+  padding: 10px;
+}
+
+/* line 278, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.social-media {
+  padding-bottom: 10px;
+}
+
+/* line 282, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.social-media img {
+  width: 25px;
+  height: auto;
+  margin: 0 10px;
+}
+
+/* line 289, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.menu-page-title {
+  text-align: center;
+}
+
+/* line 293, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card {
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  max-width: 100%;
+  max-height: 1000px;
+}
+
+/* line 300, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 307, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-img-overlay {
+  position: relative;
+}
+
+/* line 311, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.menu-intro-caption {
+  position: absolute;
+  bottom: 10%;
+  font-size: 3rem;
+  right: 15%;
+  left: 15%;
+  background: rgba(255, 255, 255, 0.8);
+  padding-bottom: 15px;
+}
+
+/* line 321, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+h1 .card-title {
+  font-weight: bold;
+}
+
+/* line 324, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+h2 .card-text,
+.card-text.menu {
+  font-weight: bold;
+}
+
+/* line 330, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.col.menu {
+  margin-bottom: 5%;
+}
+
+/* line 334, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-img-top {
+  height: 200px;
+}
+
+/* line 338, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.languages-cards {
+  width: 20rem;
+}
+
+/* line 342, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* line 347, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-body {
+  opacity: 0;
+  position: absolute;
+  width: 15rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+/* line 355, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.card-image {
+  width: 15rem;
+}
+
+/* line 361, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.languages, .accordion, .sub-accordion {
+  text-align: center;
+}
+
+/* line 365, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.languages-tagline {
+  margin-top: 25px;
+}
+
+/* line 369, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.languages-tagline h2 {
+  font-weight: bold;
+}
+
+/* line 375, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.accordion {
+  box-sizing: border-box;
+  font-weight: 900;
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* line 382, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant a {
+  text-decoration: none;
+  background-color: #1495d5;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 60%;
+  border-width: thick;
+  border-color: #1495d5;
+  outline: none;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+/* line 396, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant p {
+  font-size: 1em;
+  margin: 1em 0;
+  text-align: left;
+}
+
+/* line 402, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 406, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul .inner {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: none;
+}
+/* line 413, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul .sub-accordion.active a.toggle.title {
+  background: #1495d5;
+  color: white;
+}
+/* line 418, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul .inner.content.show {
+  background-color: white;
+  border: 2px solid #1495d5;
+  padding: 25px;
+  margin-top: 7px;
+}
+/* line 425, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul .inner.show li a.toggle.subtitle {
+  background: #1495d5;
+  color: white;
+}
+/* line 430, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul li {
+  margin: .5em 0;
+}
+/* line 433, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul li a.toggle {
+  width: 100%;
+  display: block;
+  background: white;
+  color: #1495d5;
+  padding: 1.5rem;
+  border-radius: 0.15em;
+  border: 5px solid #1495d5;
+  transition: background .3s ease;
+}
+/* line 444, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul li a.toggle.title {
+  font-size: 2rem;
+}
+/* line 448, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul li a.toggle.sub-title {
+  font-size: 1.25rem;
+}
+/* line 452, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.gurjant ul li a.show, .gurjant ul li a:hover {
+  background: #1495d5;
+  color: white;
+}
+
+/* line 461, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.log-in-form, .sign-up-form {
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
+  margin: 50px auto;
+  margin-bottom: 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #a6abb2;
+}
+
+/* line 474, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.log-in-form h2, .sign-up-form h2 {
+  font-weight: bold;
+}
+
+/* line 478, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.github-button,
+.submit-signup-form,
+.submit-login-form {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* line 488, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.submit-signup-form,
+.submit-login-form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/* line 494, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.submit-signup-form:hover,
+.submit-login-form:hover {
+  background: #007bff;
+}
+
+/* line 499, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.close-form {
+  border: 2px solid #1495d5;
+  background-color: white;
+  color: #1495d5;
+  font-weight: bold;
+}
+
+/* line 507, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.chapter-title {
+  text-align: center;
+  margin: 25px 10% 0 10%;
+  position: relative;
+}
+
+/* line 513, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.chapter-title h2 {
+  font-weight: bold;
+}
+
+/* line 517, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.totoro {
+  position: absolute;
+  z-index: 1;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+
+/* line 525, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.close-totoro {
+  position: absolute;
+  z-index: 2;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* line 534, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#loader {
+  z-index: 1;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #1495d5;
+  margin: 0 auto;
+}
+
+/* line 542, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#steps-left-panel, #steps-right-panel {
+  box-shadow: 10px 10px 10px #a6abb2;
+  background-color: white;
+}
+
+/* line 547, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#submitcode {
+  border: 2px solid #1494d5;
+  padding: 3%;
+}
+
+/* line 552, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.test-code, .submit-code {
+  margin: 25px 0;
+}
+
+/* line 556, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.row.test-code, .row.submit-code {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 561, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.row.steps-panel {
+  padding: 0;
+}
+
+/* line 565, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.test-code p, .submit-code p {
+  float: left;
+  margin-bottom: 0;
+}
+
+/* line 570, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.test-code-button, .submit-code-button {
+  float: right;
+}
+
+/* line 574, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#testcode,
+#savecode {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* line 583, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#testcode:hover,
+#savecode:hover {
+  background: #007bff;
+}
+
+/* line 588, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.result-container {
+  border: 2px solid #1495d5;
+}
+
+/* line 592, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#result {
+  background-color: #e0e0e5;
+  padding: 1%;
+  margin: 2%;
+  color: #8c05ff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  min-height: 100px;
+  height: auto;
+}
+
+/* line 603, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.CodeMirror-scroll {
+  background-color: #e0e0e5;
+}
+
+/* line 607, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.CodeMirror.cim-s-default {
+  margin-bottom: 25px;
+}
+
+/* line 611, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#steps-box {
+  padding: 3%;
+  height: 98%;
+}
+
+/* line 615, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.steps h3 {
+  font-weight: bold;
+}
+
+/* line 619, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.row.steps-page-bottom {
+  text-align: center;
+}
+
+/* line 623, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#next {
+  float: right;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* line 630, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#previous {
+  float: left;
+  font-size: 1.25rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* line 637, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.languages-link {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* line 645, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.analytics,
+.instructors-languages,
+.instructors-languages-edit,
+.instructors-chapters-edit,
+.instructors-steps-edit,
+.instructors-codetests-edit {
+  max-width: 650px;
+  min-width: 325px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
+  margin: 25px auto;
+  margin-bottom: 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #a6abb2;
+}
+
+/* line 663, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.analytics {
+  max-width: 70%;
+  min-width: 500px;
+}
+
+/* line 668, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.analytics h1 {
+  font-weight: bold;
+}
+
+/* line 672, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.analytics .row {
+  margin: 1%;
+}
+
+/* line 676, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.analytics .row {
+  padding: 2% 0;
+}
+
+/* line 680, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.instructors-languages h2,
+.instructors-languages h3,
+.instructors-languages h3 a,
+.instructors-languages-edit h2,
+.instructors-languages-edit h3,
+.instructors-languages-edit h3 a,
+.instructors-chapters-edit h2,
+.instructors-chapters-edit h3,
+.instructors-steps-edit h2,
+.instructors-steps-edit h3,
+.instructors-codetests-edit h2 {
+  font-weight: bold;
+}
+
+/* line 694, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.instructors-languages-edit p {
+  font-size: 1rem;
+}
+
+/* line 698, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#language_description,
+#chapter_description,
+#step_description,
+#code_test_output {
+  width: 90%;
+  height: 250px;
+  color: #5a2a77;
+  padding: 10px;
+  border: 2px solid #1495d5;
+}
+
+/* line 709, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#chapter_name,
+#step_name,
+#code_test_input {
+  width: 90%;
+  color: #5a2a77;
+  padding: 10px;
+  border: 2px solid #1495d5;
+}
+
+/* line 718, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.instructors-update-button {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* line 726, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.edit-chapter-menu p,
+.edit-step-menu p,
+.edit-codetests-menu p {
+  font-weight: bold;
+}
+
+/* line 734, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.profile {
+  max-width: 500px;
+  min-width: 250px;
+  height: auto;
+  background-color: white;
+  box-shadow: 0px 10px 10px #a6abb2, -10px 10px 10px #a6abb2, 10px 10px 10px #a6abb2;
+  margin: 50px auto;
+  margin-bottom: 0;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #a6abb2;
+}
+
+/* line 747, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.profile h2, .profile h4 {
+  font-weight: bold;
+}
+
+/* line 751, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.rounded-circle.profile-pic {
+  width: 150px;
+}
+
+/* line 755, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+.edit-profile {
+  padding: 10px;
+  background-color: #1495d5;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* line 763, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+footer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  color: white;
+  background-color: #1495d5;
+  font-size: 1rem;
+  padding-top: 20px;
+  bottom: -60px;
+}
+
+/* line 775, /home/navi/Desktop/teach.me/app/assets/stylesheets/application.scss */
+#progressonmain {
+  float: right;
+}
